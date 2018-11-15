@@ -39,10 +39,11 @@
 
     <build>
         <plugins>
-            <plugin>
+            <!--会在打包时去扫描子包的启动类，没有就报错-->
+            <!--<plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
     
