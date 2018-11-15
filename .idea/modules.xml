@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/sbc.iml" filepath="$PROJECT_DIR$/.idea/sbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-config/sbc-config.iml" filepath="$PROJECT_DIR$/sbc-config/sbc-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/sbc-pay-dao.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/sbc-pay-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-redis/sbc-redis.iml" filepath="$PROJECT_DIR$/sbc-redis/sbc-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-redis/sbc-redis-api/sbc-redis-api.iml" filepath="$PROJECT_DIR$/sbc-redis/sbc-redis-api/sbc-redis-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build/sbc-redis-build.iml" filepath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/sbc-redis-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/sbc-redis-service.iml" filepath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/sbc-redis-service.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-cloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay/sbc-pay-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay/sbc-pay-build" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-pay/sbc-pay-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-redis/sbc-redis-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service" charset="UTF-8" />
+  </component>
+</project>
