@@ -10,4 +10,61 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sbc-redis-build</artifactId>
+
+    <build>
+        <finalName>redis</finalName>
+        <plugins>
+            <!--会在打包时去扫描子包的启动类，没有就报错，该包的作用是打包成jar-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.0.4.RELEASE</version>
+        </dependency>
+    </dependencies>
+
+    <!--配置文件-->
+    <profiles>
+        <profile>
+            <id>local</id>
+            <!--默认启动local配置-->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <resources>
+                    <!--加载的配置文件源-->
+                    <resource>
+                        <directory>../../sbc-config/src/main/resources/local/redis</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>**/*</include>
+                        </includes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <build>
+                <resources>
+                    <!--加载的配置文件源-->
+                    <resource>
+                        <directory>../../sbc-config/src/main/resources/test/redis</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>**/*</include>
+                        </includes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
 </project>

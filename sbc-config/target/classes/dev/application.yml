@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: study-simple
-server:
-  host: localhost
-  port: 8080

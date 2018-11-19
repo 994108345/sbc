@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: sbc-redis
+
+#redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # 连接超时时间（毫秒）
+    timout: 0
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 1
+        max-active: 8
+        max-wait: -1
+
+#eureka服务器端口号7001开始算，业务逻辑模块端口号7011开始计算，其他插件模块端口号7021开始计算
+server:
+  host: localhost
+  port: 7031
+
+eureka:
+  client:
+    #将此项目注册到Eureka服务
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://root:root@localhost:7001/eureka
+
+

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: sbc-eureka #该项目名
+#开启权限认证
+  security:
+    basic:
+      enabled: true
+    user:
+      name: root
+      password: root
+
+#eureka服务器端口号7001开始算，业务逻辑模块端口号7011开始计算，其他插件模块端口号7021开始计算
+server:
+  host: localhost
+  port: 7001
+
+eureka:
+  client:
+    #此项目不作为客户端注册
+    register-with-eureka: false #是否需要注册
+    fetch-registry: false #是否需要检索
+
+    #service-url:
+      #开启权限验证后Eureka地址为 用户名：密码@地址：端口号，如未开启权限验证则直接使用 地址：端口号
+      #defaultZone: http://root:root@localhost:7001/eureka

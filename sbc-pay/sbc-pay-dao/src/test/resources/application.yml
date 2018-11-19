@@ -1,0 +1,30 @@
+#默认使用配置
+server:
+  port: 7012 #用于注册服务的端口号
+spring:
+  profiles:
+    active: local
+#    配置redis
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbc
+    username: root
+    password: bobobobo
+    driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+mybatis:
+  #存放po的包，要存放本地位置
+  typeAliasesPackage: cn.wzl.sbc.pay.model
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.wagu: debug

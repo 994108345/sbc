@@ -11,6 +11,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sbc-redis-service</artifactId>
-
+    <dependencies>
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+    </dependencies>
 
 </project>

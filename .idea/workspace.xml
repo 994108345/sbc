@@ -2,18 +2,224 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbfb77b1-203d-4989-847b-fa388399e300" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_38.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_dexx_collections_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vlsi_compactmap_compactmap_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_25_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_10_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_redis_1_4_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_core_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_0_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_0_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_0_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_0_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-eureka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/SbcEureApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/bean/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/bean/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/ManageDaoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-module/src/main/java/cn/wzl/sbc/pay/module/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/service/build/SbcRedisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenRedis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/util/RedisTemplateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/LockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/target/sbc-pay-build-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/target/sbc-pay-build-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/EncodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/EncodeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/Md5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/Md5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/sbc-pay-dao-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/sbc-pay-dao-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/sbc-config.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/sbc-config.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/src/main/resources/dev/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/src/main/resources/local/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/src/main/resources/prod/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/src/main/resources/test/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/target/classes/dev/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/target/classes/local/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/target/classes/prod/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/target/classes/test/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/target/sbc-config-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/target/sbc-config-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/sbc-pay-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/sbc-pay-dao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/sbc-pay-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/sbc-pay-dao-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/impl/WeChatPayServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-api/sbc-redis-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-api/sbc-redis-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/sbc-redis-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/sbc-redis-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/sbc-redis-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/sbc-redis-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-redis/sbc-redis.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sbc-pay/sbc-pay-common/target/" />
     <ignored path="$PROJECT_DIR$/sbc-pay/sbc-pay-build/target/" />
@@ -32,6 +238,7 @@
     <ignored path="$PROJECT_DIR$/sbc-pay/sbc-base/target/" />
     <ignored path="$PROJECT_DIR$/sbc-pay/sbc-pay-base/target/" />
     <ignored path="$PROJECT_DIR$/sbc-pay/sbc-pay-module/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-eureka/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,42 +249,49 @@
     <session id="-125621035">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
-          <entry key="iml" value="2" />
-          <entry key="java" value="22" />
-          <entry key="xml" value="58" />
-          <entry key="yml" value="6" />
+          <entry key="class" value="4" />
+          <entry key="iml" value="4" />
+          <entry key="java" value="39" />
+          <entry key="properties" value="2" />
+          <entry key="xml" value="70" />
+          <entry key="yml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="22" />
-          <entry key="XML" value="58" />
-          <entry key="YAML" value="6" />
+          <entry key="CLASS" value="4" />
+          <entry key="IDEA_MODULE" value="4" />
+          <entry key="JAVA" value="39" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="70" />
+          <entry key="YAML" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="33" />
-          <entry key="java" value="12" />
-          <entry key="xml" value="502" />
+          <entry key="dummy" value="21" />
+          <entry key="java" value="731" />
+          <entry key="txt" value="10" />
+          <entry key="xml" value="744" />
+          <entry key="yml" value="242" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="33" />
-          <entry key="JAVA" value="12" />
-          <entry key="XML" value="502" />
+          <entry key="JAVA" value="731" />
+          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="XML" value="744" />
+          <entry key="YAML" value="242" />
         </counts>
       </usages-collector>
     </session>
@@ -85,82 +299,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="408">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/WeChatPayService.java">
+        <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-api/pom.xml">
+        <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/util/RedisTemplateUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/enumclass/ErrorEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/EncodeUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/XmlUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="748">
+              <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,7 +342,66 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenRedis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/LockTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/locks/Lock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2271">
+              <caret line="278" column="59" lean-forward="true" selection-start-line="278" selection-start-column="59" selection-end-line="278" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -178,11 +411,8 @@
       <list>
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-base/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-cloud/pom.xml" />
-        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-web/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-api/pom.xml" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-redis/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-pay/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/enumclass/ErrorEnum.java" />
@@ -191,16 +421,43 @@
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/web/WeChatPayService.java" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/web/WeChatPayService.java" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/WeChatPayService.java" />
-        <option value="$PROJECT_DIR$/sbc-config/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-build/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/config/RedisConfig.java" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/XmlUtils.java" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/EncodeUtil.java" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/Md5Util.java" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-common/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/impl/WeChatPayServiceImpl.java" />
         <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-service/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/SpringApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/SbcEureApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-config/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka/application.yml" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/SpringApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/RedisApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.yml" />
+        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.properties" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-module/src/main/java/cn/wzl/sbc/pay/module/UserInfo.java" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/bean/UserDao.java" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/bean/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/ManageDaoApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/test.java" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/resources/application.yml" />
+        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/resources/mapper/UserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/util/UserRedis.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/RedisUtils.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/util/RedisTemplateUtil.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/util/RedisTemplateUtil.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenRedis.java" />
+        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/LockTest.java" />
       </list>
     </option>
   </component>
@@ -219,34 +476,15 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sbc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sbc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sbc-redis-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sbc-redis-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="414" />
-    <option name="y" value="8" />
-    <option name="width" value="952" />
-    <option name="height" value="978" />
+    <option name="x" value="625" />
+    <option name="y" value="170" />
+    <option name="width" value="1379" />
+    <option name="height" value="702" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -256,7 +494,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,33 +527,89 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sbc" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sbc" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sbc" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sbc" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sbc" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="sbc-redis-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542284708347" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542628040949" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../the-company-project/trunk/wgmanage" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.26750702" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\my-project\sbc\sbc-pay\sbc-pay-common\src\main\java\cn\wzl" />
-      <recent name="D:\project\my-project\sbc\sbc-pay\sbc-pay-service\src\main\java" />
-      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\test" />
-      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\prod" />
-      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\local" />
+      <recent name="D:\project\my-project\sbc\sbc-pay\sbc-pay-dao\src\test\resources" />
+      <recent name="D:\project\my-project\sbc\sbc-pay\sbc-pay-dao\src\main\resources\mapper" />
+      <recent name="D:\project\my-project\sbc\sbc-pay\sbc-pay-module\src\main\java\cn\wzl\sbc\pay\module" />
+      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\cn.wzl.sbc.config\test" />
+      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\cn.wzl.sbc.config\local\eureka" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.wzl.sbc.redis.util" />
+      <recent name="cn.wzl.sbc.redis.config" />
+      <recent name="cn.wzl.sbc.pay.dao" />
+      <recent name="cn.wzl.sbc.eureka" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\cn.wzl.sbc.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,6 +624,40 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.test.insertSelective">
+    <configuration name="test.insertSelective" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sbc-pay-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.wzl.sbc.pay.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.wzl.sbc.pay.dao" />
+      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.pay.dao.test" />
+      <option name="METHOD_NAME" value="insertSelective" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sbc-redis-build" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.wzl.sbc.redis.build.RedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SpringApplication" />
+      <item itemvalue="JUnit.test.insertSelective" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.test.insertSelective" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\user\AppData\Roaming\Subversion</configuration>
   </component>
@@ -342,29 +669,59 @@
       <option name="presentableId" value="Default" />
       <updated>1542178840853</updated>
       <workItem from="1542178842634" duration="7279000" />
-      <workItem from="1542276737115" duration="7677000" />
+      <workItem from="1542276737115" duration="7779000" />
+      <workItem from="1542334438087" duration="10003000" />
+      <workItem from="1542592206306" duration="6804000" />
     </task>
+    <task id="LOCAL-00001" summary="搭好环境">
+      <created>1542284735949</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542284735949</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="test_insertSelective - 2018.11.16 at 13h 10m 37s.xml">
+      <configuration name="test.insertSelective" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_insertSelective - 2018.11.16 at 13h 14m 19s.xml">
+      <configuration name="test.insertSelective" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_insertSelective - 2018.11.19 at 09h 51m 22s.xml">
+      <configuration name="test.insertSelective" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_insertSelective - 2018.11.19 at 10h 24m 43s.xml">
+      <configuration name="test.insertSelective" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_insertSelective - 2018.11.19 at 10h 30m 25s.xml">
+      <configuration name="test.insertSelective" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_insertSelective - 2018.11.19 at 10h 31m 07s.xml">
+      <configuration name="test.insertSelective" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14956000" />
+    <option name="totallyTimeSpent" value="31865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2457356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.330076" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.330076" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -373,6 +730,8 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -382,6 +741,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.21162046" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,107 +750,23 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="搭好环境" />
+    <option name="LAST_COMMIT_MESSAGE" value="搭好环境" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/test.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sbc-cloud/sbc-cloud.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/local/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/prod/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/common/util/Md5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/common/util/EncodeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/common/util/XmlUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1263">
-          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-base/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/test/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-base/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-cloud/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="44" column="12" selection-start-line="13" selection-start-column="4" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module/src/main/java/cn/wzl/sbc/pay/module/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module/src/main/java/cn/wzl/sbc/pay/module/OrderToWeChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module/src/main/java/cn/wzl/sbc/pay/module/WeChatRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -505,16 +781,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/dev/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/dev/application.yml" />
     <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-build/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -522,30 +789,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/config/RedisConfig.java" />
     <entry file="file://$PROJECT_DIR$/sbc-redis/SbcRedisApplication.class">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/Md5Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/impl/WeChatPayServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/WeChatPayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -565,63 +838,252 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/src/main/java/cn/wzl/sbc/pay/common/util/XmlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="357">
           <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/impl/WeChatPayServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="148" column="24" lean-forward="true" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/src/main/java/cn/wzl/sbc/pay/service/WeChatPayService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/redis/dev/application.yml" />
+    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/pay/dev/application.yml" />
+    <entry file="file://$PROJECT_DIR$/sbc-redis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-eureka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/service/build/SbcRedisApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/SbcEureApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/UserDaoMapper.java" />
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/bean/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/bean/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-config/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module/src/main/java/cn/wzl/sbc/pay/module/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/ManageDaoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/java/cn/wzl/sbc/pay/dao/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-start-column="8" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/main/resources/mapper/UserInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/sbc-redis-service.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/RedisUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/util/RedisTemplateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenRedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/LockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/locks/Lock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2271">
+          <caret line="278" column="59" lean-forward="true" selection-start-line="278" selection-start-column="59" selection-end-line="278" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -677,7 +1139,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>sbc-redis-api</last-edited>
+          <last-edited>sbc-pay-dao</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

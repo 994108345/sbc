@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/sbc.iml" filepath="$PROJECT_DIR$/.idea/sbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-config/sbc-config.iml" filepath="$PROJECT_DIR$/sbc-config/sbc-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml" filepath="$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" />
