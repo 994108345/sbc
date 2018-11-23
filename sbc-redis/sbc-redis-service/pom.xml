@@ -12,11 +12,12 @@
 
     <artifactId>sbc-redis-service</artifactId>
     <dependencies>
-        <!--redis-->
+        <!--内部依赖-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
-            <version>RELEASE</version>
+            <groupId>cn.wzl</groupId>
+            <artifactId>sbc-redis-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

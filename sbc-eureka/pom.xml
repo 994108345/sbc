@@ -34,7 +34,7 @@
                 <resources>
                     <!--加载的配置文件源-->
                     <resource>
-                        <directory>../../sbc-config/src/main/resources/local/eureka</directory>
+                        <directory>../sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka</directory>
                         <filtering>true</filtering>
                         <includes>
                             <include>**/*</include>
@@ -50,7 +50,7 @@
                 <resources>
                     <!--加载的配置文件源-->
                     <resource>
-                        <directory>../../sbc-config/src/main/resources/test/eureka</directory>
+                        <directory>../sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka</directory>
                         <filtering>true</filtering>
                         <includes>
                             <include>**/*</include>
