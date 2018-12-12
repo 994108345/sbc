@@ -7,9 +7,11 @@
         <groupId>cn.wzl</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sbc-eureka</artifactId>
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -19,6 +21,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -50,7 +58,7 @@
                 <resources>
                     <!--加载的配置文件源-->
                     <resource>
-                        <directory>../sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka</directory>
+                        <directory>../sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka</directory>
                         <filtering>true</filtering>
                         <includes>
                             <include>**/*</include>
@@ -60,5 +68,26 @@
             </build>
         </profile>
     </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

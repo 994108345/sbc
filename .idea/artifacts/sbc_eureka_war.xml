@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sbc-eureka:war">
+    <output-path>$PROJECT_DIR$/sbc-eureka/target</output-path>
+    <root id="archive" name="sbc-eureka-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="sbc-eureka:war exploded" />
+    </root>
+  </artifact>
+</component>

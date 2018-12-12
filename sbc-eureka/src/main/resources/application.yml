@@ -1,6 +1,8 @@
 spring:
   application:
     name: sbc-eureka #该项目名
+  profiles:
+    active: local
 #开启权限认证
   security:
     basic:

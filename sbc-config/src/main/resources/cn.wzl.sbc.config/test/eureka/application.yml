@@ -1,6 +1,8 @@
 spring:
   application:
     name: sbc-eureka #该项目名
+  profiles:
+    active: test
 #开启权限认证
   security:
     basic:
@@ -9,7 +11,7 @@ spring:
       name: root
       password: root
 server:
-  host: localhost
+  host: 47.104.240.104
   port: 7001
 
 eureka:
@@ -21,3 +23,7 @@ eureka:
     #service-url:
       #开启权限验证后Eureka地址为 用户名：密码@地址：端口号，如未开启权限验证则直接使用 地址：端口号
       #defaultZone: http://root:root@localhost:7001/eureka
+#日志输出级别
+logging:
+  level:
+    root: debug

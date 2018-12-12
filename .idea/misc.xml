@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka" />
+    <file type="web" url="file://$PROJECT_DIR$/sbc-eureka" />
+  </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
@@ -10,11 +14,13 @@
         <option value="$PROJECT_DIR$/sbc-redis/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-config/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-build/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/sbc-base/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-redis/pom.xml" />
       </set>
     </option>
   </component>

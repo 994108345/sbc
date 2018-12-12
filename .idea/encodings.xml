@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sbc-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sbc-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sbc-pay" charset="UTF-8" />
@@ -14,6 +15,12 @@
     <file url="file://$PROJECT_DIR$/sbc-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sbc-redis/sbc-redis-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbc-redis/sbc-redis-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-boot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-build" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-service" charset="UTF-8" />
   </component>
 </project>

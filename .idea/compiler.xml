@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sbc-common" />
         <module name="sbc-config" />
         <module name="sbc-eureka" />
         <module name="sbc-pay-build" />
@@ -14,14 +15,15 @@
         <module name="sbc-pay-module" />
         <module name="sbc-pay-service" />
         <module name="sbc-pay-web" />
-        <module name="sbc-redis-api" />
-        <module name="sbc-redis-build" />
-        <module name="sbc-redis-service" />
+        <module name="wgonlinepay-boot" />
+        <module name="wgonlinepay-dao" />
+        <module name="wgonlinepay-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="sbc" target="1.8" />
       <module name="sbc-cloud" target="1.8" />
+      <module name="sbc-common" target="1.8" />
       <module name="sbc-config" target="1.8" />
       <module name="sbc-eureka" target="1.8" />
       <module name="sbc-pay" target="1.8" />
@@ -35,7 +37,13 @@
       <module name="sbc-redis" target="1.8" />
       <module name="sbc-redis-api" target="1.8" />
       <module name="sbc-redis-build" target="1.8" />
+      <module name="sbc-redis-common" target="1.8" />
       <module name="sbc-redis-service" target="1.8" />
+      <module name="wgonlinepay-base" target="1.5" />
+      <module name="wgonlinepay-boot" target="1.8" />
+      <module name="wgonlinepay-build" target="1.5" />
+      <module name="wgonlinepay-dao" target="1.8" />
+      <module name="wgonlinepay-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

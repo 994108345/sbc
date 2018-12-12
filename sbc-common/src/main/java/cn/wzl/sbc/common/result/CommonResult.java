@@ -46,6 +46,11 @@ public class CommonResult<T> {
     private List<T> values;
 
     /**
+     * 一个对象
+     */
+    private Object value;
+
+    /**
      * 构造一个新的Result实例,当前处于默认的未处理状态.
      */
     public CommonResult() {
@@ -59,6 +64,14 @@ public class CommonResult<T> {
      * <p>
      * @param newValue 新的元素.
      */
+
+    public Object getValue() {
+        return value;
+    }
+
+    public void setValue(Object value) {
+        this.value = value;
+    }
     public void addValue(T newValue) {
         values.add(newValue);
     }
@@ -117,5 +130,19 @@ public class CommonResult<T> {
 
     public void setValues(List<T> values) {
         this.values = values;
+    }
+
+    @Override
+    public String toString() {
+        return "CommonResult{" +
+                "status=" + status +
+                ", count=" + count +
+                ", totalCount=" + totalCount +
+                ", exception=" + exception +
+                ", message='" + message + '\'' +
+                ", page=" + page +
+                ", values=" + values +
+                ", value=" + value +
+                '}';
     }
 }
