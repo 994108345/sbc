@@ -59,12 +59,6 @@ public class CommonResult<T> {
         this.status = ResultConstant.CODE.SUCCESS;
     }
 
-    /**
-     * 将一个元素交给result实例.
-     * <p>
-     * @param newValue 新的元素.
-     */
-
     public Object getValue() {
         return value;
     }
