@@ -1,10 +1,8 @@
 package cn.wzl.sbc.test;
 
-import cn.wzl.sbc.common.util.Mod5Util;
+import cn.wzl.sbc.common.util.Md5Util;
 import org.junit.Test;
 
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * @Author wzl
@@ -16,12 +14,10 @@ public class Md5UtilTest {
     public void test(){
         String password = "wzl";
         try {
-            String passwordMod5 = Mod5Util.EncoderByMd5(password);
+            String passwordMod5 = Md5Util.EncoderByMd5(password);
             System.out.println(passwordMod5);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+
         }
     }
 }

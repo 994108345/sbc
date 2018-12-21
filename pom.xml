@@ -13,6 +13,7 @@
         <module>sbc-eureka</module>
         <module>sbc-common</module>
         <module>sbc-permission</module>
+        <module>sbc-chatboard</module>
     </modules>
 
     <parent>

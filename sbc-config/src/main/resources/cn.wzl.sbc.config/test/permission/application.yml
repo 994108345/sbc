@@ -3,25 +3,37 @@ spring:
     #该项目名
     name: sbc-permission
   profiles:
-    active: test
-#开启权限认证
+    active: local
+
+  #开启权限认证
   security:
     basic:
       enabled: true
     user:
       name: root
       password: root
+
 #eureka服务器端口号7001开始算，业务逻辑模块端口号7011开始计算，其他插件模块端口号7021开始计算
 server:
-  host: 47.104.240.104
+  host: localhost
   port: 7011
 
 eureka:
   client:
     #此项目作为客户端注册
-    register-with-eureka: true
+    register-with-eureka: true #是否需要注册
+    fetch-registry: true #是否需要检索
+
     service-url:
       defaultZone: http://root:root@47.104.240.104:7001/eureka
+
+mybatis:
+  typeAliasesPackage: cn.wzl.sbc.model
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
 
 #日志输出级别
 logging:

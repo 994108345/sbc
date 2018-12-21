@@ -1,5 +1,6 @@
 package cn.wzl.sbc.permission.service.login.impl;
 
+import cn.wzl.sbc.common.util.Md5Util;
 import cn.wzl.sbc.permission.service.login.LoginService;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.common.result.MessageResult;
@@ -28,11 +29,15 @@ public class LoginServiceImpl implements LoginService {
     public MessageResult login(UserInfo userInfo) {
         MessageResult result = new MessageResult();
         try {
+            /*将密码转成mod5再查询*/
+            String password = Md5Util.EncoderByMd5(userInfo.getPassWord());
+            userInfo.setPassWord(password);
+            /*查询*/
             List<UserInfo> users = userDao.listUserInfoByCondition(userInfo);
             if(users == null){
                 result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"返回参数为null");
             }
-            if(users.size() <0){
+            if(users.size() < 1){
                 result.setMessageByResultEnum(ReturnResultEnum.LOGIN_ERROR);
             }
 
