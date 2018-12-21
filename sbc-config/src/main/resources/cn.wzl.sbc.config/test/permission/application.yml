@@ -3,7 +3,7 @@ spring:
     #该项目名
     name: sbc-permission
   profiles:
-    active: local
+    active: test
 
   #开启权限认证
   security:

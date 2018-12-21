@@ -5,6 +5,14 @@ spring:
   profiles:
     active: local
 
+  #开启权限认证
+  security:
+    basic:
+      enabled: true
+    user:
+      name: root
+      password: root
+
 #eureka服务器端口号7001开始算，业务逻辑模块端口号7011开始计算，其他插件模块端口号7021开始计算
 server:
   host: localhost
@@ -14,6 +22,8 @@ eureka:
   client:
     #此项目作为客户端注册
     register-with-eureka: true #是否需要注册
+    fetch-registry: true #是否需要检索
+
     service-url:
       defaultZone: http://root:root@47.104.240.104:7002/eureka
 
@@ -28,4 +38,4 @@ mybatis:
 #日志输出级别
 logging:
   level:
-    cn.wzl.sbc: debug
+    root: debug

@@ -14,7 +14,7 @@ spring:
 #eureka服务器端口号7001开始算，业务逻辑模块端口号7011开始计算，其他插件模块端口号7021开始计算
 server:
   host: localhost
-  port: 7001
+  port: 7002
 
 eureka:
   client:
