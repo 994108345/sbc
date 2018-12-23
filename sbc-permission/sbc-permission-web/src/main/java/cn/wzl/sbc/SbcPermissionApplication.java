@@ -1,4 +1,4 @@
-package cn.wzl.sbc.permission;
+package cn.wzl.sbc;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;

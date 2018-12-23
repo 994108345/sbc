@@ -72,4 +72,28 @@ public class MessageResult {
     public void setStatus(int status) {
         this.status = status;
     }
+
+    /**
+     * 是否成功
+     * @return
+     */
+    public boolean isSuccess(){
+        if(this.status == ReturnResultEnum.SUCCESS.getStatus()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * 是否失败
+     * @return
+     */
+    public boolean isError(){
+        if(this.status == ReturnResultEnum.ERROR.getStatus()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

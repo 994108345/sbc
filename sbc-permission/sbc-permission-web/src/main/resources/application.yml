@@ -19,6 +19,9 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
 
+redis:
+
+
 logging:
   level:
     cn.wzl.sbc: debug  #mybatis输出sql日志

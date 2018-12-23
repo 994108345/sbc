@@ -41,7 +41,6 @@
             <groupId>cn.wzl</groupId>
             <artifactId>sbc-pay-module</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
         <!--durid连接池-->
         <dependency>

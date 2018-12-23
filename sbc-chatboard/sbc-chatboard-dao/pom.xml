@@ -15,13 +15,11 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.4.6</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>cn.wzl</groupId>
             <artifactId>sbc-chatboard-model</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
         <!--mybatis-->
         <dependency>
