@@ -1,4 +1,4 @@
-package cn.wzl.sbc.chatboard;
+package cn.wzl.sbc;
 
 
 import org.mybatis.spring.annotation.MapperScan;

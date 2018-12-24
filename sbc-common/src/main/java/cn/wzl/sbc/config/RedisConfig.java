@@ -13,9 +13,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  */
 @Configuration
 public class RedisConfig {
-    public RedisConfig() {
-        System.out.println("初始化了吗");
-    }
 
     /**
      * 注入 RedisConnectionFactory

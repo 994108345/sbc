@@ -38,12 +38,6 @@
             <scope>import</scope>
         </dependency>
 
-        <dependency>
-            <groupId>cn.wzl</groupId>
-            <artifactId>sbc-chatboard-web</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
 
     <!--配置文件-->
