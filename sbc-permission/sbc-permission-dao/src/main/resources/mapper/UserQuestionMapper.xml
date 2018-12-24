@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wzl.sbc.permission.dao.mapper.UserQuestionMapper">
+  <resultMap id="BaseResultMap" type="cn.wzl.sbc.model.permission.UserQuestion">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="question_comment" jdbcType="VARCHAR" property="questionComment" />
+    <result column="quertion_answer" jdbcType="VARCHAR" property="quertionAnswer" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_modify_time" jdbcType="TIMESTAMP" property="lastModifyTime" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, user_name, question_comment, quertion_answer, create_time, last_modify_time
+  </sql>
+
+  <!--根据条件查询-->
+  <select id="queryByCondition" resultMap="BaseResultMap">
+    select
+    *
+    from sbc_user_question
+    <where>
+      <if test="userName != null">
+       and user_name = #{userName,jdbcType=VARCHAR}
+      </if>
+      <if test="questionComment != null">
+        and question_comment = #{questionComment,jdbcType=VARCHAR}
+      </if>
+      <if test="quertionAnswer != null">
+        and quertion_answer = #{quertionAnswer,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
+  <!--批量插入-->
+  <insert id="insertByBatch" parameterType="java.util.List">
+    insert into user_question(user_name, question_comment,quertion_answer)
+    values
+    <foreach collection="list" index="index" item="item" close=")" open="(" separator=",">
+      user_name = #{item.userName,jdbcType=VARCHAR},
+      question_comment = #{item.questionComment,jdbcType=VARCHAR},
+      quertion_answer = #{item.quertionAnswer,jdbcType=VARCHAR},
+    </foreach>
+  </insert>
+
+  <!--
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sbc_user_question
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sbc_user_question
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.yc.lottery.bean.UserQuestion">
+    insert into sbc_user_question (id, user_name, question_comment, 
+      quertion_answer, create_time, last_modify_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{questionComment,jdbcType=VARCHAR}, 
+      #{quertionAnswer,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{lastModifyTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertOneUserInfo" parameterType="com.yc.lottery.bean.UserQuestion">
+    insert into sbc_user_question
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="questionComment != null">
+        question_comment,
+      </if>
+      <if test="quertionAnswer != null">
+        quertion_answer,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastModifyTime != null">
+        last_modify_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="questionComment != null">
+        #{questionComment,jdbcType=VARCHAR},
+      </if>
+      <if test="quertionAnswer != null">
+        #{quertionAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifyTime != null">
+        #{lastModifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yc.lottery.bean.UserQuestion">
+    update sbc_user_question
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="questionComment != null">
+        question_comment = #{questionComment,jdbcType=VARCHAR},
+      </if>
+      <if test="quertionAnswer != null">
+        quertion_answer = #{quertionAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifyTime != null">
+        last_modify_time = #{lastModifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yc.lottery.bean.UserQuestion">
+    update sbc_user_question
+    set user_name = #{userName,jdbcType=VARCHAR},
+      question_comment = #{questionComment,jdbcType=VARCHAR},
+      quertion_answer = #{quertionAnswer,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_modify_time = #{lastModifyTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>-->
+</mapper>

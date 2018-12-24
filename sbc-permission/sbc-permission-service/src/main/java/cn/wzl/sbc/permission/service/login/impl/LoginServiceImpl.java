@@ -47,4 +47,19 @@ public class LoginServiceImpl implements LoginService {
         }
         return result;
     }
+
+    @Override
+    public MessageResult addUser(UserInfo userInfo) {
+        MessageResult result = new MessageResult();
+        try {
+            /*用md5给密码加密*/
+            String password = Md5Util.EncoderByMd5(userInfo.getPassWord());
+            userInfo.setPassWord(password);
+            int count = userDao.insertOneUserInfo(userInfo);
+        } catch (Exception e) {
+            log.error("添加用户出错：" + e.getMessage(),e);
+            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"添加用户出错：" + e.getMessage());
+        }
+        return result;
+    }
 }

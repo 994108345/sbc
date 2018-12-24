@@ -1,9 +1,8 @@
-package cn.wzl.sbc.permission.web.controller.login;
+package cn.wzl.sbc.permission.web.controller;
 
 import cn.wzl.sbc.common.constant.CommonConstant;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.CookieUtil;
-import cn.wzl.sbc.common.util.Md5Util;
 import cn.wzl.sbc.common.util.RedisUtil;
 import cn.wzl.sbc.common.util.UuidUtil;
 import cn.wzl.sbc.permission.service.login.LoginService;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Base64;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -64,7 +62,7 @@ public class LoginController {
             /*存cookie，存redis，存一天*/
             try {
                 CookieUtil.set(response, CommonConstant.CookieConstant.LOGIN_NAME,token,CommonConstant.CookieConstant.LOGIN_OUT_TIME);
-                redisUtil.addWithTime(token,"",1L, TimeUnit.DAYS);
+                redisUtil.addWithTime(token,"",1L, TimeUnit.HOURS);
             } catch (Exception e) {
                 log.error(String.format("redis存储失败-账号为:%s,错误信息为:%s",userInfo.toString(),e.getMessage()),e);
             }

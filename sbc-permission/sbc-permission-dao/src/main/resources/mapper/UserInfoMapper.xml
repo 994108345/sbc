@@ -14,7 +14,7 @@
   </resultMap>
 
     <!--插入单条记录-->
-    <insert id="insertSelective">
+    <insert id="insertOneUserInfo">
     insert into sbc_user_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -99,7 +99,7 @@
       #{passWord,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{lastModifiedDate,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.yc.lottery.bean.UserInfo">
+  <insert id="insertOneUserInfo" parameterType="com.yc.lottery.bean.UserInfo">
     insert into sbc_user_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

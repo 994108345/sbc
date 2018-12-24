@@ -11,12 +11,12 @@ public interface UserDao {
      * @param userInfo
      * @return
      */
-    int insertSelective(UserInfo userInfo);
+    int insertOneUserInfo(UserInfo userInfo) throws Exception;
 
     /**
      * 查询用户信息集合
      * @param userInfo
      * @return
      */
-    List<UserInfo> listUserInfoByCondition(UserInfo userInfo);
+    List<UserInfo> listUserInfoByCondition(UserInfo userInfo) throws Exception;
 }

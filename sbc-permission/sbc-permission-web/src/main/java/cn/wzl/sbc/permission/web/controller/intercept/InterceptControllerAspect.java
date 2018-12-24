@@ -26,7 +26,7 @@ import java.lang.reflect.TypeVariable;
 /**
  * @Author wzl
  * @Date 2018/12/21 13:01
- * @doc InterceptControllerAspect
+ * @doc 有缺陷，无法拦截到父模块的请求，暂时放弃
  **/
 //@Aspect(有缺陷，无法拦截到其他模块的请求，暂时放弃)
 @Component

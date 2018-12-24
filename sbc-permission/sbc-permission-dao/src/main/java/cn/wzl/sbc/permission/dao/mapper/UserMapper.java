@@ -9,7 +9,7 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    int insertSelective(UserInfo userInfo);
+    int insertOneUserInfo(UserInfo userInfo);
 
     /**
      * 查询用户信息集合

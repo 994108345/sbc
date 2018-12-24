@@ -20,20 +20,21 @@ public class UserDaoImpl implements UserDao {
     private UserMapper mapper;
 
     @Override
-    public int insertSelective(UserInfo userInfo) {
-        int count = 0;
-        try {
-           count = mapper.insertSelective(userInfo);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public int insertOneUserInfo(UserInfo userInfo) throws Exception {
+        int count = mapper.insertOneUserInfo(userInfo);
+        if(count < 1){
+            throw new Exception("插入用户记录数小于1");
         }
         return count;
     }
 
 
     @Override
-    public List<UserInfo> listUserInfoByCondition(UserInfo userInfo) {
+    public List<UserInfo> listUserInfoByCondition(UserInfo userInfo) throws Exception {
         List<UserInfo> userInfos = mapper.listUserInfoByCondition(userInfo);
+        if(userInfos == null){
+            throw new Exception("查询用户列表结果为null");
+        }
         return userInfos;
     }
 }

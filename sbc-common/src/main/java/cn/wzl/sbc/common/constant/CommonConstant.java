@@ -9,6 +9,6 @@ public class CommonConstant {
      */
     public static class CookieConstant{
         public static final String LOGIN_NAME = "userInfo";
-        public static final int LOGIN_OUT_TIME = 60*60*24;
+        public static final int LOGIN_OUT_TIME = 60*60*1;
     }
 }

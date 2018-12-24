@@ -17,6 +17,7 @@
         <module>sbc-permission-web</module>
         <module>sbc-permission-service</module>
         <module>sbc-permission-common</module>
+        <module>sbc-permission-model</module>
     </modules>
     <dependencies>
         <dependency>

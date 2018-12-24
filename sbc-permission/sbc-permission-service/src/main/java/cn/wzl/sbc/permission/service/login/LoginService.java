@@ -16,4 +16,11 @@ public interface LoginService {
      * @return
      */
     MessageResult login(UserInfo userInfo);
+
+    /**
+     * 添加用户
+     * @param userInfo
+     * @return
+     */
+    MessageResult addUser(UserInfo userInfo);
 }

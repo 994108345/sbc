@@ -4,23 +4,16 @@ import cn.wzl.sbc.common.constant.CommonConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.RedisUtil;
-import com.alibaba.druid.sql.visitor.functions.Char;
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.View;
 
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 /**
