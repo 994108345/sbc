@@ -67,7 +67,7 @@ public class RegisterController {
                 if(userQuestion.getQuestionComment() == null){
                     throw new Exception("问题内容不能为null");
                 }
-                if(userQuestion.getQuertionAnswer() == null){
+                if(userQuestion.getQuestionAnswer() == null){
                     throw new Exception("问题答案不能为null");
                 }
                 if(userQuestion.getUserName() == null){
@@ -101,11 +101,11 @@ public class RegisterController {
 
         userQuestion1.setUserName(userInfo.getUserName());
         userQuestion1.setQuestionComment(registerVO.getQuestion1());
-        userQuestion1.setQuertionAnswer(registerVO.getAnswer1());
+        userQuestion1.setQuestionAnswer(registerVO.getAnswer1());
 
         userQuestion2.setUserName(userInfo.getUserName());
         userQuestion2.setQuestionComment(registerVO.getQuestion2());
-        userQuestion2.setQuertionAnswer(registerVO.getAnswer2());
+        userQuestion2.setQuestionAnswer(registerVO.getAnswer2());
 
         userRegisterBean.setQuestions(userQuestions);
         userRegisterBean.setUserInfo(userInfo);

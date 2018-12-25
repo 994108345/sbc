@@ -1,4 +1,4 @@
-package cn.wzl.sbc.permission.web.controller.intercept;
+package cn.wzl.sbc.permission.interceptor;
 
 import cn.wzl.sbc.common.constant.CommonConstant;
 import cn.wzl.sbc.common.result.MessageResult;

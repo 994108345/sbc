@@ -40,7 +40,7 @@ public class RegisterServiceImpl implements RegisterService {
     private RegisterService registerService;
 
     @Override
-    public MessageResult register(UserRegisterBean userRegisterBean) {
+        public MessageResult register(UserRegisterBean userRegisterBean) {
         MessageResult result = new MessageResult();
         UserInfo userInfo = userRegisterBean.getUserInfo();
         /*先判断账号是否重复*/

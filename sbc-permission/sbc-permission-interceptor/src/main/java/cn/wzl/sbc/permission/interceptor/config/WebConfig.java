@@ -1,6 +1,6 @@
-package cn.wzl.sbc.permission.web.controller.config;
+package cn.wzl.sbc.permission.interceptor.config;
 
-import cn.wzl.sbc.permission.web.controller.intercept.LoginInterceptor;
+import cn.wzl.sbc.permission.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

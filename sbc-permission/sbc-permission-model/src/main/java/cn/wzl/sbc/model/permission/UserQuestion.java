@@ -9,7 +9,7 @@ public class UserQuestion {
 
     private String questionComment;
 
-    private String quertionAnswer;
+    private String questionAnswer;
 
     private Date createTime;
 
@@ -39,12 +39,12 @@ public class UserQuestion {
         this.questionComment = questionComment == null ? null : questionComment.trim();
     }
 
-    public String getQuertionAnswer() {
-        return quertionAnswer;
+    public String getQuestionAnswer() {
+        return questionAnswer;
     }
 
-    public void setQuertionAnswer(String quertionAnswer) {
-        this.quertionAnswer = quertionAnswer == null ? null : quertionAnswer.trim();
+    public void setQuestionAnswer(String questionAnswer) {
+        this.questionAnswer = questionAnswer == null ? null : questionAnswer.trim();
     }
 
     public Date getCreateTime() {

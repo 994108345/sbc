@@ -27,7 +27,7 @@ public class SbcChatboardApplication {
 
         try {
             SpringApplication.run(SbcChatboardApplication.class, args);
-            System.out.println("sbc-permission-success");
+            System.out.println("sbc-chatboard-success");
         } catch (Exception e) {
             log.error("permission-run-erroe",e);
         }
