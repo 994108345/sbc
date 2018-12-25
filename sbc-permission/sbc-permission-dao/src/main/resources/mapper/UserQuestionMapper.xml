@@ -34,12 +34,12 @@
 
   <!--批量插入-->
   <insert id="insertByBatch" parameterType="java.util.List">
-    insert into user_question(user_name, question_comment,quertion_answer)
+    insert into sbc_user_question(user_name, question_comment,quertion_answer)
     values
-    <foreach collection="list" index="index" item="item" close=")" open="(" separator=",">
-      user_name = #{item.userName,jdbcType=VARCHAR},
+    <foreach collection="list" index="index" item="item"  separator=",">
+      (user_name = #{item.userName,jdbcType=VARCHAR},
       question_comment = #{item.questionComment,jdbcType=VARCHAR},
-      quertion_answer = #{item.quertionAnswer,jdbcType=VARCHAR},
+      quertion_answer = #{item.quertionAnswer,jdbcType=VARCHAR})
     </foreach>
   </insert>
 

@@ -107,6 +107,9 @@ public class RegisterController {
         userQuestion2.setQuestionComment(registerVO.getQuestion2());
         userQuestion2.setQuertionAnswer(registerVO.getAnswer2());
 
+        userRegisterBean.setQuestions(userQuestions);
+        userRegisterBean.setUserInfo(userInfo);
+
         return userRegisterBean;
 
     }
