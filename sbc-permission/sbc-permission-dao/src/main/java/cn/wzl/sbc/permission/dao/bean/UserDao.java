@@ -19,4 +19,11 @@ public interface UserDao {
      * @return
      */
     List<UserInfo> listUserInfoByCondition(UserInfo userInfo) throws Exception;
+
+    /**
+     * 根据用户名修改密码
+     * @param userInfo
+     * @return
+     */
+    int updatePasswordByCondition(UserInfo userInfo) throws Exception;
 }

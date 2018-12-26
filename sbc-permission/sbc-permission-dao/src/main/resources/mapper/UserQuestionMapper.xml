@@ -34,13 +34,16 @@
   </select>
 
   <!--批量插入-->
-  <insert id="insertByBatch" parameterType="java.util.List">
-    insert into sbc_user_question(user_name, question_comment,question_answer)
+  <insert id="insertByBatch" parameterType="java.util.Map">
+    insert into sbc_user_question
+    (user_name, question_comment,question_answer)
     values
     <foreach collection="list" index="index" item="item"  separator=",">
-      (user_name = #{item.userName,jdbcType=VARCHAR},
-      question_comment = #{item.questionComment,jdbcType=VARCHAR},
-      question_answer = #{item.questionAnswer,jdbcType=VARCHAR})
+      (
+      #{item.userName,jdbcType=VARCHAR},
+      #{item.questionComment,jdbcType=VARCHAR},
+      #{item.questionAnswer,jdbcType=VARCHAR}
+      )
     </foreach>
   </insert>
 

@@ -42,8 +42,6 @@ public class LoginController {
      */
     @PostMapping("login")
     @ResponseBody
-
-
     public MessageResult login(@RequestBody UserInfo userInfo,HttpServletRequest request,HttpServletResponse response){
         MessageResult result = new MessageResult();
         if(StringUtils.isBlank(userInfo.getUserName())){

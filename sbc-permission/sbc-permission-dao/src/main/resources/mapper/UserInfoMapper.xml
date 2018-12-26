@@ -78,6 +78,17 @@
         </if>
     </select>
 
+  <!--根据用户名更新密码-->
+  <update id="updatePasswordByCondition">
+    update sbc_user_info
+    <set>
+      <if test="passWord != null">
+        pass_word = #{passWord,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_name = #{userName,jdbcType=INTEGER}
+  </update>
+
   <!--<sql id="Base_Column_List">
     id, user_code, user_name, pass_word, create_date, last_modified_date
   </sql>

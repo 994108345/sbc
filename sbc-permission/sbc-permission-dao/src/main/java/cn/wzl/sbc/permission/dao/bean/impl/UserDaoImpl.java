@@ -37,4 +37,13 @@ public class UserDaoImpl implements UserDao {
         }
         return userInfos;
     }
+
+    @Override
+    public int updatePasswordByCondition(UserInfo userInfo) throws Exception {
+        int count = mapper.updatePasswordByCondition(userInfo);
+        if(count < 1){
+            throw new Exception("更新记录数小于1");
+        }
+        return count;
+    }
 }

@@ -111,6 +111,5 @@ public class RegisterController {
         userRegisterBean.setUserInfo(userInfo);
 
         return userRegisterBean;
-
     }
 }

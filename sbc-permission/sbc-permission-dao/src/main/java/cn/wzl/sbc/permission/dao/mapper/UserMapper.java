@@ -17,4 +17,12 @@ public interface UserMapper {
      * @return
      */
     List<UserInfo> listUserInfoByCondition(UserInfo userInfo);
+
+
+    /**
+     * 根据用户名修改密码
+     * @param userInfo
+     * @return
+     */
+    int updatePasswordByCondition(UserInfo userInfo);
 }
