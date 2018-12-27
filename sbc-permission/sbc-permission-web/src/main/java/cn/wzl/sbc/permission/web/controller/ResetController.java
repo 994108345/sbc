@@ -53,7 +53,7 @@ public class ResetController {
     }
 
     /**
-     * 修改密码是否存在
+     * 修改密码
      * @param userInfo
      * @return
      */

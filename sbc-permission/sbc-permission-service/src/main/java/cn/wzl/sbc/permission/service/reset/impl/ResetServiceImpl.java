@@ -2,6 +2,7 @@ package cn.wzl.sbc.permission.service.reset.impl;
 
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
+import cn.wzl.sbc.common.util.Md5Util;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.model.permission.UserQuestion;
 import cn.wzl.sbc.permission.dao.bean.UserQuestionDao;
@@ -67,6 +68,9 @@ public class ResetServiceImpl implements ResetService {
     @Override
     public MessageResult modifyPassword(UserInfo userInfo) {
         MessageResult result = new MessageResult();
+        /*给密码md5加密*/
+        String password = Md5Util.EncoderByMd5(userInfo.getPassWord());
+        userInfo.setPassWord(password);
         result = userInfoService.updatePasswordByuserName(userInfo);
         return result;
     }
