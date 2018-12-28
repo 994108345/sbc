@@ -1,5 +1,7 @@
 package cn.wzl.sbc.permission.web.controller;
 
+import cn.wzl.sbc.common.annotation.LogAccept;
+import cn.wzl.sbc.common.constant.LogAcceptConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.model.permission.UserInfo;
@@ -57,6 +59,7 @@ public class ResetController {
      * @param userInfo
      * @return
      */
+    @LogAccept(modleName = LogAcceptConstant.ModelName.LOG,actionName = LogAcceptConstant.actionName.RESET)
     @PostMapping("modifyPassword")
     @ResponseBody
     public MessageResult modifyPassword(@RequestBody UserInfo userInfo){

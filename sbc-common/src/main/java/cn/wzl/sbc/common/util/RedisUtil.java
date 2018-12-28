@@ -40,4 +40,20 @@ public class RedisUtil {
     public void addWithTime(String key, Object value, Long time, TimeUnit timeUnit){
         redisTemplate.opsForValue().set(key,value,time,timeUnit);
     }
+
+    /**
+     * 给指定key的值加1
+     * @param key
+     */
+    public void addOne(String key,Long num){
+        redisTemplate.opsForValue().increment(key,num);
+    }
+
+    /**
+     * 根据key删除redis的键值对
+     * @param key
+     */
+    public void delByKey(String key){
+        redisTemplate.delete(key);
+    }
 }

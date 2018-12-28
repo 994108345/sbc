@@ -3,6 +3,9 @@ package cn.wzl.sbc.test;
 import cn.wzl.sbc.common.util.Md5Util;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * @Author wzl
@@ -20,4 +23,17 @@ public class Md5UtilTest {
 
         }
     }
+
+    @Test
+    public void nullTest(){
+        List<String> list = new ArrayList<>();
+        list.add("2");
+        if(list.size() > 0){
+            String a = list.get(2);
+        }
+
+
+    }
+
+
 }

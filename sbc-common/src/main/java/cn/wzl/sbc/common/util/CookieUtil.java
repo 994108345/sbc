@@ -59,4 +59,15 @@ public class CookieUtil {
         }
         return cookieMap;
     }
+
+
+
+    /**
+     * 删除cookie（java中没有真正删除cookie，只是将过期时间设置成0，加快cookie 的死期）
+     * @param cookie
+     */
+    public  static void delCookie(Cookie cookie){
+        cookie.setMaxAge(0);
+        cookie.setPath("/");
+    }
 }

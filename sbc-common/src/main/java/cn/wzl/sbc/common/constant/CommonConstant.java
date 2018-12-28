@@ -8,7 +8,16 @@ public class CommonConstant {
      * cookie的常量
      */
     public static class CookieConstant{
-        public static final String LOGIN_NAME = "userInfo";
+        /**
+         * token 的 key
+         */
+        public static final String TOKEN = "token";
         public static final int LOGIN_OUT_TIME = 60*60*1;
+
+        /**
+         * userName的key
+         */
+        public static final String USERNAME = "userName";
+        public static final int USERNAME_OUT_TIME = 60*60*1;
     }
 }

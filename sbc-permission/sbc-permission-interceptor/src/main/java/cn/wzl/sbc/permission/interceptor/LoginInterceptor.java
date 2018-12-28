@@ -15,11 +15,12 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author wzl
  * @Date 2018/12/24 11:22
- * @doc LoinInterceptor
+ * @doc 登陆拦截
  **/
 @Component
 public class LoginInterceptor implements HandlerInterceptor {
@@ -34,25 +35,25 @@ public class LoginInterceptor implements HandlerInterceptor {
         Cookie[] cookies = request.getCookies();
         /*标签是否有cookie*/
         boolean isCookie = false;
-        for (Cookie cookie : cookies) {
-            String name = cookie.getName();
-            if(CommonConstant.CookieConstant.LOGIN_NAME.equals(name)){
-                String value = cookie.getValue();
-                /*查看redis是否有该key*/
-
-                String token = null;
-                try {
-                    token = (String)redisUtil.getByKey(value);
-                } catch (Exception e) {
-                    log.error("请求redis报错：" + e.getMessage(),e);
+        try {
+            for (Cookie cookie : cookies) {
+                String name = cookie.getName();
+                if(CommonConstant.CookieConstant.TOKEN.equals(name)){
+                    String value = cookie.getValue();
+                    /*查看redis是否有该key*/
+                    String token = (String)redisUtil.getByKey(value);
+                    if(token == null){
+                        isCookie = false;
+                    }else{
+                        /*token存在后，生命周期重置*/
+                        redisUtil.addWithTime(token,"",1L, TimeUnit.HOURS);
+                        isCookie = true;
+                    }
+                    break;
                 }
-                if(token == null){
-                    isCookie = false;
-                }else{
-                    isCookie = true;
-                }
-                break;
             }
+        } catch (Exception e) {
+            log.error("请求redis报错：" + e.getMessage(),e);
         }
         if(!isCookie){
             String origin = request.getHeader("Origin");

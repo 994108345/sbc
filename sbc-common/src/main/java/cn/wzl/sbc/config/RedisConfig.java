@@ -21,6 +21,23 @@ public class RedisConfig {
     RedisConnectionFactory redisConnectionFactory;
 
     /**
+     * 取消序列化
+     * @param factory
+     * @return
+     */
+    @Bean
+    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory factory) {
+        RedisTemplate redisTemplate = new StringRedisTemplate(factory);
+        StringRedisSerializer stringRedisSerializer =new StringRedisSerializer();
+        redisTemplate.setValueSerializer(stringRedisSerializer);
+        redisTemplate.setKeySerializer(stringRedisSerializer);
+        redisTemplate.setHashKeySerializer(stringRedisSerializer);
+        redisTemplate.setHashValueSerializer(stringRedisSerializer);
+        redisTemplate.afterPropertiesSet();
+        return redisTemplate;
+    }
+
+    /**
      * 实例化 RedisTemplate 对象
      *
      * @return

@@ -17,7 +17,7 @@ import org.springframework.context.annotation.PropertySource;
 @SpringBootApplication
 /**该类为eureka的服务中心*/
 @EnableEurekaClient
-@MapperScan("cn.wzl.sbc.chatboard.dao.mapper")
+@MapperScan("cn.wzl.sbc.*.dao.mapper")
 @PropertySource("classpath:sql.properties")
 public class SbcChatboardApplication {
 
