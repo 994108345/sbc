@@ -1,72 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbfb77b1-203d-4989-847b-fa388399e300" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/sbc_eureka_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/sbc_eureka_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_25_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_util_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_parboiled_parboiled_core_1_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_parboiled_parboiled_java_1_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_pegdown_pegdown_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_hateoas_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_0_24_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/controller/EurekaServerTestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sbc-eureka/src/main/resources/wzl.html" afterDir="false" />
+    <list default="true" id="cbfb77b1-203d-4989-847b-fa388399e300" name="Default Changelist" comment="登陆的密码加入了md5加密">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_4_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/result/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/result/CommonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-dao/sbc-chatboard-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-dao/sbc-chatboard-dao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-model/sbc-chatboard-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-model/sbc-chatboard-model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-service/sbc-chatboard-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-service/sbc-chatboard-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/sbc-chatboard-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/sbc-chatboard-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-common/sbc-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-common/sbc-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-config/sbc-config.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/sbc-config.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbc-config/target/sbc-config-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/target/sbc-config-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-config/target/sbc-config-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-eureka/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-eureka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/sbc-pay-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/target/sbc-pay-build-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-build/target/sbc-pay-build-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-common/sbc-pay-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/sbc-pay-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/sbc-pay-dao.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/sbc-pay-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-dao/target/sbc-pay-dao-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-pay/sbc-pay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-pay/sbc-pay.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-permission/sbc-permission-common/sbc-permission-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-permission/sbc-permission-common/sbc-permission-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/sbc-permission-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/sbc-permission-dao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/sbc-permission-interceptor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/sbc-permission-interceptor.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-permission/sbc-permission-service/sbc-permission-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-permission/sbc-permission-service/sbc-permission-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-permission/sbc-permission-web/sbc-permission-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-permission/sbc-permission-web/sbc-permission-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbc-permission/sbc-permission.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-permission/sbc-permission.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-api/sbc-redis-api.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/sbc-redis-build.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/SbcReditApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/controller/TokenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-common/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-common/sbc-redis-common.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/sbc-redis-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisTemplateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/impl/TokenServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/SbcRedisTestApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/base/WzlBaseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/test/RedisTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbc-redis/sbc-redis.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sbc-pay/sbc-pay-common/target/" />
     <ignored path="$PROJECT_DIR$/sbc-pay/sbc-pay-build/target/" />
@@ -93,6 +64,18 @@
     <ignored path="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-service/target/" />
     <ignored path="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-build/target/" />
     <ignored path="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-boot/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-permission/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-permission/sbc-permission-web/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-permission/sbc-permission-service/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-permission/sbc-permission-common/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-chatboard/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-service/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-model/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-dao/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-permission/sbc-permission-model/target/" />
+    <ignored path="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,60 +86,67 @@
     <session id="-125621035">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="8" />
+          <entry key="project.open.time.1" value="12" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="6" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="21" />
-          <entry key="html" value="1" />
-          <entry key="iml" value="8" />
-          <entry key="java" value="159" />
-          <entry key="properties" value="35" />
-          <entry key="xml" value="129" />
+          <entry key="class" value="52" />
+          <entry key="html" value="2" />
+          <entry key="iml" value="14" />
+          <entry key="java" value="484" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="102" />
+          <entry key="xml" value="279" />
           <entry key="xsd" value="1" />
-          <entry key="yml" value="59" />
+          <entry key="yml" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="21" />
-          <entry key="HTML" value="1" />
-          <entry key="IDEA_MODULE" value="8" />
-          <entry key="JAVA" value="157" />
+          <entry key="CLASS" value="52" />
+          <entry key="HTML" value="2" />
+          <entry key="IDEA_MODULE" value="14" />
+          <entry key="JAVA" value="482" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Properties" value="35" />
-          <entry key="XML" value="130" />
-          <entry key="YAML" value="59" />
+          <entry key="Properties" value="102" />
+          <entry key="XML" value="281" />
+          <entry key="YAML" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="35" />
-          <entry key="dummy" value="72" />
+          <entry key="dummy" value="127" />
           <entry key="html" value="33" />
-          <entry key="java" value="4639" />
-          <entry key="properties" value="127" />
-          <entry key="txt" value="48" />
-          <entry key="xml" value="915" />
-          <entry key="yml" value="330" />
+          <entry key="java" value="24922" />
+          <entry key="properties" value="425" />
+          <entry key="txt" value="315" />
+          <entry key="xml" value="2514" />
+          <entry key="yml" value="797" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="35" />
           <entry key="HTML" value="33" />
-          <entry key="JAVA" value="4639" />
-          <entry key="PLAIN_TEXT" value="120" />
-          <entry key="Properties" value="127" />
-          <entry key="XML" value="915" />
-          <entry key="YAML" value="330" />
+          <entry key="JAVA" value="24922" />
+          <entry key="PLAIN_TEXT" value="442" />
+          <entry key="Properties" value="425" />
+          <entry key="SQL" value="18" />
+          <entry key="XML" value="2496" />
+          <entry key="YAML" value="797" />
         </counts>
       </usages-collector>
     </session>
@@ -164,97 +154,99 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/LoginInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="714">
+              <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/config/WebConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="561">
+              <caret line="38" column="103" selection-start-line="38" selection-start-column="103" selection-end-line="38" selection-end-column="103" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-common/pom.xml">
+        <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/InterceptControllerAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="289">
+              <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="634">
+              <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-web/src/main/java/cn/wzl/sbc/pay/web/controller/ControllertTest.java">
+        <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-eureka/pom.xml">
+        <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/util/CookieUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+            <state relative-caret-position="986">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/util/RedisUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
               <folding>
-                <element signature="n#profiles#0;n#project#0;n#!!top" />
+                <element signature="e#470#471#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#1232#1233#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/log4j.properties">
+        <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/constant/LogAcceptConstant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+            <state relative-caret-position="357">
+              <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/application.yml">
+        <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/resources/wzl.html">
+        <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/ResetController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/SbcEureApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="850">
+              <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -272,13 +264,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SbcRedisAp</find>
-      <find>org.springframework.boot.autoconfigure.web.servlet</find>
-      <find>org.springframework.boot.autoconfigure.</find>
-      <find>import org.springframework.web.bind.annotation</find>
-      <find>redisConnectionFactory</find>
-      <find>RedisConnectionFactory</find>
+      <find>sbc-permission</find>
+      <find>sbc-chatboard-web</find>
+      <find>\&lt;groupId\&gt;org\.mybatis\&lt;\/groupId\&gt;\n            \&lt;artifactId\&gt;mybatis\-spring\&lt;\/artifactId\&gt;</find>
+      <find>insertComment</find>
+      <find>cn.wzl.sbc.permission.dao.mapper</find>
+      <find>listUserInfoByCondition</find>
+      <find>cn.wzl.sbc.permission</find>
+      <find>classpath:mapper/*.xml</find>
+      <find>mapperLocations:</find>
+      <find>40</find>
+      <find>sbc-eureka</find>
+      <find>localhost</find>
+      <find>spring-cloud-starter-netflix-eureka-server</find>
+      <find>EnableEurekaServer</find>
+      <find>defaultZone</find>
+      <find>eureka</find>
+      <find>serviceUrl</find>
+      <find>47</find>
+      <find>fetch-registry</find>
+      <find>/sbc-permission/Login/login</find>
+      <find>quertionAnswer</find>
+      <find>com.zaxxer.hikari.HikariDataSource</find>
+      <find>scopedTarget.dataSource</find>
+      <find>spring.datasource.druid.exceptionSorter</find>
+      <find>spring.datasource.druid.filters</find>
+      <find>sqlSessionFactory</find>
+      <find>queryByCondition</find>
+      <find>userName</find>
+      <find>Method method = (Method) handler;</find>
+      <find>handler</find>
     </findStrings>
+    <replaceStrings>
+      <replace>question_answer</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\project\my-project\sbc\sbc-permission\sbc-permission-web\src\main\java\cn\wzl\sbc\permission</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -286,57 +308,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/controller/SbcRedisApplication.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/SbcReditStart.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/SbcReditStart.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/target/classes/application.yml" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.yml" />
-        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/cofig/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.properties" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/SbcReditApplication.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenRedis.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/controller/TokenController.java" />
-        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-web/src/main/java/cn/wzl/sbc/pay/SbcPayApplication.java" />
-        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-web/src/main/java/cn/wzl/sbc/pay/web/controller/ControllertEST.java" />
-        <option value="$PROJECT_DIR$/sbc-pay/sbc-pay-web/src/main/java/cn/wzl/sbc/pay/web/controller/ControllertTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/LockTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/LockRun.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/LockMain.java" />
-        <option value="$PROJECT_DIR$/sbc-common/pom.xml" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/util/RedisTemplateUtil.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/SbcRedisTestApplication.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/WzlBaseTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/pay/test/RedisTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/service/RedisTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/RedisTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/resources/application.properties" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/pom.xml" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/SbcReditApplication.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-common/src/main/java/cn/wzl/sbc/redis/common/util/RedisTemplateUtil.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-common/src/main/java/cn/wzl/sbc/redis/common/config/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/SbcRedisTestApplication.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisTemplateUtil.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/Collaborator.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/ClassTested.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/ClassUnderTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/ExampleTest.java" />
-        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/result/CommonResult.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-common/src/main/java/cn/wzl/sbc/redis/common/model/RedisParam.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/impl/TokenServiceImpl.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/test/RedisTest.java" />
-        <option value="$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenService.java" />
-        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka/application.yml" />
-        <option value="$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/SbcEureApplication.java" />
-        <option value="$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/controller/EurekaServerTestController.java" />
-        <option value="$PROJECT_DIR$/sbc-eureka/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/sbc-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/log4j.properties" />
-        <option value="$PROJECT_DIR$/sbc-eureka/src/main/resources/wzl.html" />
-        <option value="$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/application.yml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/test/UserQuestionTest.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/test/PermissionApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/test/dao/UserQuestionDaoTest.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/test/base/SbcBaseTest.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/config/DruidDataSourceConfiguration.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/resources/application.yml" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/PermissionApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/test/config/DruidDataSourceConfiguration.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/resources/sql.properties" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/resources/mapper/UserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/bean/UserDao.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/UserInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/bean/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/UserInfoService.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/resources/mapper/UserQuestionMapper.xml" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/reset/ResetService.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/bean/ResetVO.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/bean/ValidQuestionVO.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/test/dao/DemoTest.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/reset/impl/ResetServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/constant/RedisConstant.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/website/WebSiteService.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/website/impl/WebSiteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/test/java/cn/wzl/sbc/test/Md5UtilTest.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/bean/RedisVO.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/WebSiteController.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-model/src/main/java/cn/wzl/sbc/model/permission/Log.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/resources/mapper/LogMapper.xml" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/mapper/LogMapper.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/bean/LogDao.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/bean/impl/LogDaoImpl.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/log/LogService.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/log/impl/LogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/annotation.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/LogAccept.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/annotation/LogAccept.java" />
+        <option value="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/src/main/java/cn/wzl/sbc/SbcChatboardApplication.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/InterceptControllerAspect.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/constant/CommonConstant.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/RegisterController.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/ResetController.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/constant/LogAcceptConstant.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/util/CookieUtil.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/LogInterceptor.java" />
       </list>
     </option>
   </component>
@@ -347,8 +369,15 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/application/maven/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="C:\application\maven\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
         <option name="lookForNested" value="true" />
       </MavenImportingSettings>
     </option>
@@ -358,11 +387,20 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sbc-eureka" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="sbc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sbc-eureka" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="sbc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sbc-permission" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sbc-permission" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -370,8 +408,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="569" />
-    <option name="y" value="65" />
+    <option name="x" value="63" />
+    <option name="y" value="8" />
     <option name="width" value="1932" />
     <option name="height" value="1045" />
   </component>
@@ -381,23 +419,30 @@
         <expanded-state>
           <State />
           <State>
-            <id>CodeSpring CoreSpring</id>
+            <id>Android</id>
           </State>
           <State>
-            <id>General</id>
+            <id>CorrectnessLintAndroid</id>
           </State>
           <State>
-            <id>Spring</id>
+            <id>Gradle</id>
           </State>
           <State>
-            <id>Spring CoreSpring</id>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>Probable bugsGradle</id>
           </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>Duplicates</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -409,7 +454,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -422,46 +466,52 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544611169763" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546854610705" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sbc-eureka" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.26750702" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cn.wzl.sbc" />
+      <recent name="" />
       <recent name="cn.wzl.sbc.redis" />
       <recent name="cn.wzl.sbc.redis.service" />
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\cn.wzl.sbc.config\test\eureka" />
-      <recent name="D:\project\my-project\sbc\sbc-eureka\src\main\resources" />
-      <recent name="D:\project\my-project\sbc\sbc-redis\sbc-redis-service\src\test\resources" />
-      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\cn.wzl.sbc.config\local\pay" />
-      <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\cn.wzl.sbc.config\local\redis" />
+      <recent name="D:\project\my-project\sbc\sbc-permission\sbc-permission-dao\src\main\resources\mapper" />
+      <recent name="D:\project\my-project\sbc\sbc-permission\sbc-permission-model\src\main\java\cn\wzl\sbc\model\permission" />
+      <recent name="D:\project\my-project\sbc\sbc-permission\sbc-permission-dao\src\test\resources" />
+      <recent name="D:\project\my-project\sbc\sbc-permission\sbc-permission-interceptor\src\main\java\cn\wzl\sbc\permission\interceptor" />
+      <recent name="D:\project\my-project\sbc\sbc-permission\sbc-permission-dao\src\main\java\cn\wzl\sbc\permission\dao\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.wzl.sbc.redis.service.config" />
-      <recent name="cn.wzl.sbc.redis.common.config" />
-      <recent name="cn.wzl.sbc.redis.common.util" />
-      <recent name="cn.wzl.sbc.pay" />
-      <recent name="cn.wzl.sbc.common.result" />
+      <recent name="cn.wzl.sbc.test.config" />
+      <recent name="cn.wzl.sbc.config" />
+      <recent name="cn.wzl.sbc.test.base" />
+      <recent name="cn.wzl.sbc.test" />
+      <recent name="cn.wzl.sbc.chatboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\my-project\sbc\sbc-permission\sbc-permission-dao\src\main\java\cn\wzl\sbc\permission\dao\mapper" />
       <recent name="D:\project\my-project\sbc\sbc-redis\sbc-redis-build\src\main\java\cn\wzl\sbc\redis\build\controller" />
       <recent name="D:\project\my-project\sbc\sbc-config\src\main\resources\cn.wzl.sbc.config" />
     </key>
@@ -478,70 +528,93 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.eureka-install">
-    <configuration name="ExampleTest.addDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sbc-redis-service" />
+  <component name="RunManager" selected="Spring Boot.permission-run">
+    <configuration name="SbcChatboardApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.SbcChatboardApplication" />
+      <module name="sbc-chatboard-web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.wzl.sbc.redis.mock.*" />
+          <option name="PATTERN" value="cn.wzl.sbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.wzl.sbc.redis.mock" />
-      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.redis.mock.ExampleTest" />
-      <option name="METHOD_NAME" value="addDocument" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoTest.testDemo1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sbc-permission-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.wzl.sbc.test.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.wzl.sbc.test.dao" />
+      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.test.dao.DemoTest" />
+      <option name="METHOD_NAME" value="testDemo1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExampleTest.testRemoveNonExistingDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sbc-redis-service" />
+    <configuration name="Md5UtilTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sbc-permission-web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.wzl.sbc.redis.mock.*" />
+          <option name="PATTERN" value="cn.wzl.sbc.test.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.wzl.sbc.redis.mock" />
-      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.redis.mock.ExampleTest" />
-      <option name="METHOD_NAME" value="testRemoveNonExistingDocument" />
+      <option name="PACKAGE_NAME" value="cn.wzl.sbc.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.test.Md5UtilTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedisTest.getToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sbc-redis-service" />
+    <configuration name="UserQuestionDaoTest.insertByBatchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sbc-permission-dao" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.wzl.sbc.redis.test.*" />
+          <option name="PATTERN" value="cn.wzl.sbc.test.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.wzl.sbc.redis.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.redis.test.RedisTest" />
-      <option name="METHOD_NAME" value="getToken" />
+      <option name="PACKAGE_NAME" value="cn.wzl.sbc.test.dao" />
+      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.test.dao.UserQuestionDaoTest" />
+      <option name="METHOD_NAME" value="insertByBatchTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedisTest.tokenTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sbc-redis-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.wzl.sbc.redis.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.wzl.sbc.redis.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.wzl.sbc.redis.test.RedisTest" />
-      <option name="METHOD_NAME" value="tokenTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="chatboard-run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/sbc-chatboard" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="eureka-install" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -556,7 +629,6 @@
               <list>
                 <option value="clean" />
                 <option value="install" />
-                <option value="-Ptest" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -570,23 +642,69 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="OnlinepayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="wgonlinepay-boot" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wagu.OnlinepayApplication" />
+    <configuration name="permission-run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/sbc-permission" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="sbc - clean+install" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SbcChatboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sbc-chatboard-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.wzl.sbc.SbcChatboardApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SbcReditApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="sbc-redis-build" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.wzl.sbc.redis.build.SbcReditApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="sbc-redis-build" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.wzl.sbc.redis.build.RedisApplication" />
+    <configuration name="chatboard-run" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sbc-chatboard-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.wzl.sbc.SbcChatboardApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -605,24 +723,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="permission-run" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sbc-permission-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.wzl.sbc.SbcPermissionApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="permission-run" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sbc-permission-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.wzl.sbc.SbcPermissionApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Maven.sbc - clean+install" />
+      <item itemvalue="Maven.chatboard-run" />
+      <item itemvalue="Maven.permission-run" />
       <item itemvalue="Maven.eureka-install" />
-      <item itemvalue="Spring Boot.SpringApplication" />
-      <item itemvalue="Spring Boot.OnlinepayApplication" />
-      <item itemvalue="JUnit.RedisTest.tokenTest (1)" />
-      <item itemvalue="JUnit.ExampleTest.addDocument" />
-      <item itemvalue="JUnit.ExampleTest.testRemoveNonExistingDocument" />
-      <item itemvalue="JUnit.RedisTest.getToken" />
+      <item itemvalue="Spring Boot.chatboard-run" />
+      <item itemvalue="Spring Boot.SbcChatboardApplication" />
+      <item itemvalue="Spring Boot.permission-run" />
+      <item itemvalue="Application.SbcChatboardApplication" />
+      <item itemvalue="JUnit.Md5UtilTest.test" />
+      <item itemvalue="JUnit.UserQuestionDaoTest.insertByBatchTest" />
+      <item itemvalue="JUnit.DemoTest.testDemo1" />
       <item itemvalue="Spring Boot.eureka-run" />
-      <item itemvalue="Spring Boot.SbcReditApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DemoTest.testDemo1" />
+        <item itemvalue="JUnit.UserQuestionDaoTest.insertByBatchTest" />
         <item itemvalue="Spring Boot.eureka-run" />
-        <item itemvalue="JUnit.RedisTest.getToken" />
-        <item itemvalue="JUnit.RedisTest.tokenTest (1)" />
-        <item itemvalue="JUnit.ExampleTest.testRemoveNonExistingDocument" />
-        <item itemvalue="JUnit.ExampleTest.addDocument" />
+        <item itemvalue="Application.SbcChatboardApplication" />
+        <item itemvalue="JUnit.Md5UtilTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -649,6 +786,20 @@
       <workItem from="1543289674761" duration="8902000" />
       <workItem from="1543563420886" duration="675000" />
       <workItem from="1544528534535" duration="16873000" />
+      <workItem from="1544667458061" duration="26910000" />
+      <workItem from="1544868197788" duration="11602000" />
+      <workItem from="1545191938342" duration="8417000" />
+      <workItem from="1545271017999" duration="8032000" />
+      <workItem from="1545287133372" duration="1272000" />
+      <workItem from="1545288425170" duration="9516000" />
+      <workItem from="1545358428161" duration="713000" />
+      <workItem from="1545359154822" duration="310000" />
+      <workItem from="1545359472415" duration="47000" />
+      <workItem from="1545359529217" duration="6954000" />
+      <workItem from="1545373883037" duration="15322000" />
+      <workItem from="1545615528860" duration="56967000" />
+      <workItem from="1545878312031" duration="36380000" />
+      <workItem from="1546841516740" duration="2066000" />
     </task>
     <task id="LOCAL-00001" summary="搭好环境">
       <created>1542284735949</created>
@@ -671,48 +822,118 @@
       <option name="project" value="LOCAL" />
       <updated>1542974166544</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="第一次搭建成功springboot + springcloud +mybitis+durid">
+      <created>1544712573715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544712573715</updated>
+    </task>
+    <task id="LOCAL-00005" summary="登陆的密码加入了md5加密">
+      <created>1545192047943</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1545192047943</updated>
+    </task>
+    <task id="LOCAL-00006" summary="波波留言板完成">
+      <created>1545359699757</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545359699757</updated>
+    </task>
+    <task id="LOCAL-00007" summary="加入路由拦截">
+      <created>1545633698770</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545633698770</updated>
+    </task>
+    <task id="LOCAL-00008" summary="注册一次提交（写个大概）">
+      <created>1545646989939</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545646989939</updated>
+    </task>
+    <task id="LOCAL-00009" summary="注册功能">
+      <created>1545720194898</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545720194898</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改拦截器位置">
+      <created>1545729137758</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545729137758</updated>
+    </task>
+    <task id="LOCAL-00011" summary="重置密码：到验证密保阶段，下一阶段是设置新密码">
+      <created>1545827256235</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1545827256235</updated>
+    </task>
+    <task id="LOCAL-00012" summary="重置密码完全写完">
+      <created>1545904948871</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545904948871</updated>
+    </task>
+    <task id="LOCAL-00013" summary="添加了路由拦截，添加日志">
+      <created>1545994147215</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1545994147215</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExampleTest_testRemoveNonExistingDocument - 2018.11.26 at 15h 24m 43s.xml">
-      <configuration name="ExampleTest.testRemoveNonExistingDocument" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 09m 31s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExampleTest_testRemoveNonExistingDocument - 2018.11.26 at 15h 25m 17s.xml">
-      <configuration name="ExampleTest.testRemoveNonExistingDocument" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 10m 02s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExampleTest_testRemoveNonExistingDocument - 2018.11.26 at 15h 25m 58s.xml">
-      <configuration name="ExampleTest.testRemoveNonExistingDocument" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 12m 58s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RedisTest_tokenTest_(1) - 2018.11.27 at 11h 41m 40s.xml">
-      <configuration name="RedisTest.tokenTest (1)" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 14m 29s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RedisTest_tokenTest_(1) - 2018.11.27 at 11h 42m 56s.xml">
-      <configuration name="RedisTest.tokenTest (1)" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 16m 24s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RedisTest_tokenTest_(1) - 2018.11.27 at 11h 44m 52s.xml">
-      <configuration name="RedisTest.tokenTest (1)" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 17m 38s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RedisTest_tokenTest_(1) - 2018.11.27 at 11h 55m 22s.xml">
-      <configuration name="RedisTest.tokenTest (1)" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 18m 40s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RedisTest_getToken - 2018.11.27 at 11h 55m 34s.xml">
-      <configuration name="RedisTest.getToken" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 19m 52s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RedisTest_getToken - 2018.11.27 at 11h 56m 16s.xml">
-      <configuration name="RedisTest.getToken" configurationId="JUnit" />
+    <history-entry file="UserQuestionDaoTest_insertByBatchTest - 2018.12.25 at 18h 20m 38s.xml">
+      <configuration name="UserQuestionDaoTest.insertByBatchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RedisTest_getToken - 2018.11.27 at 12h 05m 01s.xml">
-      <configuration name="RedisTest.getToken" configurationId="JUnit" />
+    <history-entry file="DemoTest_testDemo1 - 2018.12.27 at 13h 10m 01s.xml">
+      <configuration name="DemoTest.testDemo1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106105000" />
+    <option name="totallyTimeSpent" value="290613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21908316" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -722,14 +943,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.330076" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35504887" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37459284" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2888165" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32899022" />
       <window_info anchor="bottom" id="Spring" order="12" />
@@ -742,7 +963,7 @@
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.21162046" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.13326226" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
@@ -783,6 +1004,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -790,367 +1021,413 @@
     <MESSAGE value="搭好环境" />
     <MESSAGE value="搭好" />
     <MESSAGE value="日常提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="日常提交" />
+    <MESSAGE value="第一次搭建成功springboot + springcloud +mybitis+durid" />
+    <MESSAGE value="登陆的密码加入了md5加密" />
+    <MESSAGE value="波波留言板完成" />
+    <MESSAGE value="加入路由拦截" />
+    <MESSAGE value="注册一次提交（写个大概）" />
+    <MESSAGE value="注册功能" />
+    <MESSAGE value="修改拦截器位置" />
+    <MESSAGE value="重置密码：到验证密保阶段，下一阶段是设置新密码" />
+    <MESSAGE value="重置密码完全写完" />
+    <MESSAGE value="添加了路由拦截，添加日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了路由拦截，添加日志" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sbc-pay/sbc-pay-dao/src/test/java/cn/wzl/sbc/pay/dao/test.java</url>
-          <line>32</line>
+          <url>file://$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/test/java/cn/wzl/sbc/test/dao/UserQuestionDaoTest.java</url>
+          <line>29</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/test/RedisTest.java</url>
-          <line>26</line>
+          <url>file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/InterceptControllerAspect.java</url>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/test/RedisTest.java</url>
-          <line>35</line>
-          <properties />
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/base/WzlBaseTest.java">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/website/WebSiteService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/target/test-classes/cn/wzl/sbc/redis/test/RedisTest.class">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/test/java/cn/wzl/sbc/test/Md5UtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/model/permission/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/bean/RedisVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/website/impl/WebSiteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-model/src/main/java/cn/wzl/sbc/model/permission/Log.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE.jar!/org/springframework/data/redis/serializer/Jackson2JsonRedisSerializer.class">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/resources/mapper/LogMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="142">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE.jar!/org/springframework/data/redis/connection/RedisConnectionFactory.class">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/mapper/LogMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="187">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="23" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/bean/LogDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/result/ResultConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-common/src/main/java/cn/wzl/sbc/redis/common/util/RedisTemplateUtil.java" />
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/target/test-classes/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/target/test-classes/application.properties">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-dao/src/main/java/cn/wzl/sbc/permission/dao/bean/impl/LogDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/target/test-classes/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/SbcRedisTestApplication.java">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/log/LogService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/ClassTested.java" />
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/ClassUnderTest.java" />
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/Collaborator.java" />
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/mock/ExampleTest.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/easymock/easymock/4.0.1/easymock-4.0.1.jar!/org/easymock/EasyMockSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/java/cn/wzl/sbc/redis/test/RedisTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/TokenService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-common/src/main/java/cn/wzl/sbc/redis/common/model/RedisParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/impl/TokenServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/TimeUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/result/CommonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="135" column="18" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/test/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE.jar!/org/springframework/data/redis/core/ValueOperations.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-service/src/main/java/cn/wzl/sbc/redis/service/config/RedisTemplateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-web/src/main/java/cn/wzl/sbc/pay/web/SbcPayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="204">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/pom.xml">
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-service/src/main/java/cn/wzl/sbc/permission/service/log/impl/LogServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="357">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/target/classes/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/pom.xml">
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/annotation/LogAccept.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="425">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/eureka/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/target/maven-archiver/pom.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/controller/EurekaServerTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/target/classes/cn/wzl/sbc/eureka/SbcEureApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#564#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-redis/sbc-redis-build/src/main/java/cn/wzl/sbc/redis/build/controller/TokenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/local/redis/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding>
-            <element signature="n#profiles#0;n#project#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/resources/wzl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-eureka/src/main/java/cn/wzl/sbc/eureka/SbcEureApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-config/src/main/resources/cn.wzl.sbc.config/test/eureka/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sbc-pay/sbc-pay-web/src/main/java/cn/wzl/sbc/pay/web/controller/ControllertTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/HandlerInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="104" column="19" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/src/main/java/cn/wzl/sbc/SbcChatboardApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/WebSiteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/config/annotation/InterceptorRegistration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/config/annotation/InterceptorRegistry.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/constant/CommonConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/PrintWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-411">
+          <caret line="55" column="41" lean-forward="true" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="478" selection-start-line="478" selection-end-line="478" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/javax/servlet/http/HttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/reflect/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/OutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="true" />
+            <element signature="e#10148#10149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/javax/servlet/ServletOutputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Locale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="483" column="19" selection-start-line="483" selection-start-column="19" selection-end-line="483" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/javax/servlet/http/HttpServletResponse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/javax/servlet/ServletResponse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2043">
+          <caret line="141" column="19" lean-forward="true" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE-sources.jar!/org/springframework/web/method/HandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="201" column="17" selection-start-line="201" selection-start-column="11" selection-end-line="201" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/util/UuidUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/LogInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="129" column="24" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="38" column="103" selection-start-line="38" selection-start-column="103" selection-end-line="38" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/src/main/java/cn/wzl/sbc/permission/interceptor/InterceptControllerAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/util/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/util/RedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+          <folding>
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-common/src/main/java/cn/wzl/sbc/common/constant/LogAcceptConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/ResetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/java/cn/wzl/sbc/permission/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -1160,10 +1437,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>sbc-eureka:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.26750702" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1206,7 +1485,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>sbc-pay-dao</last-edited>
+          <last-edited>sbc-permission-model</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -6,6 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sbc-chatboard-dao" />
+        <module name="sbc-chatboard-model" />
+        <module name="sbc-chatboard-service" />
+        <module name="sbc-chatboard-web" />
         <module name="sbc-common" />
         <module name="sbc-config" />
         <module name="sbc-eureka" />
@@ -15,13 +19,21 @@
         <module name="sbc-pay-module" />
         <module name="sbc-pay-service" />
         <module name="sbc-pay-web" />
-        <module name="wgonlinepay-boot" />
-        <module name="wgonlinepay-dao" />
-        <module name="wgonlinepay-service" />
+        <module name="sbc-permission-common" />
+        <module name="sbc-permission-dao" />
+        <module name="sbc-permission-interceptor" />
+        <module name="sbc-permission-model" />
+        <module name="sbc-permission-service" />
+        <module name="sbc-permission-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="sbc" target="1.8" />
+      <module name="sbc-chatboard" target="1.8" />
+      <module name="sbc-chatboard-dao" target="1.8" />
+      <module name="sbc-chatboard-model" target="1.8" />
+      <module name="sbc-chatboard-service" target="1.8" />
+      <module name="sbc-chatboard-web" target="1.8" />
       <module name="sbc-cloud" target="1.8" />
       <module name="sbc-common" target="1.8" />
       <module name="sbc-config" target="1.8" />
@@ -34,16 +46,14 @@
       <module name="sbc-pay-module" target="1.8" />
       <module name="sbc-pay-service" target="1.8" />
       <module name="sbc-pay-web" target="1.8" />
-      <module name="sbc-redis" target="1.8" />
-      <module name="sbc-redis-api" target="1.8" />
-      <module name="sbc-redis-build" target="1.8" />
-      <module name="sbc-redis-common" target="1.8" />
+      <module name="sbc-permission" target="1.8" />
+      <module name="sbc-permission-common" target="1.8" />
+      <module name="sbc-permission-dao" target="1.8" />
+      <module name="sbc-permission-interceptor" target="1.8" />
+      <module name="sbc-permission-model" target="1.8" />
+      <module name="sbc-permission-service" target="1.8" />
+      <module name="sbc-permission-web" target="1.8" />
       <module name="sbc-redis-service" target="1.8" />
-      <module name="wgonlinepay-base" target="1.5" />
-      <module name="wgonlinepay-boot" target="1.8" />
-      <module name="wgonlinepay-build" target="1.5" />
-      <module name="wgonlinepay-dao" target="1.8" />
-      <module name="wgonlinepay-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

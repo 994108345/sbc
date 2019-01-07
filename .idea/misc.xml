@@ -20,6 +20,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/sbc-base/pom.xml" />
+        <option value="$PROJECT_DIR$/sbc-chat-board/pom.xml" />
         <option value="$PROJECT_DIR$/sbc-redis/pom.xml" />
       </set>
     </option>

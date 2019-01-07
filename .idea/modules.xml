@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/sbc.iml" filepath="$PROJECT_DIR$/.idea/sbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-chatboard/sbc-chatboard.iml" filepath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-dao/sbc-chatboard-dao.iml" filepath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-dao/sbc-chatboard-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-model/sbc-chatboard-model.iml" filepath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-model/sbc-chatboard-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-service/sbc-chatboard-service.iml" filepath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-service/sbc-chatboard-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/sbc-chatboard-web.iml" filepath="$PROJECT_DIR$/sbc-chatboard/sbc-chatboard-web/sbc-chatboard-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-common/sbc-common.iml" filepath="$PROJECT_DIR$/sbc-common/sbc-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-config/sbc-config.iml" filepath="$PROJECT_DIR$/sbc-config/sbc-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml" filepath="$PROJECT_DIR$/sbc-eureka/sbc-eureka.iml" />
@@ -13,11 +18,13 @@
       <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-module/sbc-pay-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-service/sbc-pay-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" filepath="$PROJECT_DIR$/sbc-pay/sbc-pay-web/sbc-pay-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-base/wgonlinepay-base.iml" filepath="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-base/wgonlinepay-base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-boot/wgonlinepay-boot.iml" filepath="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-boot/wgonlinepay-boot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-build/wgonlinepay-build.iml" filepath="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-build/wgonlinepay-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-dao/wgonlinepay-dao.iml" filepath="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-dao/wgonlinepay-dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-service/wgonlinepay-service.iml" filepath="$PROJECT_DIR$/../../the-company-project/trunk/wgonlinepay/wgonlinepay-service/wgonlinepay-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-permission/sbc-permission.iml" filepath="$PROJECT_DIR$/sbc-permission/sbc-permission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-permission/sbc-permission-common/sbc-permission-common.iml" filepath="$PROJECT_DIR$/sbc-permission/sbc-permission-common/sbc-permission-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-permission/sbc-permission-dao/sbc-permission-dao.iml" filepath="$PROJECT_DIR$/sbc-permission/sbc-permission-dao/sbc-permission-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/sbc-permission-interceptor.iml" filepath="$PROJECT_DIR$/sbc-permission/sbc-permission-interceptor/sbc-permission-interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-permission/sbc-permission-model/sbc-permission-model.iml" filepath="$PROJECT_DIR$/sbc-permission/sbc-permission-model/sbc-permission-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-permission/sbc-permission-service/sbc-permission-service.iml" filepath="$PROJECT_DIR$/sbc-permission/sbc-permission-service/sbc-permission-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbc-permission/sbc-permission-web/sbc-permission-web.iml" filepath="$PROJECT_DIR$/sbc-permission/sbc-permission-web/sbc-permission-web.iml" />
     </modules>
   </component>
 </project>
