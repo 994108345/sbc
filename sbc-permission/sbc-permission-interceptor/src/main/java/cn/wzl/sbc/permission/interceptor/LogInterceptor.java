@@ -21,7 +21,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.lang.reflect.Method;
 
 /**
@@ -51,6 +50,23 @@ public class LogInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        /*获取方法名*/
+        String methodName = this.getMethodName(handler);
+        /*如果的登出*/
+        if(methodName.equals(CommonConstant.CommonParam.LOGINOUT_METHOD_NAME)){
+            Cookie cookie = CookieUtil.get(request, CommonConstant.CookieConstant.TOKEN);
+            if(cookie == null){
+                logger.error("cookie不存在");
+            }
+            String token = cookie.getValue();
+            if(StringUtils.isBlank(token)){
+                logger.error("token不存在");
+            }
+            /*获取用户信息*/
+            UserInfo userInfo = this.getUserInfo(token);
+            /*保存日志*/
+            this.saveLog(handler,userInfo);
+        }
         return true;
     }
 
@@ -66,18 +82,17 @@ public class LogInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         try {
-            Cookie cookie = CookieUtil.get(request, CommonConstant.CookieConstant.TOKEN);
+            /*获取方法名*/
+            String methodName = this.getMethodName(handler);
+            /*如果是登陆和登出，直接弹出*/
+            if(methodName.equals(CommonConstant.CommonParam.LOGINOUT_METHOD_NAME) || methodName.equals(CommonConstant.CommonParam.LOGIN_METHOD_NAME)){
+                return;
+            }
+            /*从请求参数中，找到cookie*/
+            Cookie cookie = CookieUtil.get(request,CommonConstant.CookieConstant.TOKEN);
             String token = cookie.getValue();
-            String userName = (String) redisUtil.getByKey(token);
-            if(StringUtils.isBlank(userName)){
-                throw new Exception("redis中的userName不存在");
-            }
-            String userStr = (String) redisUtil.getByKey(userName);
-
-            if(StringUtils.isBlank(userStr)){
-                throw new Exception("redis中的userInfo不存在");
-            }
-            UserInfo userInfo = JSON.parseObject(userStr,UserInfo.class);
+            /*获取用户信息*/
+            UserInfo userInfo = this.getUserInfo(token);
             /*调用接口保存日志*/
             saveLog(handler, userInfo);
         } catch (Exception e) {
@@ -137,5 +152,60 @@ public class LogInterceptor implements HandlerInterceptor {
      */
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        /*获取方法名*/
+        String methodName = this.getMethodName(handler);
+        if(methodName.equals(CommonConstant.CommonParam.LOGIN_METHOD_NAME)){
+            try {
+                /*从返回参数中，找到set-cookie*/
+                String token = CookieUtil.getSetCookie(response);
+                String userName = (String) redisUtil.getByKey(token);
+                if(StringUtils.isBlank(userName)){
+                    throw new Exception("redis中的userName不存在");
+                }
+                String userStr = (String) redisUtil.getByKey(userName);
+
+                if(StringUtils.isBlank(userStr)){
+                    throw new Exception("redis中的userInfo不存在");
+                }
+                UserInfo userInfo = JSON.parseObject(userStr,UserInfo.class);
+                /*调用接口保存日志*/
+                saveLog(handler, userInfo);
+            } catch (Exception e) {
+                logger.error("logInterceptor postHandle", e);
+            }
+        }
+        System.out.println();
+        return;
+    }
+
+    /**
+     * 获取方法名
+     * @param handler
+     * @return
+     */
+    public String getMethodName(Object handler){
+        HandlerMethod handlerMethod = (HandlerMethod) handler;
+        /*获取方法信息*/
+        Method method = handlerMethod.getMethod();
+        String methodName = method.getName();
+        return methodName;
+    }
+
+    /**
+     * 获取用户对象
+     * @param token
+     * @return
+     */
+    public UserInfo getUserInfo(String token){
+        String userName = (String) redisUtil.getByKey(token);
+        if(StringUtils.isBlank(userName)){
+            logger.error("redis中的userName不存在");
+        }
+        String userStr = (String) redisUtil.getByKey(userName);
+
+        if(StringUtils.isBlank(userStr)){
+            logger.error("redis中的userInfo不存在");
+        }
+        return JSON.parseObject(userStr,UserInfo.class);
     }
 }

@@ -7,15 +7,11 @@ import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.CookieUtil;
 import cn.wzl.sbc.common.util.RedisUtil;
-import cn.wzl.sbc.common.util.SessionUtil;
 import cn.wzl.sbc.common.util.UuidUtil;
 import cn.wzl.sbc.permission.service.login.LoginService;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.common.result.MessageResult;
-import com.alibaba.druid.support.json.JSONUtils;
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import io.netty.handler.codec.json.JsonObjectDecoder;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +21,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.util.concurrent.TimeUnit;
 
 /**

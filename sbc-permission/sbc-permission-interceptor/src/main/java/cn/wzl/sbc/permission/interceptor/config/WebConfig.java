@@ -28,7 +28,8 @@ public class WebConfig implements WebMvcConfigurer {
         /**
          * 日志拦截
          */
-        registry.addInterceptor(logInterceptor).addPathPatterns("/**");
+        registry.addInterceptor(logInterceptor).addPathPatterns("/**")
+                .excludePathPatterns();
 
         /**
          * addPathPatterns：拦截哪些路径("/**":代表拦截所有路径);

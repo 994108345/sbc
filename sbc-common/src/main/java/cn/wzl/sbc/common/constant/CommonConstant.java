@@ -3,11 +3,11 @@ package cn.wzl.sbc.common.constant;
 /**常量类
  * Created by 99410 on 2018/12/23.
  */
-public class CommonConstant {
+public  final class CommonConstant {
     /**
      * cookie的常量
      */
-    public static class CookieConstant{
+    public static final  class CookieConstant{
         /**
          * token 的 key
          */
@@ -24,7 +24,7 @@ public class CommonConstant {
     /**
      * session常量
      */
-    public static class SessionConstant{
+    public static final  class SessionConstant{
         /**
          * token 的 name
          */
@@ -34,5 +34,17 @@ public class CommonConstant {
          * 用户信息的name
          */
         public static final String USERNAME = "userName";
+    }
+
+    public static final class CommonParam{
+        /**
+         * 登出（注销）方法名
+         */
+        public static final String LOGINOUT_METHOD_NAME = "loginOut";
+
+        /**
+         * 登录方法名
+         */
+        public static final String LOGIN_METHOD_NAME = "login";
     }
 }

@@ -1,9 +1,13 @@
 package cn.wzl.sbc.common.util;
 
+import org.apache.commons.lang.StringUtils;
+import org.springframework.util.CollectionUtils;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -91,5 +95,38 @@ public class CookieUtil {
             throw new Exception("没有找到指定Cookie");
         }
 
+    }
+
+    /**
+     * 根据response获取setCookie
+     * @param response
+     * @return
+     */
+    public static String getSetCookie(HttpServletResponse response) throws Exception {
+        List<String> headerList = (List)response.getHeaders("set-cookie");
+        if(CollectionUtils.isEmpty(headerList)){
+            throw new Exception("1获取set-cookie异常");
+        }
+        String setCookie = headerList.get(0);
+        if(StringUtils.isBlank(setCookie)){
+            throw new Exception("2获取set-cookie异常");
+        }
+        String[] setCookieArr = setCookie.split(";");
+        if(setCookieArr.length < 1 ){
+            throw new Exception("3获取set-cookie异常");
+        }
+        String tokenStr = setCookieArr[0];
+        if(StringUtils.isBlank(tokenStr)){
+            throw new Exception("4获取set-cookie异常");
+        }
+        String[] tokenArr = tokenStr.split("=");
+        if(tokenArr.length < 1){
+            throw new Exception("5获取set-cookie异常");
+        }
+        String token = tokenArr[1];
+        if(StringUtils.isBlank(token)){
+            throw new Exception("6获取set-cookie异常");
+        }
+        return token;
     }
 }
