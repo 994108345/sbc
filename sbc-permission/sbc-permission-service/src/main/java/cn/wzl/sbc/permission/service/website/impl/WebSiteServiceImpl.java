@@ -35,12 +35,12 @@ public class WebSiteServiceImpl implements WebSiteService {
             log.error("save the website accessCount which has error",e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"save website accessCount has error" + e.getMessage());
         }
-        return null;
+        return result;
     }
 
     @Override
     public MessageResult getAccessCount(String key) {
         MessageResult result = new MessageResult();
-        return null;
+        return result;
     }
 }

@@ -40,6 +40,8 @@ public class LoginServiceImpl implements LoginService {
             }
             if(users.size() < 1){
                 result.setMessageByResultEnum(ReturnResultEnum.LOGIN_ERROR);
+            }else{
+                result.setData(users.get(0));
             }
         } catch (Exception e) {
             log.error("登陆错误" + e.getMessage(),e);

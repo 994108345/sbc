@@ -8,6 +8,8 @@ spring:
 server:
   host: localhost
   port: 7011
+  session:
+    timeout: 3600 #设置超时时间为
 
 eureka:
   client:

@@ -29,7 +29,7 @@ public class WebSiteController {
     @PostMapping("addAccessCount")
     @ResponseBody
     public MessageResult addAccessCount(@RequestBody RedisVO redisVO){
-        MessageResult result = webSiteService.saveAccessCount();
+        MessageResult result = new MessageResult();
         /*参数校验*/
         if(redisVO == null){
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"请求参数不能为null");
@@ -48,9 +48,10 @@ public class WebSiteController {
         }
 
         /*不记录测试用的账号*/
-        if(userName.equals("1111")){
+        if(userName.equals("11110")){
             return result;
         }
+        result = webSiteService.saveAccessCount();
         return result;
     }
 

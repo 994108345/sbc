@@ -1,10 +1,16 @@
 package cn.wzl.sbc.permission.interceptor;
 
 import cn.wzl.sbc.common.constant.CommonConstant;
+import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
+import cn.wzl.sbc.common.util.CookieUtil;
 import cn.wzl.sbc.common.util.RedisUtil;
+import cn.wzl.sbc.common.util.SessionUtil;
+import cn.wzl.sbc.model.permission.UserInfo;
 import com.alibaba.fastjson.JSON;
+import com.netflix.discovery.util.StringUtil;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -14,6 +20,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.util.concurrent.TimeUnit;
 
@@ -32,43 +39,31 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Cookie[] cookies = request.getCookies();
-        /*标签是否有cookie*/
-        boolean isCookie = false;
+        MessageResult result = new MessageResult();
+        boolean isToken = false;
+        /*获取session中的session*/
         try {
-            for (Cookie cookie : cookies) {
-                String name = cookie.getName();
-                if(CommonConstant.CookieConstant.TOKEN.equals(name)){
-                    String value = cookie.getValue();
-                    /*查看redis是否有该key*/
-                    String token = (String)redisUtil.getByKey(value);
-                    if(token == null){
-                        isCookie = false;
-                    }else{
-                        /*token存在后，生命周期重置*/
-                        redisUtil.addWithTime(token,"",1L, TimeUnit.HOURS);
-                        isCookie = true;
-                    }
-                    break;
-                }
-            }
+            Cookie cookie = CookieUtil.get(request, CommonConstant.CookieConstant.TOKEN);
+            String token = cookie.getValue();
+            String userName = (String)redisUtil.getByKey(token);
+            /*token存在，即重置cookie的token，redis的token和username的存活时间*/
+            cookie.setMaxAge(CommonConstant.CookieConstant.LOGIN_OUT_TIME);
+            redisUtil.addOutTime(token,RedisConstant.RedisOutTimes.TOKEN_OUT_TIME,TimeUnit.HOURS);
+            redisUtil.addOutTime(userName,RedisConstant.RedisOutTimes.TOKEN_OUT_TIME,TimeUnit.HOURS);
+            isToken = true;
         } catch (Exception e) {
-            log.error("请求redis报错：" + e.getMessage(),e);
+            isToken = false;
+            log.error("loginInterceptor preHandle",e);
+            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"缺少登陆信息，请先登陆");
         }
-        if(!isCookie){
-            String origin = request.getHeader("Origin");
+        if(!isToken){
+            /*token不存在，设置返回值*/
             response.setContentType("application/json;charset=UTF-8");
             response.setStatus(200);
             PrintWriter writer = response.getWriter();
-            MessageResult result = new MessageResult();
-            result.setStatus(ReturnResultEnum.ERROR.getStatus());
-            result.setMessage("缺少登陆信息，请先登陆");
             String jsonData = JSON.toJSONString(result);
-            char[] characters = jsonData.toCharArray();
-            for (int i = 0; i < characters.length; i++) {
-                writer.append(characters[i]);
-            }
+            writer.write(jsonData);
         }
-        return isCookie;
+        return isToken;
     }
 }

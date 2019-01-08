@@ -16,4 +16,14 @@ public class RedisConstant {
     public static final class RedisKeys{
         public static final String WEBSITE_ACCESS_COUNT_KEY = "website_access_count";
     }
+
+    /**
+     * redis的超时时间
+     */
+    public static final class RedisOutTimes{
+        /**
+         * token的超时时间
+         */
+        public static final Long TOKEN_OUT_TIME = 1L;
+    }
 }

@@ -10,6 +10,10 @@ server:
   host: localhost
   port: 7012
 
+  servlet:
+    session:
+      timeout: 3600s
+
 eureka:
   client:
     #此项目作为客户端注册

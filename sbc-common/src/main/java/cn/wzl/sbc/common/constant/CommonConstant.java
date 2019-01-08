@@ -20,4 +20,19 @@ public class CommonConstant {
         public static final String USERNAME = "userName";
         public static final int USERNAME_OUT_TIME = 60*60*1;
     }
+
+    /**
+     * session常量
+     */
+    public static class SessionConstant{
+        /**
+         * token 的 name
+         */
+        public static final String TOKEN = "token";
+
+        /**
+         * 用户信息的name
+         */
+        public static final String USERNAME = "userName";
+    }
 }

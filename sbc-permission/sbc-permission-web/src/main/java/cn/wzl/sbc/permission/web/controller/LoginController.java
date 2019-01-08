@@ -7,6 +7,7 @@ import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.CookieUtil;
 import cn.wzl.sbc.common.util.RedisUtil;
+import cn.wzl.sbc.common.util.SessionUtil;
 import cn.wzl.sbc.common.util.UuidUtil;
 import cn.wzl.sbc.permission.service.login.LoginService;
 import cn.wzl.sbc.model.permission.UserInfo;
@@ -20,6 +21,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -47,7 +49,7 @@ public class LoginController {
     @LogAccept(modleName = LogAcceptConstant.ModelName.LOG,actionName = LogAcceptConstant.actionName.LOG)
     @PostMapping("login")
     @ResponseBody
-    public MessageResult login(@RequestBody UserInfo userInfo,HttpServletResponse response){
+    public MessageResult login(@RequestBody UserInfo userInfo,HttpServletResponse response,HttpServletRequest request){
         MessageResult result = new MessageResult();
         /*参数校验*/
         if(StringUtils.isBlank(userInfo.getUserName())){
@@ -63,13 +65,17 @@ public class LoginController {
         if(result.isSuccess()){
             /*生成token*/
             String token = UuidUtil.getUuidNoLine();
-            /*存cookie，存redis，存一天*/
+            UserInfo user = (UserInfo) result.getData();
+            /*将密码置空，不能存到session中*/
+            user.setPassWord(null);
+            /*存cookie，存redis，存一小时*/
             try {
-                /*token*/
-                CookieUtil.set(response, CommonConstant.CookieConstant.TOKEN,token,CommonConstant.CookieConstant.LOGIN_OUT_TIME);
-                /*userName*/
-                CookieUtil.set(response, CommonConstant.CookieConstant.USERNAME,userInfo.getUserName(),CommonConstant.CookieConstant.USERNAME_OUT_TIME);
-                redisUtil.addWithTime(token,"",1L, TimeUnit.HOURS);
+                /*token存cookie*/
+                CookieUtil.set(response,CommonConstant.CookieConstant.TOKEN,token,CommonConstant.CookieConstant.LOGIN_OUT_TIME);
+                /*token存redis*/
+                redisUtil.addWithTime(token,user.getUserName(),RedisConstant.RedisOutTimes.TOKEN_OUT_TIME, TimeUnit.HOURS);
+                /*userName存session*/
+                redisUtil.addWithTime(user.getUserName(),user,RedisConstant.RedisOutTimes.TOKEN_OUT_TIME,TimeUnit.HOURS);
             } catch (Exception e) {
                 log.error(String.format("redis存储失败-账号为:%s,错误信息为:%s",userInfo.toString(),e.getMessage()),e);
             }
@@ -89,33 +95,22 @@ public class LoginController {
     @ResponseBody
     public MessageResult loginOut(@RequestBody UserInfo userInfo,HttpServletRequest request,HttpServletResponse response){
         MessageResult result = new MessageResult();
-        Cookie[] cookies = request.getCookies();
-        /*循环cookie，找出token,从cookie中删除，从redis中删除*/
-        boolean isCookie = false;
         try{
-            for (Cookie cookie : cookies) {
-                String name = cookie.getName();
-                if(!StringUtils.isBlank(name) && name.equals(CommonConstant.CookieConstant.TOKEN)){
-                    String value = cookie.getValue();
-                    if(StringUtils.isBlank(value)){
-                        result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"cookie异常");
-                        return result;
-                    }else{
-                        /*redis删除token*/
-                        redisUtil.delByKey(value);
-                        /*删除cookie*/
-                        CookieUtil.delCookie(cookie);
-                        response.addCookie(cookie);
-
-                        isCookie = true;
-                    }
-                    break;
-                }
+            Cookie cookie = CookieUtil.get(request, CommonConstant.CookieConstant.TOKEN);
+            String token = cookie.getValue();
+            /*判断token是否一样*/
+            if(token == null){
+                result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"Cookie中的token不合法");
+                return result;
             }
-            if(!isCookie){
-                throw new Exception("登出失败");
+            String userName = (String)redisUtil.getByKey(token);
+            if(userName == null){
+                throw new Exception("token不存在");
             }
-
+            /*token存在，说明合法，删除Cookie中的token，redis中的token，userName*/
+            redisUtil.delByKey(token);
+            redisUtil.delByKey(userName);
+            CookieUtil.delCookie(request, CommonConstant.CookieConstant.TOKEN);
         }catch (Exception e){
             log.error("loginController loginOut has a error",e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"删除redis出错" + e.getMessage());
