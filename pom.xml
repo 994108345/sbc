@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>sbc-pay</module>
         <module>sbc-eureka</module>
         <module>sbc-common</module>
         <module>sbc-permission</module>
@@ -23,23 +22,18 @@
         <version>2.0.3.RELEASE</version>
     </parent>
 
-
     <dependencies>
         <!--springboot-->
         <!--eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>${spring.clound.dependencies}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.boot.dependencies}</version>
             <scope>test</scope>
         </dependency>
 
@@ -47,7 +41,31 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring.boot.dependencies}</version>
             <optional>true</optional>
+        </dependency>
+
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${spring.boot.dependencies}</version>
+        </dependency>
+        <!--jedis-->
+        <!--<dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
         </dependency>
 
         <!--log4j-->
@@ -69,7 +87,6 @@
             <version>1.1.10</version>
             <scope>test</scope>
         </dependency>
-
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>
@@ -82,34 +99,11 @@
             <artifactId>druid</artifactId>
             <version>1.1.9</version>
         </dependency>
-
-        <!--redis-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
-            <version>RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <!--jedis-->
-        <!--<dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
-        </dependency>-->
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-        </dependency>
-
-
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
+            <!--springCloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -121,7 +115,7 @@
     </dependencyManagement>
 
 
-    <build>
+    <!--<build>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -136,19 +130,20 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-    </build>
+    </build>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.boot.dependencies>2.0.4.RELEASE</spring.boot.dependencies>
+        <spring.clound.dependencies>2.0.2.RELEASE</spring.clound.dependencies>
         <java.version>1.8</java.version>
         <!--跳过测试-->
         <skipTests>true</skipTests>
     </properties>
 
     <profiles>
-        <profile>
+        <!--<profile>
             <id>local</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -156,7 +151,7 @@
             <properties>
                 <profile.name>local</profile.name>
             </properties>
-        </profile>
+        </profile>-->
         <profile>
             <id>test</id>
             <properties>

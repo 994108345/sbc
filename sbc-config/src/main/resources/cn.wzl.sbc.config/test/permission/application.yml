@@ -25,7 +25,7 @@ eureka:
     fetch-registry: true #是否需要检索
 
     service-url:
-      defaultZone: http://root:root@47.104.240.104:7001/eureka
+      defaultZone: http://root:root@localhost:7001/eureka
 
 mybatis:
   typeAliasesPackage: cn.wzl.sbc.model
@@ -35,7 +35,6 @@ mybatis:
 
 
 
-#日志输出级别
 logging:
   level:
-    root: debug
+    cn.wzl.sbc: debug  #mybatis输出sql日志

@@ -12,6 +12,10 @@ import cn.wzl.sbc.common.util.UuidUtil;
 import cn.wzl.sbc.permission.service.login.LoginService;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.common.result.MessageResult;
+import com.alibaba.druid.support.json.JSONUtils;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import io.netty.handler.codec.json.JsonObjectDecoder;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -75,7 +79,9 @@ public class LoginController {
                 /*token存redis*/
                 redisUtil.addWithTime(token,user.getUserName(),RedisConstant.RedisOutTimes.TOKEN_OUT_TIME, TimeUnit.HOURS);
                 /*userName存session*/
-                redisUtil.addWithTime(user.getUserName(),user,RedisConstant.RedisOutTimes.TOKEN_OUT_TIME,TimeUnit.HOURS);
+                /*将usre转成json字符串*/
+                String userStr = JSONObject.toJSONString(user);
+                redisUtil.addWithTime(user.getUserName(), userStr,RedisConstant.RedisOutTimes.TOKEN_OUT_TIME,TimeUnit.HOURS);
             } catch (Exception e) {
                 log.error(String.format("redis存储失败-账号为:%s,错误信息为:%s",userInfo.toString(),e.getMessage()),e);
             }

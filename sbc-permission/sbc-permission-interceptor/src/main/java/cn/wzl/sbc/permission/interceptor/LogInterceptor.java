@@ -8,6 +8,7 @@ import cn.wzl.sbc.common.util.RedisUtil;
 import cn.wzl.sbc.model.permission.Log;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.permission.service.log.LogService;
+import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,10 +72,12 @@ public class LogInterceptor implements HandlerInterceptor {
             if(StringUtils.isBlank(userName)){
                 throw new Exception("redis中的userName不存在");
             }
-            UserInfo userInfo = (UserInfo) redisUtil.getByKey(userName);
-            if(userInfo == null){
+            String userStr = (String) redisUtil.getByKey(userName);
+
+            if(StringUtils.isBlank(userStr)){
                 throw new Exception("redis中的userInfo不存在");
             }
+            UserInfo userInfo = JSON.parseObject(userStr,UserInfo.class);
             /*调用接口保存日志*/
             saveLog(handler, userInfo);
         } catch (Exception e) {

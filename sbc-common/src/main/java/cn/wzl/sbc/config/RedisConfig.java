@@ -18,7 +18,7 @@ public class RedisConfig {
      * 注入 RedisConnectionFactory
      */
     @Autowired
-    RedisConnectionFactory redisConnectionFactory;
+    private RedisConnectionFactory redisConnectionFactory;
 
     /**
      * 取消序列化
