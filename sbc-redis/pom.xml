@@ -19,5 +19,18 @@
         <module>sbc-redis-common</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.wzl</groupId>
+            <artifactId>sbc-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.wzl</groupId>
+            <artifactId>sbc-config</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

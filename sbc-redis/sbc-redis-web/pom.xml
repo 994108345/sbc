@@ -11,5 +11,42 @@
 
     <artifactId>sbc-redis-web</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.wzl</groupId>
+            <artifactId>sbc-permission-interceptor</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <!--配置文件-->
+    <profiles>
+        <profile>
+            <id>test</id>
+            <build>
+                <resources>
+                    <!--加载的配置文件源-->
+                    <resource>
+                        <directory>../../sbc-config/src/main/resources/cn.wzl.sbc.config/test/redis</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>**/*</include>
+                        </includes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <finalName>redis</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
