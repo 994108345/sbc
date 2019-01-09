@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.Set;
 
 /**
  * @Author wzl
@@ -28,5 +29,17 @@ public class RedisUtilTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+
+    public void keysAll(){
+        Set set = redisUtil.keysAll("*");
+        System.out.println();
+    }
+
+    @Test
+    public void addHash(){
+
     }
 }
