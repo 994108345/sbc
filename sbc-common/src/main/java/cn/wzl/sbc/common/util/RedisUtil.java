@@ -95,12 +95,48 @@ public class RedisUtil {
     /*----------------------------------------------list------------------------------------------------------------*/
 
     /**
-     *  获取list类型的键值对
+     * 获取list类型的键值对
+     *
      * @param key
      * @return
      */
     public List lGetByKey(Object key) {
         return null;
+    }
+
+    /**
+     * 向list的左端插入一个值
+     *
+     * @param key
+     * @param value
+     * @return
+     */
+    public Long lsetLeft(Object key, Object value) {
+        return redisTemplate.opsForList().leftPush(key, value);
+    }
+
+    /**
+     * 向list的右端插入一个值
+     *
+     * @param key
+     * @param value
+     * @return
+     */
+    public Long lsetRight(Object key, Object value) {
+        return redisTemplate.opsForList().rightPush(key, value);
+    }
+
+
+    /**
+     * 获取list范围内的数据
+     *
+     * @param key
+     * @param begin
+     * @param end
+     * @return
+     */
+    public List lgetByRange(Object key, int begin, int end) {
+        return redisTemplate.opsForList().range(key, begin, end);
     }
 
     /*----------------------------------------------set------------------------------------------------------------*/
@@ -111,17 +147,18 @@ public class RedisUtil {
      * @param key
      * @return
      */
-    public Long sSet(Object key,Object[] objs){
-        Long count = redisTemplate.opsForSet().add(key,objs);
+    public Long sSet(Object key, Object[] objs) {
+        Long count = redisTemplate.opsForSet().add(key, objs);
         return count;
     }
 
     /**
      * 获取set结果的一个键值对
+     *
      * @param key
      * @return
      */
-    public Set sGetByKey(Object key){
+    public Set sGetByKey(Object key) {
         Set set = redisTemplate.opsForSet().members(key);
         return set;
     }
@@ -130,27 +167,30 @@ public class RedisUtil {
 
     /**
      * 新增一个set集合
+     *
      * @param key
      * @param objs
      * @return
      */
-    public Long zSets(Object key ,Set<ZSetOperations.TypedTuple> objs){
-       return redisTemplate.opsForZSet().add(key,objs);
+    public Long zSets(Object key, Set<ZSetOperations.TypedTuple> objs) {
+        return redisTemplate.opsForZSet().add(key, objs);
     }
 
     /**
      * 往指定key 的集合中插入一条数据，存在就更新，不存在就插入
+     *
      * @param key
      * @param obj
      * @param d
      * @return
      */
-    public Boolean zSet(Object key ,Object obj ,Double d){
-        return redisTemplate.opsForZSet().add(key,obj,d);
+    public Boolean zSet(Object key, Object obj, Double d) {
+        return redisTemplate.opsForZSet().add(key, obj, d);
     }
 
 
     /*----------------------------------------------通用------------------------------------------------------------*/
+
     /**
      * 根据key删除redis的键值对
      *

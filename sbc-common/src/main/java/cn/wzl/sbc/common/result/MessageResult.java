@@ -1,5 +1,7 @@
 package cn.wzl.sbc.common.result;
 
+import cn.wzl.sbc.model.permission.UserInfo;
+
 /**
  * @Author wzl
  * @Date 2018/12/13 19:18
@@ -20,6 +22,11 @@ public class MessageResult {
      * 一个对象
      */
     private Object data;
+
+    /**
+     * 用户信息
+     */
+    private UserInfo userInfo;
 
 
     /**
@@ -95,5 +102,13 @@ public class MessageResult {
         }else{
             return false;
         }
+    }
+
+    public UserInfo getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(UserInfo userInfo) {
+        this.userInfo = userInfo;
     }
 }

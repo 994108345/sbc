@@ -88,6 +88,15 @@ public class LogInterceptor implements HandlerInterceptor {
             if(methodName.equals(CommonConstant.CommonParam.LOGINOUT_METHOD_NAME) || methodName.equals(CommonConstant.CommonParam.LOGIN_METHOD_NAME)){
                 return;
             }
+            // 将handler强转为HandlerMethod
+            HandlerMethod handlerMethod = (HandlerMethod) handler;
+            /*获取方法信息*/
+            Method method = handlerMethod.getMethod();
+            /*获取方法是否有@LogAccept注解,没有直接弹出*/
+            LogAccept logAccept = method.getAnnotation(LogAccept.class);
+            if(logAccept == null){
+                return ;
+            }
             /*从请求参数中，找到cookie*/
             Cookie cookie = CookieUtil.get(request,CommonConstant.CookieConstant.TOKEN);
             String token = cookie.getValue();

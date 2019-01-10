@@ -46,5 +46,11 @@ public  final class CommonConstant {
          * 登录方法名
          */
         public static final String LOGIN_METHOD_NAME = "login";
+
+
+        /**
+         * 秒杀数量
+         */
+        public static final int SECKILL_COUNT = 10;
     }
 }

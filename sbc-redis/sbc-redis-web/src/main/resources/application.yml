@@ -14,8 +14,6 @@ server:
 
 eureka:
   client:
-    register-with-eureka: true #是否需要注册
-    fetch-registry: false #是否需要检索
     serviceUrl:
       defaultZone: http://root:root@47.104.240.104:7002/eureka/ #47.104.240.104
 

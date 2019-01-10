@@ -14,7 +14,16 @@ public class RedisConstant {
      * redis的key值
      */
     public static final class RedisKeys{
+        /**
+         * 网站访问次数
+         */
         public static final String WEBSITE_ACCESS_COUNT_KEY = "website_access_count";
+
+        /**
+         * 秒杀list
+         */
+        public static final String SECKILL_KEY = "seckill_count";
+
     }
 
     /**

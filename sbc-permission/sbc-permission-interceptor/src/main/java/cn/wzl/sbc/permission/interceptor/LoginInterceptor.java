@@ -2,6 +2,7 @@ package cn.wzl.sbc.permission.interceptor;
 
 import cn.wzl.sbc.common.constant.CommonConstant;
 import cn.wzl.sbc.common.constant.RedisConstant;
+import cn.wzl.sbc.common.constant.RestConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.CookieUtil;
@@ -41,8 +42,14 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         MessageResult result = new MessageResult();
         boolean isToken = false;
-        /*获取session中的session*/
+        /*获取cookie*/
         try {
+            /*获取头信息，是否为内部restapi访问,如果是内部请求，直接放行*/
+            String restApi = request.getHeader(RestConstant.REST_API_HEADER);
+            if(!StringUtils.isBlank(restApi)){
+               return true;
+            }
+
             Cookie cookie = CookieUtil.get(request, CommonConstant.CookieConstant.TOKEN);
             String token = cookie.getValue();
             String userName = (String)redisUtil.getByKey(token);
