@@ -1,13 +1,13 @@
 spring:
   application:
-    name: sbc-permission
+    name: sbc-redis
 
   profiles:
     active: local
 
 server:
   host: localhost
-  port: 7011
+  port: 7013
   servlet:
     session:
       timeout: 3600s
@@ -15,7 +15,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:root@47.104.240.104:7002/eureka/ #47.104.240.104
+      defaultZone: http://root:root@47.104.240.104:7001/eureka/ #47.104.240.104
 
 mybatis:
   typeAliasesPackage: cn.wzl.sbc.model

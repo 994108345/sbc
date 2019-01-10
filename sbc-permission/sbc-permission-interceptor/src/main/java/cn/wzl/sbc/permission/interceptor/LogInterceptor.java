@@ -167,16 +167,8 @@ public class LogInterceptor implements HandlerInterceptor {
             try {
                 /*从返回参数中，找到set-cookie*/
                 String token = CookieUtil.getSetCookie(response);
-                String userName = (String) redisUtil.getByKey(token);
-                if(StringUtils.isBlank(userName)){
-                    throw new Exception("redis中的userName不存在");
-                }
-                String userStr = (String) redisUtil.getByKey(userName);
-
-                if(StringUtils.isBlank(userStr)){
-                    throw new Exception("redis中的userInfo不存在");
-                }
-                UserInfo userInfo = JSON.parseObject(userStr,UserInfo.class);
+                /*获取用户*/
+                UserInfo userInfo = getUserInfo(token);
                 /*调用接口保存日志*/
                 saveLog(handler, userInfo);
             } catch (Exception e) {

@@ -106,4 +106,9 @@ public class SecKillServiceImpl implements SecKillService{
         });
     }
 
+    @Override
+    public MessageResult setIsEnough() {
+        this.isEnough = true;
+        return null;
+    }
 }

@@ -1,14 +1,14 @@
 package cn.wzl.sbc.redis.web.controller;
 
+import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.constant.RestConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
+import cn.wzl.sbc.common.util.RedisUtil;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.redis.service.SecKillService;
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
-import org.apache.ibatis.executor.Executor;
-import org.apache.logging.log4j.core.util.JsonUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -27,6 +27,9 @@ public class SecKillController {
 
     @Resource
     private SecKillService secKillService;
+
+    @Resource
+    private RedisUtil redisUtil;
 
     /**
      * 秒杀(暂时弃用)
@@ -87,6 +90,22 @@ public class SecKillController {
         /*阻止新来的任务提交*/
         executorService.shutdown();
         result.setData(resultList);
+        return result;
+    }
+
+    @PostMapping("resetSeckill")
+    @ResponseBody
+    public MessageResult reSetSecKill(@RequestBody UserInfo userInfo){
+        MessageResult result = new MessageResult();
+        /**
+         * 删除redis
+         */
+        redisUtil.delByKey(RedisConstant.RedisKeys.SECKILL_KEY);
+        /**
+         * 控制开关设置为初始状态
+         */
+        secKillService.setIsEnough();
+
         return result;
     }
 

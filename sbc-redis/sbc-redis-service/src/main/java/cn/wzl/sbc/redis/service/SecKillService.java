@@ -15,4 +15,10 @@ public interface SecKillService {
      * @return
      */
     MessageResult secKill(UserInfo userInfo);
+
+    /**
+     * 将控制值设置为true
+     * @return
+     */
+    MessageResult setIsEnough();
 }
