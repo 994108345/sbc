@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -41,6 +42,9 @@ public class SecKillServiceImpl implements SecKillService{
 
     @Resource
     private RestTemplate restTemplate;
+
+    @Resource
+    private KafkaTemplate kafkaTemplate;
 
     @Value("${permission.seckill.url}")
     private String SECKILL_URL;
@@ -109,6 +113,12 @@ public class SecKillServiceImpl implements SecKillService{
     @Override
     public MessageResult setIsEnough() {
         this.isEnough = true;
+        return null;
+    }
+
+    @Override
+    public MessageResult secKillByKafka(UserInfo userInfo) {
+        kafkaTemplate.send("","","");
         return null;
     }
 }

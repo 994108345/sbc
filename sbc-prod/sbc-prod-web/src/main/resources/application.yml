@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: sbc-redis
+
+  profiles:
+    active: local
+
+server:
+  host: localhost
+  port: 7013
+  servlet:
+    session:
+      timeout: 3600s
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@47.104.240.104:7002/eureka/ #47.104.240.104
+
+mybatis:
+  typeAliasesPackage: cn.wzl.sbc.model
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    cn.wzl.sbc: debug  #mybatis输出sql日志

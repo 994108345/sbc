@@ -21,4 +21,13 @@ public interface SecKillService {
      * @return
      */
     MessageResult setIsEnough();
+
+
+
+    /**
+     * 用kafka秒杀
+     * @param userInfo
+     * @return
+     */
+    MessageResult secKillByKafka(UserInfo userInfo);
 }

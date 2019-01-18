@@ -9,6 +9,7 @@ import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.redis.service.SecKillService;
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -30,6 +31,9 @@ public class SecKillController {
 
     @Resource
     private RedisUtil redisUtil;
+
+    @Resource
+    private KafkaTemplate kafkaTemplate;
 
     /**
      * 秒杀(暂时弃用)
@@ -105,6 +109,19 @@ public class SecKillController {
          * 控制开关设置为初始状态
          */
         secKillService.setIsEnough();
+
+        return result;
+    }
+
+    /**
+     * 秒杀(使用kafka实现)
+     * @param userInfo
+     * @return
+     */
+    @PostMapping("seckillByMq")
+    @ResponseBody
+    public MessageResult seckillByMq(@RequestBody UserInfo userInfo){
+        MessageResult result = new MessageResult();
 
         return result;
     }
