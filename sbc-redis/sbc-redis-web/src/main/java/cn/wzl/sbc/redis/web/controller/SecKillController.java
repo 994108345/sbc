@@ -122,7 +122,7 @@ public class SecKillController {
     @ResponseBody
     public MessageResult seckillByMq(@RequestBody UserInfo userInfo){
         MessageResult result = new MessageResult();
-
+        result = secKillService.secKillByKafka(userInfo);
         return result;
     }
 

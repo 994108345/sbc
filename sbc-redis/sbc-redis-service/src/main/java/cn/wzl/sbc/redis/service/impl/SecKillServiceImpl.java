@@ -1,14 +1,18 @@
 package cn.wzl.sbc.redis.service.impl;
 
 import cn.wzl.sbc.common.constant.CommonConstant;
+import cn.wzl.sbc.common.constant.KafkaConstant;
 import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.constant.RestConstant;
 import cn.wzl.sbc.common.result.MessageResult;
+import cn.wzl.sbc.common.result.ResultConstant;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.RedisUtil;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.redis.service.SecKillService;
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.logging.log4j.core.util.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,11 +20,14 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
+import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 /**
  * @Author wzl
@@ -31,11 +38,6 @@ import java.util.List;
 public class SecKillServiceImpl implements SecKillService{
 
     private final static Logger log = LoggerFactory.getLogger(SecKillServiceImpl.class);
-
-    /**
-     * redis是否已经存够秒杀够用的数据
-     */
-    private boolean isEnough = true;
 
     @Resource
     private RedisUtil redisUtil;
@@ -55,7 +57,8 @@ public class SecKillServiceImpl implements SecKillService{
         try {
             Long count = 0L;
             /*当redis数目够了,就不再往redis里存数据*/
-            if(isEnough){
+            Boolean isSeckill = (Boolean)redisUtil.getByKey(RedisConstant.RedisKeys.SECKILL_SWITCH);
+            if(isSeckill){
                 /*往redis里存值，达到秒杀数后，开始操作数据库*/
                 count = redisUtil.lsetLeft(RedisConstant.RedisKeys.SECKILL_KEY,userInfo.getUserName());
             }else{
@@ -64,9 +67,9 @@ public class SecKillServiceImpl implements SecKillService{
             if(count == CommonConstant.CommonParam.SECKILL_COUNT){
                 /*使用rest请求*/
                 this.calculateCount();
-                isEnough = false;
+                redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,false);
             }else if(count > CommonConstant.CommonParam.SECKILL_COUNT){
-                isEnough = false;
+                redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,false);
                 throw new Exception("不好意思，你没有秒杀成功，请下次再接再厉");
             }
         } catch (Exception e) {
@@ -112,13 +115,20 @@ public class SecKillServiceImpl implements SecKillService{
 
     @Override
     public MessageResult setIsEnough() {
-        this.isEnough = true;
+        redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,true);
         return null;
     }
 
     @Override
     public MessageResult secKillByKafka(UserInfo userInfo) {
-        kafkaTemplate.send("","","");
-        return null;
+        MessageResult result = new MessageResult();
+        try {
+            Object object =  kafkaTemplate.send(KafkaConstant.Topic.SECKILL_TOPIC,JSON.toJSONString(userInfo));
+            System.out.println();
+        } catch (Exception e) {
+            log.error("secKillServiceImpl secKillByKafka:传输消息为" + JSON.toJSONString(userInfo),e);
+            result.setMessageAndStatus(ResultConstant.CODE.ERROR,"调用kafka失败");
+        }
+        return result;
     }
 }

@@ -14,6 +14,9 @@ server:
 
 eureka:
   client:
+    #防止注册的时候报错，虽然不影响功能
+    service-url:
+        defaultZone: http://root:root@localhost:7002/eureka/
     #此项目不作为客户端注册
     register-with-eureka: false #是否需要注册
     fetch-registry: false #是否需要检索

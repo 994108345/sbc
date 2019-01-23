@@ -24,6 +24,11 @@ public class RedisConstant {
          */
         public static final String SECKILL_KEY = "seckill_count";
 
+        /**
+         * 秒杀开关
+         */
+        public static final String SECKILL_SWITCH = "IS_SECKILL";
+
     }
 
     /**

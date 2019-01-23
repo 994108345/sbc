@@ -185,6 +185,9 @@ public class LogInterceptor implements HandlerInterceptor {
      * @return
      */
     public String getMethodName(Object handler){
+        if(handler.getClass().getTypeName()!= "org.springframework.web.method.HandlerMethod"){
+            return "";
+        }
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         /*获取方法信息*/
         Method method = handlerMethod.getMethod();
