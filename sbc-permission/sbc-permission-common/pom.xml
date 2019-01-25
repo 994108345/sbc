@@ -11,11 +11,6 @@
 
     <artifactId>sbc-permission-common</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
-        </dependency>
     </dependencies>
 
 

@@ -32,4 +32,4 @@ mybatis:
 #日志输出级别
 logging:
   level:
-    cn.wzl.sbc: debug
+    cn.wzl.sbc: debug  #mybatis输出sql日志

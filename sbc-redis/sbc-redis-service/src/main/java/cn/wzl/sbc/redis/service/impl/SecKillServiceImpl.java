@@ -57,8 +57,8 @@ public class SecKillServiceImpl implements SecKillService{
         try {
             Long count = 0L;
             /*当redis数目够了,就不再往redis里存数据*/
-            Boolean isSeckill = (Boolean)redisUtil.getByKey(RedisConstant.RedisKeys.SECKILL_SWITCH);
-            if(isSeckill){
+            String isSeckill = (String)redisUtil.getByKey(RedisConstant.RedisKeys.SECKILL_SWITCH);
+            if(isSeckill.equals("1") ){
                 /*往redis里存值，达到秒杀数后，开始操作数据库*/
                 count = redisUtil.lsetLeft(RedisConstant.RedisKeys.SECKILL_KEY,userInfo.getUserName());
             }else{
@@ -67,9 +67,9 @@ public class SecKillServiceImpl implements SecKillService{
             if(count == CommonConstant.CommonParam.SECKILL_COUNT){
                 /*使用rest请求*/
                 this.calculateCount();
-                redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,false);
+                redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,"0");
             }else if(count > CommonConstant.CommonParam.SECKILL_COUNT){
-                redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,false);
+                redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,"0");
                 throw new Exception("不好意思，你没有秒杀成功，请下次再接再厉");
             }
         } catch (Exception e) {
@@ -115,7 +115,7 @@ public class SecKillServiceImpl implements SecKillService{
 
     @Override
     public MessageResult setIsEnough() {
-        redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,true);
+        redisUtil.add(RedisConstant.RedisKeys.SECKILL_SWITCH,"1");
         return null;
     }
 

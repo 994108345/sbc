@@ -20,3 +20,7 @@ eureka:
     #此项目不作为客户端注册
     register-with-eureka: false #是否需要注册
     fetch-registry: false #是否需要检索
+
+logging:
+  level:
+    cn.wzl.sbc: debug  #mybatis输出sql日志

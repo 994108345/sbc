@@ -26,3 +26,4 @@ mybatis:
 logging:
   level:
     cn.wzl.sbc: debug  #mybatis输出sql日志
+
