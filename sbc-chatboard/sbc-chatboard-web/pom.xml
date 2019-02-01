@@ -13,6 +13,12 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--eureka-client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+            <scope>compile</scope>
+        </dependency>
 
         <dependency>
             <groupId>cn.wzl</groupId>
