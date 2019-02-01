@@ -8,6 +8,7 @@ import java.io.Serializable;
 public class PageBean implements Serializable{
     private int start ;
     private int end ;
+    private boolean isPaging;
 
 
     private int pageSize = 10;
@@ -15,6 +16,7 @@ public class PageBean implements Serializable{
     public PageBean(){
         start = this.getStart();
         end = this.getEnd();
+        isPaging = false;
     }
     //oracle数据库用法
     /*public int getStart() {
