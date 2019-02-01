@@ -18,6 +18,12 @@
             <artifactId>spring-cloud-netflix-eureka-client</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>cn.wzl</groupId>
+            <artifactId>sbc-prod-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>

@@ -159,18 +159,6 @@
                 <artifactId>commons-lang</artifactId>
                 <version>${commons.lang.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-commons</artifactId>
-                <version>${spring.cloud.commons.version}</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring.web.version}</version>
-                <scope>compile</scope>
-            </dependency>
             <!--eureka-client-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
