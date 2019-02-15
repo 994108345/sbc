@@ -2,7 +2,6 @@ package cn.wzl.sbc.prod.dao.bean.brand.impl;
 
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
-import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.prod.dao.bean.brand.ProdBrandDao;
 import cn.wzl.sbc.prod.dao.mapper.ProdBrandMapper;
 import cn.wzl.sbc.prod.model.ProdBrand;

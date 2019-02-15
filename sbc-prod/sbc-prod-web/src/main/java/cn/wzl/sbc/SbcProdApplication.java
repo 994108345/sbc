@@ -14,18 +14,17 @@ import org.springframework.context.annotation.PropertySource;
  * @doc SbcRedisApplications
  **/
 @SpringBootApplication
-/**该类为eureka的服务中心*/
 @EnableEurekaClient
-@MapperScan("cn.wzl.sbc.redis.dao.mapper")
+@MapperScan("cn.wzl.sbc.prod.dao.mapper")
 @PropertySource({"classpath:sql.properties","classpath:param.properties"})
 public class SbcProdApplication {
     private final static Logger log = LoggerFactory.getLogger(SbcProdApplication.class);
     public static void main(String[] args) {
         try {
             SpringApplication.run(SbcProdApplication.class, args);
-            System.out.println("sbc-redis-run-success");
+            System.out.println("sbc-prod-run-success");
         } catch (Exception e) {
-            log.error("sbc-redis-run-erroe",e);
+            log.error("sbc-prod-run-erroe",e);
         }
     }
 }

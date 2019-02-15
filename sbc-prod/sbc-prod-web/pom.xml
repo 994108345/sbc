@@ -26,4 +26,33 @@
         </dependency>
     </dependencies>
 
+    <!--配置文件-->
+    <profiles>
+        <profile>
+            <id>test</id>
+            <build>
+                <resources>
+                    <!--加载的配置文件源-->
+                    <resource>
+                        <directory>../../sbc-config/src/main/resources/cn.wzl.sbc.config/test/prod</directory>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>**/*</include>
+                        </includes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <finalName>prod</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

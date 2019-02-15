@@ -1,13 +1,13 @@
 spring:
   application:
-    name: sbc-redis
+    name: sbc-prod
 
   profiles:
     active: local
 
 server:
   host: localhost
-  port: 7013
+  port: 7014
   servlet:
     session:
       timeout: 3600s
@@ -15,7 +15,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:root@47.104.240.104:7002/eureka/ #47.104.240.104
+      defaultZone: http://root:root@localhost:7002/eureka/ #47.104.240.104
 
 mybatis:
   typeAliasesPackage: cn.wzl.sbc.model
