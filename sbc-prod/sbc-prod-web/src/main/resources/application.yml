@@ -24,5 +24,6 @@ mybatis:
     map-underscore-to-camel-case: true
 
 logging:
+ #mybatis输出sql日志
   level:
-    cn.wzl.sbc: debug  #mybatis输出sql日志
+    cn.wzl.sbc: debug

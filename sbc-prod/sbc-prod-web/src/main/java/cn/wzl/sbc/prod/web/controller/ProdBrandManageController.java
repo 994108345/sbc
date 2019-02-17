@@ -16,7 +16,7 @@ public class ProdBrandManageController {
     @Resource
     private ProdBrandService prodBrandService;
 
-    @PostMapping("querybrandpage")
+    @PostMapping("query-brand-page")
     @ResponseBody
     public PageBeanResult queryBrandByPage(@RequestBody PageBrandBean pageBrandBean){
         PageBeanResult result = new PageBeanResult();
