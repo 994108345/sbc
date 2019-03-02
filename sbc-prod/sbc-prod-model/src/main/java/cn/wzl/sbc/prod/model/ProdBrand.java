@@ -12,8 +12,6 @@ public class ProdBrand {
 
     private String brandName;
 
-    private String spuCode;
-
     private String status;
 
     private Date createTime;
@@ -48,14 +46,6 @@ public class ProdBrand {
 
     public void setBrandName(String brandName) {
         this.brandName = brandName == null ? null : brandName.trim();
-    }
-
-    public String getSpuCode() {
-        return spuCode;
-    }
-
-    public void setSpuCode(String spuCode) {
-        this.spuCode = spuCode == null ? null : spuCode.trim();
     }
 
     public String getStatus() {

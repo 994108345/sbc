@@ -111,4 +111,10 @@ public class MessageResult {
     public void setUserInfo(UserInfo userInfo) {
         this.userInfo = userInfo;
     }
+
+    public void setErrorMessage(String errorMessage){
+        this.message = errorMessage;
+        this.status = ReturnResultEnum.ERROR.getStatus();
+    }
+
 }

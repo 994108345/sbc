@@ -1,8 +1,10 @@
 package cn.wzl.sbc.prod.service.brand.impl;
 
+import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
+import cn.wzl.sbc.common.util.CodeUtil;
 import cn.wzl.sbc.prod.dao.bean.brand.ProdBrandDao;
 import cn.wzl.sbc.prod.model.ProdBrand;
 import cn.wzl.sbc.prod.model.page.PageBrandBean;
@@ -12,6 +14,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.annotation.Resources;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ProdBrandServiceImpl implements ProdBrandService {
@@ -21,9 +26,25 @@ public class ProdBrandServiceImpl implements ProdBrandService {
     @Resource
     private ProdBrandDao prodBrandDao;
 
+    @Resource
+    private CodeUtil codeUtil;
+
+
     @Override
     public PageBeanResult queryByParam(PageBrandBean pageBrandBean) {
-        return null;
+        PageBeanResult result = new PageBeanResult();
+        try {
+            result = prodBrandDao.queryByParam(pageBrandBean);
+            List<ProdBrand> brandList = (ArrayList)result.getData();
+            if(brandList.size() < 1){
+                throw new Exception("查询不到对应记录");
+            }
+            result.setData(brandList.get(0));
+        } catch (Exception e) {
+            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"prodBrandService queryByParam has error ..."+ e.getMessage());
+            log.error("prodBrandService queryByParam has error ...",e);
+        }
+        return result;
     }
 
     @Override
@@ -46,6 +67,8 @@ public class ProdBrandServiceImpl implements ProdBrandService {
     public MessageResult insertBrand(ProdBrand prodBrand) {
         MessageResult result = new MessageResult();
         try {
+            /*生成品牌编码*/
+            prodBrand.setBrandCode(codeUtil.createCodeByRedis(RedisConstant.RedisCreateCode.CodeType.BRAND_CODE));
             prodBrandDao.insertBrand(prodBrand);
         } catch (Exception e) {
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),e.getMessage());

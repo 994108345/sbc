@@ -57,8 +57,8 @@ public class RedisUtil {
      *
      * @param key
      */
-    public void addOne(Object key, Long num) {
-        redisTemplate.opsForValue().increment(key, num);
+    public Long addOne(Object key, Long num) {
+        return redisTemplate.opsForValue().increment(key, num);
     }
 
     /*----------------------------------------------hash------------------------------------------------------------*/

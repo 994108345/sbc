@@ -8,16 +8,10 @@ import java.io.Serializable;
 public class PageBean implements Serializable{
     private int start ;
     private int end ;
-    private boolean isPaging;
-
-
+    private boolean isPaging = true;
     private int pageSize = 10;
     private int curPage = 1;
-    public PageBean(){
-        start = this.getStart();
-        end = this.getEnd();
-        isPaging = false;
-    }
+
     //oracle数据库用法
     /*public int getStart() {
         return (curPage - 1)*pageSize + 1;
@@ -52,5 +46,13 @@ public class PageBean implements Serializable{
 
     public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
+    }
+
+    public boolean isPaging() {
+        return isPaging;
+    }
+
+    public void setPaging(boolean paging) {
+        isPaging = paging;
     }
 }

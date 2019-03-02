@@ -5,7 +5,6 @@ import cn.wzl.sbc.common.constant.KafkaConstant;
 import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.constant.RestConstant;
 import cn.wzl.sbc.common.result.MessageResult;
-import cn.wzl.sbc.common.result.ResultConstant;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.RedisUtil;
 import cn.wzl.sbc.model.permission.UserInfo;
@@ -127,7 +126,7 @@ public class SecKillServiceImpl implements SecKillService{
             System.out.println();
         } catch (Exception e) {
             log.error("secKillServiceImpl secKillByKafka:传输消息为" + JSON.toJSONString(userInfo),e);
-            result.setMessageAndStatus(ResultConstant.CODE.ERROR,"调用kafka失败");
+            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"调用kafka失败");
         }
         return result;
     }

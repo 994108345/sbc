@@ -29,9 +29,10 @@ public class ProdBrandDaoImpl implements ProdBrandDao {
             if(queryList == null){
                 throw new Exception("查询返回结果为null");
             }
+            result.setData(queryList);
         } catch (Exception e) {
             log.error("ProdBrandDaoImpl queryByParam is error:",e);
-            throw new Exception("ProdBrandDaoImpl queryByParam is error：更新错误");
+            throw new Exception("ProdBrandDaoImpl queryByParam is error：查询错误");
         }
         return result;
     }
@@ -44,7 +45,7 @@ public class ProdBrandDaoImpl implements ProdBrandDao {
             result.setTotalRecords(count);
         } catch (Exception e) {
             log.error("ProdBrandDaoImpl queryCountByParam is error:",e);
-            throw new Exception("ProdBrandDaoImpl queryCountByParam is error：更新错误");
+            throw new Exception("ProdBrandDaoImpl queryCountByParam is error：查询错误");
         }
         return result;
     }
@@ -56,7 +57,7 @@ public class ProdBrandDaoImpl implements ProdBrandDao {
             mapper.deleteByParam(prodBrand);
         } catch (Exception e) {
             log.error("ProdBrandDaoImpl deleteByParam is error:",e);
-            throw new Exception("ProdBrandDaoImpl deleteByParam is error：更新错误");
+            throw new Exception("ProdBrandDaoImpl deleteByParam is error：删除错误");
         }
         return result;
     }
@@ -65,10 +66,13 @@ public class ProdBrandDaoImpl implements ProdBrandDao {
     public MessageResult insertBrand(ProdBrand prodBrand) throws Exception {
         MessageResult result = new MessageResult();
         try {
-            mapper.insertBrand(prodBrand);
+            Integer count = mapper.insertBrand(prodBrand);
+            if(count < 1){
+                throw new Exception("插入记录数小于1");
+            }
         } catch (Exception e) {
             log.error("ProdBrandDaoImpl insertBrand is error:",e);
-            throw new Exception("ProdBrandDaoImpl insertBrand is error：更新错误");
+            throw new Exception("ProdBrandDaoImpl insertBrand is error：插入错误");
         }
         return result;
     }

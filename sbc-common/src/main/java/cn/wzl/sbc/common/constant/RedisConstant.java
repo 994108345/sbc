@@ -40,4 +40,16 @@ public class RedisConstant {
          */
         public static final Long TOKEN_OUT_TIME = 1L;
     }
+
+    /**
+     * redis生成编码
+     */
+    public static final class RedisCreateCode{
+        /**
+         * redis生产编码的类型
+         */
+        public final class CodeType{
+            public static final String BRAND_CODE = "brand";
+        }
+    }
 }

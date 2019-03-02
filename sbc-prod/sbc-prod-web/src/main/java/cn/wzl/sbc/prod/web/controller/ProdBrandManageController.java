@@ -5,6 +5,7 @@ import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.prod.model.ProdBrand;
 import cn.wzl.sbc.prod.model.page.PageBrandBean;
 import cn.wzl.sbc.prod.service.brand.ProdBrandService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -23,6 +24,13 @@ public class ProdBrandManageController {
         return prodBrandService.queryBrandByPage(pageBrandBean);
     }
 
+    @PostMapping("query-one-brand")
+    @ResponseBody
+    public PageBeanResult queryBrandByParam(@RequestBody PageBrandBean pageBrandBean){
+        PageBeanResult result = new PageBeanResult();
+        return prodBrandService.queryByParam(pageBrandBean);
+    }
+
     @PostMapping("update-brand")
     @ResponseBody
     public MessageResult updateBrand(@RequestBody ProdBrand prodBrand){
@@ -34,6 +42,14 @@ public class ProdBrandManageController {
     @ResponseBody
     public MessageResult insertBrand(@RequestBody ProdBrand prodBrand){
         MessageResult result = new MessageResult();
+        if(StringUtils.isBlank(prodBrand.getBrandName())){
+            result.setErrorMessage("品牌名称不能为空");
+            return result;
+        }
+        if(StringUtils.isBlank(prodBrand.getStatus())){
+            result.setErrorMessage("状态不能为空");
+            return result;
+        }
         return prodBrandService.insertBrand(prodBrand);
     }
 

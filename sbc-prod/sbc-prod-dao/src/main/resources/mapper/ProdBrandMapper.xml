@@ -6,7 +6,6 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="brand_code" jdbcType="VARCHAR" property="brandCode" />
     <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
-    <result column="spu_code" jdbcType="VARCHAR" property="spuCode" />
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="create_user" jdbcType="VARCHAR" property="createUser" />
@@ -16,7 +15,7 @@
   </resultMap>
 
   <sql id="Base_Column_List">
-    id, brand_code, brand_name, spu_code, status, create_time, create_user, last_modified_time, 
+    id, brand_code, brand_name, status, create_time, create_user, last_modified_time,
     last_modified_user, remark
   </sql>
 
@@ -26,14 +25,14 @@
     *
     from sbc_prod_brand
     <where>
+      <if test="id != null">
+        and id = #{id,jdbcType=VARCHAR}
+      </if>
       <if test="brandCode != null">
         and brand_code = #{brandCode,jdbcType=VARCHAR}
       </if>
       <if test="brandName != null">
         and  brand_name = #{brandName,jdbcType=VARCHAR}
-      </if>
-      <if test="spuCode != null">
-        and  spu_code = #{spuCode,jdbcType=VARCHAR}
       </if>
       <if test="status != null">
         and  status = #{status,jdbcType=VARCHAR}
@@ -51,7 +50,7 @@
   </select>
 
   <!--查询数据数目-->
-  <select id="queryCountByParam" resultMap="BaseResultMap">
+  <select id="queryCountByParam" resultType="java.lang.Integer">
     select
     count(*)
     from sbc_prod_brand
@@ -61,9 +60,6 @@
       </if>
       <if test="brandName != null">
         and  brand_name = #{brandName,jdbcType=VARCHAR}
-      </if>
-      <if test="spuCode != null">
-        and  spu_code = #{spuCode,jdbcType=VARCHAR}
       </if>
       <if test="status != null">
         and  status = #{status,jdbcType=VARCHAR}
@@ -103,9 +99,6 @@
       <if test="brandName != null">
         brand_name,
       </if>
-      <if test="spuCode != null">
-        spu_code,
-      </if>
       <if test="status != null">
         status,
       </if>
@@ -126,9 +119,6 @@
       <if test="brandName != null">
         #{brandName,jdbcType=VARCHAR},
       </if>
-      <if test="spuCode != null">
-        #{spuCode,jdbcType=VARCHAR},
-      </if>
       <if test="status != null">
         #{status,jdbcType=VARCHAR},
       </if>
@@ -145,14 +135,11 @@
   </insert>
 
   <!--根据编码更新品牌信息-->
-  <update id="updateBrandByCode">
+  <update id="updateBrandByCode" >
     update sbc_prod_brand
     <set>
       <if test="brandName != null">
         brand_name = #{brandName,jdbcType=VARCHAR},
-      </if>
-      <if test="spuCode != null">
-        spu_code = #{spuCode,jdbcType=VARCHAR},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=VARCHAR},
