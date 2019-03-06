@@ -1,7 +1,9 @@
 package cn.wzl.sbc.prod.service.article.impl;
 
+import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
+import cn.wzl.sbc.common.util.CodeUtil;
 import cn.wzl.sbc.prod.dao.bean.brand.ArticleDao;
 import cn.wzl.sbc.prod.model.Article;
 import cn.wzl.sbc.prod.model.page.ArticleBean;
@@ -24,6 +26,8 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Resource
     private ArticleDao articleDao;
+    @Resource
+    private CodeUtil codeUtil;
 
     @Override
     public PageBeanResult queryArticleByPage(ArticleBean articleBean) {
@@ -42,6 +46,8 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public MessageResult insertOneArticle(Article article) {
         MessageResult result = new MessageResult();
+        String code = codeUtil.createCodeByRedis(RedisConstant.RedisCreateCode.CodeType.ARTICLE_CODE);
+        article.setArticleCode(code);
         result = articleDao.insertOneArticle(article);
         return result;
     }
