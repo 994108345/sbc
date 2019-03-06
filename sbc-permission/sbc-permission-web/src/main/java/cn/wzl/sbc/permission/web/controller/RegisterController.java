@@ -1,6 +1,6 @@
 package cn.wzl.sbc.permission.web.controller;
 
-import cn.wzl.sbc.common.annotation.LogAccept;
+import cn.wzl.sbc.common.annotation.aop.LogAccept;
 import cn.wzl.sbc.common.constant.LogAcceptConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;

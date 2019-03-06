@@ -1,4 +1,4 @@
-package cn.wzl.sbc.common.annotation;
+package cn.wzl.sbc.common.annotation.aop;
 
 import java.lang.annotation.*;
 

@@ -50,6 +50,7 @@ public class RedisConstant {
          */
         public final class CodeType{
             public static final String BRAND_CODE = "brand";
+            public static final String ARTICLETYPE_CODE = "articletype";
         }
     }
 }

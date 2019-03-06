@@ -1,6 +1,6 @@
 package cn.wzl.sbc.permission.interceptor;
 
-import cn.wzl.sbc.common.annotation.LogAccept;
+import cn.wzl.sbc.common.annotation.aop.LogAccept;
 import cn.wzl.sbc.common.constant.CommonConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.util.CookieUtil;

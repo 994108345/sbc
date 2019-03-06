@@ -35,7 +35,7 @@ public class InterceptControllerAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(InterceptControllerAspect.class);
 
-    @Before("@annotation(cn.wzl.sbc.common.annotation.LogAccept)")
+    @Before("@annotation(cn.wzl.sbc.common.annotation.aop.LogAccept)")
     public MessageResult beforeMethod(JoinPoint joinPoint){
         MessageResult result = new MessageResult();
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
