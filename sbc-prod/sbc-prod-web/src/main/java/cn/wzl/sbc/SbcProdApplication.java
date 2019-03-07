@@ -18,8 +18,8 @@ import org.springframework.context.annotation.PropertySource;
  **/
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan("cn.wzl.sbc.prod.dao.mapper")
-@PropertySource({"classpath:sql.properties"})
+@MapperScan("cn.wzl.sbc.*.dao.mapper")
+@PropertySource({"classpath:sql.properties","classpath:param.properties"})
 @Import(SpringBeanUtil.class)
 public class SbcProdApplication {
     private final static Logger log = LoggerFactory.getLogger(SbcProdApplication.class);

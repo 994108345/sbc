@@ -29,7 +29,7 @@ public class WebConfig implements WebMvcConfigurer {
          * 日志拦截
          */
         registry.addInterceptor(logInterceptor).addPathPatterns("/**")
-                .excludePathPatterns("");
+                .excludePathPatterns("/sbc-prod/**","/sbc-permission/Login/login","/sbc-permission/Register/register","/sbc-permission/Login/loginOut");
 
         /**
          * addPathPatterns：拦截哪些路径("/**":代表拦截所有路径);
@@ -37,7 +37,7 @@ public class WebConfig implements WebMvcConfigurer {
          *  登陆拦截
          */
         registry.addInterceptor(loginInterceptor).addPathPatterns("/**")
-                .excludePathPatterns("/sbc-permission/Login/login","/sbc-permission/Register/register");
+                .excludePathPatterns("/sbc-permission/Login/login","/sbc-permission/Register/register","/sbc-permission/Login/loginOut");
 
     }
 

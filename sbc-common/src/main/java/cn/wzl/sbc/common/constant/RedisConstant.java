@@ -52,6 +52,7 @@ public class RedisConstant {
             public static final String BRAND_CODE = "brand";
             public static final String ARTICLETYPE_CODE = "articletype";
             public static final String ARTICLE_CODE = "article";
+            public static final String OSS_FILE_CODE = "ossFile";
         }
     }
 }

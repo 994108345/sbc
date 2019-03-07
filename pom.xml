@@ -178,6 +178,20 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
             </dependency>
+
+            <!--oss文件上传-->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-sdk-oss.version}</version>
+            </dependency>
+
+            <!--内部引用-->
+            <dependency>
+                <groupId>cn.wzl</groupId>
+                <artifactId>sbc-permission-interceptor</artifactId>
+                <version>${sbc-permission-interceptor.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -198,6 +212,7 @@
         <spring.boot.starter.log4j2>2.0.3.RELEASE</spring.boot.starter.log4j2>
         <spring.kafka.version>2.1.7.RELEASE</spring.kafka.version>
         <kafka.version>1.0.1</kafka.version>
+        <aliyun-sdk-oss.version>2.8.3</aliyun-sdk-oss.version>
 
         <spring.cloud.commons.version>2.0.2.RELEASE</spring.cloud.commons.version>
         <commons.lang.version>2.5</commons.lang.version>
@@ -208,7 +223,8 @@
 
         <mybatis.version>3.4.6</mybatis.version>
         <mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
-
+        <!--内部引用-->
+        <sbc-permission-interceptor.version>1.0-SNAPSHOT</sbc-permission-interceptor.version>
         <!--跳过测试-->
         <skipTests>true</skipTests>
     </properties>

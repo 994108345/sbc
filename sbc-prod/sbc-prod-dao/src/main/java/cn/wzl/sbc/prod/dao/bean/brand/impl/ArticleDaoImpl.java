@@ -39,7 +39,7 @@ public class ArticleDaoImpl implements ArticleDao {
                 Integer count = mapper.queryArticleCount(articleBean);
                 result.setTotalRecords(count);
             }
-            result.setData(result);
+            result.setData(list);
         } catch (Exception e) {
             log.error("ArticleDao queryArticleByPage has error ......",e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),e.getMessage());
@@ -66,7 +66,7 @@ public class ArticleDaoImpl implements ArticleDao {
     public MessageResult insertOneArticle(Article article) {
         MessageResult result = new MessageResult();
         try {
-            Integer count = mapper.updateOneArticle(article);
+            Integer count = mapper.insertOneArticle(article);
             if(count == null || count < 1){
                 throw new Exception("插入记录返回参数异常:"+count);
             }

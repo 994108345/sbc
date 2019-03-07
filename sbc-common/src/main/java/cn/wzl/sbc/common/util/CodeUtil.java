@@ -23,11 +23,8 @@ public class CodeUtil {
      * @return
      */
     public String createCodeByRedis(String type){
-        /*设置日期格式*/
-        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
-        String currentDate = df.format(new Date());
-        Long num = redisUtil.addOne(currentDate,1L);
-        String code = type + currentDate + num;
+        Long num = redisUtil.addOne(type,1L);
+        String code = type + num;
         return code;
     }
 }

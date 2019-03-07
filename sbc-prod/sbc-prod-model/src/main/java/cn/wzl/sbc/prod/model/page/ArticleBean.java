@@ -24,7 +24,7 @@ public class ArticleBean  extends PageBean {
 
     private String content;
 
-    private String tag;
+    private String tags;
 
     private String status;
 
@@ -37,6 +37,16 @@ public class ArticleBean  extends PageBean {
     private String lastModifiedUser;
 
     private String remark;
+
+    private String isPrivate;
+
+    public String getIsPrivate() {
+        return isPrivate;
+    }
+
+    public void setIsPrivate(String isPrivate) {
+        this.isPrivate = isPrivate;
+    }
 
     public Integer getId() {
         return id;
@@ -94,12 +104,12 @@ public class ArticleBean  extends PageBean {
         this.content = content == null ? null : content.trim();
     }
 
-    public String getTag() {
-        return tag;
+    public String getTags() {
+        return tags;
     }
 
-    public void setTag(String tag) {
-        this.tag = tag == null ? null : tag.trim();
+    public void setTags(String tags) {
+        this.tags = tags == null ? null : tags.trim();
     }
 
     public String getStatus() {

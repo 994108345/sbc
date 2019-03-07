@@ -9,17 +9,18 @@
     <result column="author" jdbcType="VARCHAR" property="author" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="create_user" jdbcType="VARCHAR" property="createUser" />
     <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime" />
     <result column="last_modified_user" jdbcType="VARCHAR" property="lastModifiedUser" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="is_private" jdbcType="VARCHAR" property="isPrivate" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, article_code, user_id, article_type, author, title, content, tag, status, create_time, 
-    create_user, last_modified_time, last_modified_user, remark
+    id, article_code, user_id, article_type, author, title, content, tags, status, create_time,
+    create_user, last_modified_time, last_modified_user, remark,is_Private
   </sql>
 
   <select id="queryArticleByPage" resultMap="BaseResultMap">
@@ -46,8 +47,8 @@
       <if test="content != null">
         and  content = #{content,jdbcType=VARCHAR}
       </if>
-      <if test="tag != null">
-        and tag = #{tag,jdbcType=VARCHAR}
+      <if test="tags != null">
+        and tags = #{tags,jdbcType=VARCHAR}
       </if>
       <if test="status != null">
         and status = #{status,jdbcType=VARCHAR}
@@ -57,6 +58,9 @@
       </if>
       <if test="lastModifiedUser != null">
         and last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR}
+      </if>
+      <if test="isPrivate != null">
+        and is_private = #{isPrivate,jdbcType=VARCHAR}
       </if>
       <if test="remark != null">
         and remark = #{remark,jdbcType=VARCHAR}
@@ -91,8 +95,8 @@
       <if test="content != null">
         and  content = #{content,jdbcType=VARCHAR}
       </if>
-      <if test="tag != null">
-        and tag = #{tag,jdbcType=VARCHAR}
+      <if test="tags != null">
+        and tags = #{tags,jdbcType=VARCHAR}
       </if>
       <if test="status != null">
         and status = #{status,jdbcType=VARCHAR}
@@ -102,6 +106,9 @@
       </if>
       <if test="lastModifiedUser != null">
         and last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR}
+      </if>
+      <if test="isPrivate != null">
+        and is_private = #{isPrivate,jdbcType=VARCHAR}
       </if>
       <if test="remark != null">
         and remark = #{remark,jdbcType=VARCHAR}
@@ -128,14 +135,17 @@
       <if test="content != null">
         content = #{content,jdbcType=VARCHAR},
       </if>
-      <if test="tag != null">
-        tag = #{tag,jdbcType=VARCHAR},
+      <if test="tags != null">
+        tags = #{tags,jdbcType=VARCHAR},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=VARCHAR},
       </if>
       <if test="remark != null">
         remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="isPrivate != null">
+        is_private = #{isPrivate,jdbcType=VARCHAR},
       </if>
     </set>
     <where>
@@ -169,8 +179,8 @@
       <if test="content != null">
         content,
       </if>
-      <if test="tag != null">
-        tag,
+      <if test="tags != null">
+        tags,
       </if>
       <if test="status != null">
         status,
@@ -180,6 +190,9 @@
       </if>
       <if test="lastModifiedUser != null">
         last_modified_user,
+      </if>
+      <if test="isPrivate != null">
+        is_private,
       </if>
       <if test="remark != null">
         remark,
@@ -204,8 +217,8 @@
       <if test="content != null">
         #{content,jdbcType=VARCHAR},
       </if>
-      <if test="tag != null">
-        #{tag,jdbcType=VARCHAR},
+      <if test="tags != null">
+        #{tags,jdbcType=VARCHAR},
       </if>
       <if test="status != null">
         #{status,jdbcType=VARCHAR},
@@ -215,6 +228,9 @@
       </if>
       <if test="lastModifiedUser != null">
         #{lastModifiedUser,jdbcType=VARCHAR},
+      </if>
+      <if test="isPrivate != null">
+        #{isPrivate,jdbcType=VARCHAR},
       </if>
       <if test="remark != null">
         #{remark,jdbcType=VARCHAR},
@@ -236,12 +252,12 @@
   <insert id="insert" parameterType="com.yc.lottery.bean.Article">
     insert into sbc_article (id, article_code, user_id,
       article_type, author, title,
-      content, tag, status,
+      content, tags, status,
       create_time, create_user, last_modified_time,
       last_modified_user, remark)
     values (#{id,jdbcType=INTEGER}, #{articleCode,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR},
       #{articleType,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR},
-      #{content,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR},
+      #{content,jdbcType=VARCHAR}, #{tags,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR},
       #{createTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=VARCHAR}, #{lastModifiedTime,jdbcType=TIMESTAMP},
       #{lastModifiedUser,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
   </insert>
@@ -269,8 +285,8 @@
       <if test="content != null">
         content,
       </if>
-      <if test="tag != null">
-        tag,
+      <if test="tags != null">
+        tags,
       </if>
       <if test="status != null">
         status,
@@ -313,8 +329,8 @@
       <if test="content != null">
         #{content,jdbcType=VARCHAR},
       </if>
-      <if test="tag != null">
-        #{tag,jdbcType=VARCHAR},
+      <if test="tags != null">
+        #{tags,jdbcType=VARCHAR},
       </if>
       <if test="status != null">
         #{status,jdbcType=VARCHAR},
@@ -357,8 +373,8 @@
       <if test="content != null">
         content = #{content,jdbcType=VARCHAR},
       </if>
-      <if test="tag != null">
-        tag = #{tag,jdbcType=VARCHAR},
+      <if test="tags != null">
+        tags = #{tags,jdbcType=VARCHAR},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=VARCHAR},
@@ -389,7 +405,7 @@
       author = #{author,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
       content = #{content,jdbcType=VARCHAR},
-      tag = #{tag,jdbcType=VARCHAR},
+      tags = #{tags,jdbcType=VARCHAR},
       status = #{status,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       create_user = #{createUser,jdbcType=VARCHAR},
