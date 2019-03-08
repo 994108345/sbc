@@ -40,6 +40,32 @@ public class ArticleBean  extends PageBean {
 
     private String isPrivate;
 
+    /**
+     * 个人分类
+     */
+    private String articlePersonalClassification;
+
+    /**
+     * 审核状态（0未审核，2审核失败，1审核成功）
+     */
+    private String auditStatus;
+
+    public String getAuditStatus() {
+        return auditStatus;
+    }
+
+    public void setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
+    }
+
+    public String getArticlePersonalClassification() {
+        return articlePersonalClassification;
+    }
+
+    public void setArticlePersonalClassification(String articlePersonalClassification) {
+        this.articlePersonalClassification = articlePersonalClassification;
+    }
+
     public String getIsPrivate() {
         return isPrivate;
     }

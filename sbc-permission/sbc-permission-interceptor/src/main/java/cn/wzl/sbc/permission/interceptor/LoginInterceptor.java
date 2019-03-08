@@ -9,6 +9,7 @@ import cn.wzl.sbc.common.util.CookieUtil;
 import cn.wzl.sbc.common.util.RedisUtil;
 import cn.wzl.sbc.model.permission.UserInfo;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,7 +50,8 @@ public class LoginInterceptor implements HandlerInterceptor {
 
             Cookie cookie = CookieUtil.get(request, CommonConstant.CookieConstant.TOKEN);
             String token = cookie.getValue();
-            UserInfo userInfo = (UserInfo)redisUtil.getByKey(token);
+            String userInfoStr = (String)redisUtil.getByKey(token);
+            UserInfo userInfo = JSONObject.parseObject(userInfoStr,UserInfo.class);
             if(userInfo == null){
                 throw new Exception("缺少登陆信息，请先登陆");
             }

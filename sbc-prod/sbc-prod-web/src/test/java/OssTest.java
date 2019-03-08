@@ -1,5 +1,6 @@
 import cn.wzl.sbc.SbcProdApplication;
 import cn.wzl.sbc.common.result.MessageResult;
+import cn.wzl.sbc.common.util.ArrayUtil;
 import cn.wzl.sbc.common.util.OssUtil;
 import cn.wzl.sbc.common.util.RedisUtil;
 import org.junit.Test;
@@ -10,6 +11,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.annotation.Resource;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author ：wzl
@@ -39,6 +42,22 @@ public class OssTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void arrTest(){
+        String[] arr1 = {"1","3","4"};
+        String[] arr2 = {"1","2","3"};
+        List<String> list = new ArrayList<>();
+        list.add("5");list.add("2");list.add("6");
+        String[] arr3 = new String[0];
+        try {
+            arr3 = ArrayUtil.arrAddList(arr1,list,String.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(arr3);
+
     }
 
 }

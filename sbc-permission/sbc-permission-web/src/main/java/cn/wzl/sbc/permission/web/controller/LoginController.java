@@ -101,13 +101,12 @@ public class LoginController {
                 result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"Cookie中的token不合法");
                 return result;
             }
-            String userName = (String)redisUtil.getByKey(token);
-            if(userName == null){
+            String userJsonStr = (String)redisUtil.getByKey(token);
+            if(userJsonStr == null){
                 throw new Exception("token不存在");
             }
             /*token存在，说明合法，删除Cookie中的token，redis中的token，userName*/
             redisUtil.delByKey(token);
-            redisUtil.delByKey(userName);
             CookieUtil.delCookie(request, CommonConstant.CookieConstant.TOKEN);
         }catch (Exception e){
             log.error("loginController loginOut has a error",e);

@@ -17,10 +17,12 @@
     <result column="last_modified_user" jdbcType="VARCHAR" property="lastModifiedUser" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="is_private" jdbcType="VARCHAR" property="isPrivate" />
+    <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification" />
+    <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus" />
   </resultMap>
   <sql id="Base_Column_List">
     id, article_code, user_id, article_type, author, title, content, tags, status, create_time,
-    create_user, last_modified_time, last_modified_user, remark,is_Private
+    create_user, last_modified_time, last_modified_user, remark,is_Private,article_Personal_Classification,audit_Status
   </sql>
 
   <select id="queryArticleByPage" resultMap="BaseResultMap">
@@ -64,6 +66,12 @@
       </if>
       <if test="remark != null">
         and remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="articlePersonalClassification != null">
+        and article_Personal_Classification = #{articlePersonalClassification,jdbcType=VARCHAR}
+      </if>
+      <if test="auditStatus != null">
+        and audit_Status = #{auditStatus,jdbcType=VARCHAR}
       </if>
     </where>
     <if test="isPaging == true">
@@ -113,6 +121,12 @@
       <if test="remark != null">
         and remark = #{remark,jdbcType=VARCHAR}
       </if>
+      <if test="articlePersonalClassification != null">
+        and article_Personal_Classification = #{articlePersonalClassification,jdbcType=VARCHAR}
+      </if>
+      <if test="auditStatus != null">
+        and audit_Status = #{auditStatus,jdbcType=VARCHAR}
+      </if>
     </where>
   </select>
 
@@ -146,6 +160,12 @@
       </if>
       <if test="isPrivate != null">
         is_private = #{isPrivate,jdbcType=VARCHAR},
+      </if>
+      <if test="articlePersonalClassification != null">
+      article_Personal_Classification = #{articlePersonalClassification,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null">
+       audit_Status = #{auditStatus,jdbcType=VARCHAR},
       </if>
     </set>
     <where>
@@ -197,6 +217,12 @@
       <if test="remark != null">
         remark,
       </if>
+      <if test="articlePersonalClassification != null">
+       article_Personal_Classification,
+      </if>
+      <if test="auditStatus != null">
+       audit_Status,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="articleCode != null">
@@ -234,6 +260,12 @@
       </if>
       <if test="remark != null">
         #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="articlePersonalClassification != null">
+        #{articlePersonalClassification,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null">
+        #{auditStatus,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
