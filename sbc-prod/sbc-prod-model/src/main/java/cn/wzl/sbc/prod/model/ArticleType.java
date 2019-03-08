@@ -1,8 +1,11 @@
 package cn.wzl.sbc.prod.model;
 
+import cn.wzl.sbc.model.permission.UserInfo;
+import cn.wzl.sbc.model.permission.UserMessage;
+
 import java.util.Date;
 
-public class ArticleType {
+public class ArticleType extends UserMessage {
     private Integer id;
 
     private String articleTypeCode;

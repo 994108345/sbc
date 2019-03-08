@@ -1,11 +1,13 @@
 package cn.wzl.sbc.model.page;
 
+import cn.wzl.sbc.model.permission.UserMessage;
+
 import java.io.Serializable;
 
 /**
  * Created by wenzailong on 2018/1/8.
  */
-public class PageBean implements Serializable{
+public class PageBean extends UserMessage implements Serializable{
     private int start ;
     private int end ;
     private boolean isPaging = true;

@@ -22,6 +22,16 @@ public  final class CommonConstant {
     }
 
     /**
+     * request常量
+     */
+    public static final class RequestConstant{
+        /**
+         * 用户名
+         */
+        public static final String userName = "userName";
+    }
+
+    /**
      * session常量
      */
     public static final  class SessionConstant{

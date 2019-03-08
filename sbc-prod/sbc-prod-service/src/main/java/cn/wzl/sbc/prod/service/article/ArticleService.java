@@ -13,11 +13,19 @@ import cn.wzl.sbc.prod.model.page.ArticleBean;
 public interface ArticleService {
 
     /**
-     * 查询
+     * 查询（拼文章内容）
      * @param articleBean
      * @return
      */
     PageBeanResult queryArticleByPage(ArticleBean articleBean);
+
+
+    /**
+     * 简单查询（不拼文章内容）
+     * @param articleBean
+     * @return
+     */
+    PageBeanResult querySimpleArticleByPage(ArticleBean articleBean);
 
     /**
      * 更新

@@ -58,6 +58,11 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public PageBeanResult querySimpleArticleByPage(ArticleBean articleBean) {
+        return articleDao.queryArticleByPage(articleBean);
+    }
+
+    @Override
     public MessageResult updateOneArticle(Article article) {
         MessageResult result = new MessageResult();
         /*将文章内容变成流存到oss*/

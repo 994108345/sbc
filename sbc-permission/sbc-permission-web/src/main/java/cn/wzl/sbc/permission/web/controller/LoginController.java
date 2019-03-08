@@ -71,12 +71,9 @@ public class LoginController {
             try {
                 /*token存cookie*/
                 CookieUtil.set(response,CommonConstant.CookieConstant.TOKEN,token,CommonConstant.CookieConstant.LOGIN_OUT_TIME);
-                /*token存redis*/
-                redisUtil.addWithTime(token,user.getUserName(),RedisConstant.RedisOutTimes.TOKEN_OUT_TIME, TimeUnit.HOURS);
-                /*userName存session*/
-                /*将usre转成json字符串*/
                 String userStr = JSONObject.toJSONString(user);
-                redisUtil.addWithTime(user.getUserName(), userStr,RedisConstant.RedisOutTimes.TOKEN_OUT_TIME,TimeUnit.HOURS);
+                /*token存redis*/
+                redisUtil.addWithTime(token,userStr,RedisConstant.RedisOutTimes.TOKEN_OUT_TIME, TimeUnit.HOURS);
             } catch (Exception e) {
                 log.error(String.format("redis存储失败-账号为:%s,错误信息为:%s",userInfo.toString(),e.getMessage()),e);
             }

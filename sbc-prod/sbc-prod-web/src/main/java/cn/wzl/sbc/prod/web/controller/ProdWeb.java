@@ -1,7 +1,8 @@
 package cn.wzl.sbc.prod.web.controller;
 
+import cn.wzl.sbc.common.constant.CommonConstant;
+import cn.wzl.sbc.common.constant.JsonConstant;
 import cn.wzl.sbc.common.result.MessageResult;
-import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.ClassUtil;
 import cn.wzl.sbc.common.util.SpringBeanUtil;
@@ -27,6 +28,7 @@ public class ProdWeb {
     @PostMapping("web/{serviceName}/{method}")
     @ResponseBody
     public Object webPost(@RequestBody Object obj ,
+                                   @RequestAttribute(value = CommonConstant.RequestConstant.userName) String userName,
                                    @PathVariable("serviceName")String serviceName,
                                    @PathVariable("method")String method){
         MessageResult result = new MessageResult();
@@ -40,6 +42,10 @@ public class ProdWeb {
         }
         if(StringUtils.isBlank(method)){
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"method不能为空");
+            return result;
+        }
+        if(StringUtils.isBlank(userName)){
+            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"用户名不能为空");
             return result;
         }
         Object bean = SpringBeanUtil.getBean(serviceName);
@@ -56,7 +62,11 @@ public class ProdWeb {
                 throw new Exception("该方法没有入参");
             }
             String jsonStr = JSONObject.toJSONString(obj);
-            Object paramObj =JSONObject.parseObject(jsonStr ,parmeterClass);
+            /*给请求参数加人用户名*/
+            JSONObject jsonObj = JSONObject.parseObject(jsonStr);
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_USERNAME,userName);
+            String param = JSONObject.toJSONString(jsonObj);
+            Object paramObj =JSONObject.parseObject(param ,parmeterClass);
             /*调用目标方法*/
             Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),paramObj);
             return returnParam;
