@@ -46,6 +46,19 @@ public class Article extends UserMessage {
      */
     private String auditStatus;
 
+    /**
+     * 是否原创：0转载，1原创，2翻译
+     */
+    private  String isOriginal;
+
+    public String getIsOriginal() {
+        return isOriginal;
+    }
+
+    public void setIsOriginal(String isOriginal) {
+        this.isOriginal = isOriginal;
+    }
+
     public String getAuditStatus() {
         return auditStatus;
     }

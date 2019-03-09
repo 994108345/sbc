@@ -44,7 +44,7 @@ public class ArrayUtil<T> {
             oldNew[i] = arr[i];
         }
         for (int i = 0; i < listSize; i++) {
-            oldNew[i+listSize] = list.get(i);
+            oldNew[i+arrSize] = list.get(i);
         }
         return oldNew;
     }

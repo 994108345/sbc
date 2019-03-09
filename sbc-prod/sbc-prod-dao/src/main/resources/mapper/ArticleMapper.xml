@@ -19,10 +19,12 @@
     <result column="is_private" jdbcType="VARCHAR" property="isPrivate" />
     <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification" />
     <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus" />
+    <result column="is_Original" jdbcType="VARCHAR" property="isOriginal" />
   </resultMap>
   <sql id="Base_Column_List">
     id, article_code, user_id, article_type, author, title, content, tags, status, create_time,
-    create_user, last_modified_time, last_modified_user, remark,is_Private,article_Personal_Classification,audit_Status
+    create_user, last_modified_time, last_modified_user, remark,is_Private,
+    article_Personal_Classification,audit_Status,is_Original
   </sql>
 
   <select id="queryArticleByPage" resultMap="BaseResultMap">
@@ -72,6 +74,9 @@
       </if>
       <if test="auditStatus != null">
         and audit_Status = #{auditStatus,jdbcType=VARCHAR}
+      </if>
+      <if test="isOriginal != null">
+        and is_Original = #{isOriginal,jdbcType=VARCHAR}
       </if>
     </where>
     <if test="isPaging == true">
@@ -127,6 +132,9 @@
       <if test="auditStatus != null">
         and audit_Status = #{auditStatus,jdbcType=VARCHAR}
       </if>
+      <if test="isOriginal != null">
+        and is_Original = #{isOriginal,jdbcType=VARCHAR}
+      </if>
     </where>
   </select>
 
@@ -166,6 +174,9 @@
       </if>
       <if test="auditStatus != null">
        audit_Status = #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="isOriginal != null">
+       is_Original = #{isOriginal,jdbcType=VARCHAR},
       </if>
     </set>
     <where>
@@ -223,6 +234,9 @@
       <if test="auditStatus != null">
        audit_Status,
       </if>
+      <if test="isOriginal != null">
+        is_Original,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="articleCode != null">
@@ -266,6 +280,9 @@
       </if>
       <if test="auditStatus != null">
         #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="isOriginal != null">
+        #{isOriginal,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
