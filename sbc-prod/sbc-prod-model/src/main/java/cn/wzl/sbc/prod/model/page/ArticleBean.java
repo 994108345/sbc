@@ -1,6 +1,7 @@
 package cn.wzl.sbc.prod.model.page;
 
 import cn.wzl.sbc.model.page.PageBean;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
 
@@ -28,10 +29,12 @@ public class ArticleBean  extends PageBean {
 
     private String status;
 
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date createTime;
 
     private String createUser;
 
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date lastModifiedTime;
 
     private String lastModifiedUser;

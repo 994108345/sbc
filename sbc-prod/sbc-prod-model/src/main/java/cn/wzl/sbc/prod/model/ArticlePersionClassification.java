@@ -2,6 +2,7 @@ package cn.wzl.sbc.prod.model;
 
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.model.permission.UserMessage;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
 
@@ -12,10 +13,12 @@ public class ArticlePersionClassification extends UserMessage {
 
     private String persionClassification;
 
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date createTime;
 
     private String createUser;
 
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date lastModifiedTime;
 
     private String lastModifiedUser;
