@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: sbc-prod
+
+  profiles:
+    active: test
+#开启权限认证
+  security:
+    basic:
+      enabled: true
+    user:
+      name: root
+      password: root
+
+server:
+  host: localhost
+  port: 7014
+  servlet:
+    session:
+      timeout: 3600s
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@47.104.240.104:7001/eureka/ #47.104.240.104
+
+mybatis:
+  typeAliasesPackage: cn.wzl.sbc.model
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    cn.wzl.sbc: debug  #mybatis输出sql日志
