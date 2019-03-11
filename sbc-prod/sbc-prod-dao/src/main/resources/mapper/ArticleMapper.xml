@@ -69,8 +69,11 @@
       <if test="remark != null">
         and remark = #{remark,jdbcType=VARCHAR}
       </if>
-      <if test="articlePersonalClassification != null">
-        and article_Personal_Classification = #{articlePersonalClassification,jdbcType=VARCHAR}
+      <if test="articlePersonalClassificationList != null">
+        and
+        <foreach collection="articlePersonalClassificationList" separator="or" open="(" close=")" item="item" index="index">
+          article_Personal_Classification like "%"#{item}"%"
+        </foreach>
       </if>
       <if test="auditStatus != null">
         and audit_Status = #{auditStatus,jdbcType=VARCHAR}
@@ -126,8 +129,11 @@
       <if test="remark != null">
         and remark = #{remark,jdbcType=VARCHAR}
       </if>
-      <if test="articlePersonalClassification != null">
-        and article_Personal_Classification = #{articlePersonalClassification,jdbcType=VARCHAR}
+      <if test="articlePersonalClassificationList != null">
+        and
+        <foreach collection="articlePersonalClassificationList" separator="or" open="(" close=")" item="item" index="index">
+          article_Personal_Classification like "%"#{item}"%"
+        </foreach>
       </if>
       <if test="auditStatus != null">
         and audit_Status = #{auditStatus,jdbcType=VARCHAR}
@@ -137,7 +143,6 @@
       </if>
     </where>
   </select>
-
 
   <update id="updateOneArticle" >
     update sbc_article

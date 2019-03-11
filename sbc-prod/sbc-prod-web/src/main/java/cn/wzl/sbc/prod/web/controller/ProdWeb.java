@@ -5,6 +5,7 @@ import cn.wzl.sbc.common.constant.JsonConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.ClassUtil;
+import cn.wzl.sbc.common.util.ObjectTranUtil;
 import cn.wzl.sbc.common.util.SpringBeanUtil;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.StringUtils;
@@ -67,8 +68,9 @@ public class ProdWeb {
             jsonObj.put(JsonConstant.UserInfo.USRINFO_USERNAME,userName);
             String param = JSONObject.toJSONString(jsonObj);
             Object paramObj =JSONObject.parseObject(param ,parmeterClass);
+            Object requestParam = ObjectTranUtil.emptyToNull(paramObj);
             /*调用目标方法*/
-            Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),paramObj);
+            Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),requestParam);
             return returnParam;
 //            result = JSONObject.parseObject(JSONObject.toJSONString(returnParam), PageBeanResult.class);
         } catch (Exception e) {

@@ -36,7 +36,7 @@ public class ArrayUtil<T> {
      * @param <T>
      * @return
      */
-    public static<T> T[] arrAddList(T[] arr, List<T> list,Class type){
+    public static<T> T[] listToArr(T[] arr, List<T> list, Class type){
         int listSize = list.size();
         int arrSize = arr.length;
         T[] oldNew = (T[]) Array.newInstance(type, listSize + arrSize);
@@ -69,5 +69,19 @@ public class ArrayUtil<T> {
             }
         }
         return list;
+    }
+
+    /**
+     * 将数组的元素添加到新建的集合当中，并返回集合
+     * @param arr
+     * @param <T>
+     * @return
+     */
+    public static<T> List<T> arrToList(T[] arr){
+        List<T> resultList = new ArrayList();
+        for (T t : arr) {
+            resultList.add(t);
+        }
+        return resultList;
     }
 }

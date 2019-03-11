@@ -52,7 +52,7 @@ public class OssTest {
         list.add("5");list.add("2");list.add("6");
         String[] arr3 = new String[0];
         try {
-            arr3 = ArrayUtil.arrAddList(arr1,list,String.class);
+            arr3 = ArrayUtil.listToArr(arr1,list,String.class);
         } catch (Exception e) {
             e.printStackTrace();
         }

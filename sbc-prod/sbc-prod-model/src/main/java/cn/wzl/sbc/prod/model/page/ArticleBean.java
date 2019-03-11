@@ -4,6 +4,7 @@ import cn.wzl.sbc.model.page.PageBean;
 import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author ：wzl
@@ -49,6 +50,16 @@ public class ArticleBean  extends PageBean {
     private String articlePersonalClassification;
 
     /**
+     * 个人分类集合
+     */
+    private List<String> articlePersonalClassificationList;
+
+    /**
+     * 个人分类数组
+     */
+    private String[] articlePersonalClassficationArr;
+
+    /**
      * 审核状态（0未审核，2审核失败，1审核成功）
      */
     private String auditStatus;
@@ -57,6 +68,22 @@ public class ArticleBean  extends PageBean {
      * 是否原创：0转载，1原创，2翻译
      */
     private  String isOriginal;
+
+    public String[] getArticlePersonalClassficationArr() {
+        return articlePersonalClassficationArr;
+    }
+
+    public void setArticlePersonalClassficationArr(String[] articlePersonalClassficationArr) {
+        this.articlePersonalClassficationArr = articlePersonalClassficationArr;
+    }
+
+    public List<String> getArticlePersonalClassificationList() {
+        return articlePersonalClassificationList;
+    }
+
+    public void setArticlePersonalClassificationList(List<String> articlePersonalClassificationList) {
+        this.articlePersonalClassificationList = articlePersonalClassificationList;
+    }
 
     public String getIsOriginal() {
         return isOriginal;

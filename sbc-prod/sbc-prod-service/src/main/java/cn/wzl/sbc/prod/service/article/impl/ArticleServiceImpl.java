@@ -13,7 +13,6 @@ import cn.wzl.sbc.prod.model.Article;
 import cn.wzl.sbc.prod.model.ArticlePersionClassification;
 import cn.wzl.sbc.prod.model.page.ArticleBean;
 import cn.wzl.sbc.prod.service.article.ArticleService;
-import org.apache.logging.log4j.core.util.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -43,6 +42,12 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public PageBeanResult queryArticleByPage(ArticleBean articleBean) {
         PageBeanResult result = new PageBeanResult();
+        List<String> articlePcList = articleBean.getArticlePersonalClassificationList();
+        String[] articlePcArr = articleBean.getArticlePersonalClassficationArr();
+        if(articlePcArr != null || articlePcArr.length < 1){
+            articlePcList = ArrayUtil.arrToList(articlePcArr);
+            articleBean.setArticlePersonalClassificationList(articlePcList);
+        }
         result = articleDao.queryArticleByPage(articleBean);
         if(result.isSuccess()){
             List<Article> list = (ArrayList)result.getData();
@@ -166,7 +171,7 @@ public class ArticleServiceImpl implements ArticleService {
             /*返回null代表没有新增的类型，不需要更新操作*/
             return null;
         }else{
-            oldNew = ArrayUtil.arrAddList(oldPCs,beyond,String.class);
+            oldNew = ArrayUtil.listToArr(oldPCs,beyond,String.class);
         }
         /*将结果数组拼成字符串*/
         String result = ArrayUtil.arrToStr(oldNew,",");
