@@ -49,6 +49,8 @@ public class ProdWeb {
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"用户名不能为空");
             return result;
         }
+        /*去空字符串*/
+        obj = ObjectTranUtil.emptyToNullOfObj(obj);
         Object bean = SpringBeanUtil.getBean(serviceName);
         Class serviceClass = bean.getClass();
         try {
@@ -68,9 +70,8 @@ public class ProdWeb {
             jsonObj.put(JsonConstant.UserInfo.USRINFO_USERNAME,userName);
             String param = JSONObject.toJSONString(jsonObj);
             Object paramObj =JSONObject.parseObject(param ,parmeterClass);
-            Object requestParam = ObjectTranUtil.emptyToNull(paramObj);
             /*调用目标方法*/
-            Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),requestParam);
+            Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),paramObj);
             return returnParam;
 //            result = JSONObject.parseObject(JSONObject.toJSONString(returnParam), PageBeanResult.class);
         } catch (Exception e) {

@@ -2,11 +2,14 @@ package cn.wzl.sbc.common.util;
 
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @Author wzl
@@ -44,6 +47,26 @@ public class ObjectTranUtil {
             log.error("ObjectTranUtil emptyToNull has error",e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"对象转换失败");
         }
+        return result;
+    }
+
+    /**
+     * 对象中的属性如果为空字符串(""),则转成null(只针对普通类型，暂时不支持数组和集合)
+     * @param param 需要判断的数据
+     * @throws IllegalAccessException
+     */
+    public static Object emptyToNullOfObj(Object param){
+        /*获取对象的类类型*/
+        JSONObject jsonObject = JSONObject.parseObject(JSONObject.toJSONString(param));
+        Set<Map.Entry<String, Object>> set =  jsonObject.entrySet();
+        for (Map.Entry<String, Object> stringObjectEntry : set) {
+            String key = stringObjectEntry.getKey();
+            Object value = jsonObject.get(key);
+            if(value != null && "".equals(String.valueOf(value))){
+                jsonObject.put(key,null);
+            }
+        }
+        Object result = JSONObject.parse(jsonObject.toJSONString());
         return result;
     }
 }

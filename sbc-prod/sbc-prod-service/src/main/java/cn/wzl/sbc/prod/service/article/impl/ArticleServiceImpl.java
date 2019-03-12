@@ -44,7 +44,7 @@ public class ArticleServiceImpl implements ArticleService {
         PageBeanResult result = new PageBeanResult();
         List<String> articlePcList = articleBean.getArticlePersonalClassificationList();
         String[] articlePcArr = articleBean.getArticlePersonalClassficationArr();
-        if(articlePcArr != null || articlePcArr.length < 1){
+        if(articlePcArr != null && articlePcArr.length > 0){
             articlePcList = ArrayUtil.arrToList(articlePcArr);
             articleBean.setArticlePersonalClassificationList(articlePcList);
         }
