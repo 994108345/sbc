@@ -69,6 +69,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public PageBeanResult querySimpleArticleByPage(ArticleBean articleBean) {
+        articleBean.setAuthor(articleBean.getUsrInfoUserName());
         return articleDao.queryArticleByPage(articleBean);
     }
 

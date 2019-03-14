@@ -72,4 +72,13 @@ public class StrTest {
             this.list = list;
         }
     }
+
+    @Test
+    public void dubboTest(){
+        double b = 323.34;
+        double a = 4.85;
+        double c = a - b;
+        String str = String.valueOf(b);
+        System.out.println(b);
+    }
 }
