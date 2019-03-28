@@ -1,9 +1,7 @@
-package cn.wzl.sbc.prod.dao.bean.brand;
+package cn.wzl.sbc.prod.dao.bean.article;
 
 import cn.wzl.sbc.common.result.MessageResult;
-import cn.wzl.sbc.prod.model.ArticlePersionClassification;
-
-import java.util.List;
+import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
 
 /**
  * @author ：wzl

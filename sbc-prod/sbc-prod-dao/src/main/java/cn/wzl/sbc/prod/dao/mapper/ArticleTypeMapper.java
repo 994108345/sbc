@@ -1,6 +1,6 @@
 package cn.wzl.sbc.prod.dao.mapper;
 
-import cn.wzl.sbc.prod.model.ArticleType;
+import cn.wzl.sbc.prod.model.article.ArticleType;
 import cn.wzl.sbc.prod.model.page.ArticleTypeBean;
 import org.apache.ibatis.annotations.Mapper;
 

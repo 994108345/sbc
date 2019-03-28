@@ -1,4 +1,4 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.article;
 
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.model.permission.UserMessage;

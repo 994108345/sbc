@@ -1,7 +1,7 @@
 package cn.wzl.sbc.prod.service.article;
 
 import cn.wzl.sbc.common.result.MessageResult;
-import cn.wzl.sbc.prod.model.ArticlePersionClassification;
+import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
 
 /**
  * @author ：wzl

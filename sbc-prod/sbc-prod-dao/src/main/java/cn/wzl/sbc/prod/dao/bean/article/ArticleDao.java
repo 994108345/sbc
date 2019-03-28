@@ -1,11 +1,9 @@
-package cn.wzl.sbc.prod.dao.bean.brand;
+package cn.wzl.sbc.prod.dao.bean.article;
 
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
-import cn.wzl.sbc.prod.model.Article;
+import cn.wzl.sbc.prod.model.article.Article;
 import cn.wzl.sbc.prod.model.page.ArticleBean;
-
-import java.util.List;
 
 /**
  * @author ：wzl

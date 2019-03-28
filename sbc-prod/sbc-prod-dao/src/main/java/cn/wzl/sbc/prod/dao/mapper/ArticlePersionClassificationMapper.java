@@ -1,6 +1,6 @@
 package cn.wzl.sbc.prod.dao.mapper;
 
-import cn.wzl.sbc.prod.model.ArticlePersionClassification;
+import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,11 +1,11 @@
-package cn.wzl.sbc.prod.dao.bean.brand.impl;
+package cn.wzl.sbc.prod.dao.bean.article.impl;
 
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
-import cn.wzl.sbc.prod.dao.bean.brand.ArticleTypeDao;
+import cn.wzl.sbc.prod.dao.bean.article.ArticleTypeDao;
 import cn.wzl.sbc.prod.dao.mapper.ArticleTypeMapper;
-import cn.wzl.sbc.prod.model.ArticleType;
+import cn.wzl.sbc.prod.model.article.ArticleType;
 import cn.wzl.sbc.prod.model.page.ArticleTypeBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

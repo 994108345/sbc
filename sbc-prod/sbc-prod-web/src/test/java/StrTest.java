@@ -1,7 +1,9 @@
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -80,5 +82,31 @@ public class StrTest {
         double c = a - b;
         String str = String.valueOf(b);
         System.out.println(b);
+    }
+
+    @Test
+    public void  voidaddTime(){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.add(Calendar.DAY_OF_YEAR, -1);
+        System.out.println(calendar.getTime());
+    }
+
+    @Test
+    public void sum(){
+        int a = 10;
+        int b = 3;
+        Double c = new Double(100*b)/new Double(a);
+        System.out.println(c);
+    }
+
+    @Test
+    public void multi(){
+        BigDecimal a = new BigDecimal("3");
+        BigDecimal b = new BigDecimal("7");
+        BigDecimal c = new BigDecimal("12");
+        BigDecimal d = (a.divide(b,2,RoundingMode.FLOOR).multiply(new BigDecimal("100")));
+        BigDecimal e = a.divide(b,3,RoundingMode.FLOOR);
+        System.out.println();
     }
 }

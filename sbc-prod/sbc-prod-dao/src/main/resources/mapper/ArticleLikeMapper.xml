@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wzl.sbc.prod.dao.mapper.ArticleLikeMapper">
+  <resultMap id="BaseResultMap" type="cn.wzl.sbc.prod.model.article.ArticleLike">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="article_like_code" jdbcType="VARCHAR" property="articleLikeCode" />
+    <result column="user_code" jdbcType="VARCHAR" property="userCode" />
+    <result column="article_code" jdbcType="VARCHAR" property="articleCode" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, article_like_code, user_code, article_code, create_time, last_modified_time, 
+    remark
+  </sql>
+
+  <select id="queryLikeByRequest" resultMap="BaseResultMap">
+    select * from sbc_article_like
+    <where>
+      <if test="articleLikeCode != null">
+       and article_like_code = #{articleLikeCode,jdbcType=VARCHAR}
+      </if>
+      <if test="userCode != null">
+        and  user_code = #{userCode,jdbcType=VARCHAR}
+      </if>
+      <if test="articleCode != null">
+        and  article_code = #{articleCode,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
+  <insert id="insertArticleLike">
+    insert into sbc_article_like
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="articleLikeCode != null">
+        article_like_code,
+      </if>
+      <if test="userCode != null">
+        user_code,
+      </if>
+      <if test="articleCode != null">
+        article_code,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="articleLikeCode != null">
+        #{articleLikeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="articleCode != null">
+        #{articleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <!--
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sbc_article_like
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sbc_article_like
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.wzl.sbc.prod.model.article.ArticleLike">
+    insert into sbc_article_like (id, article_like_code, user_code, 
+      article_code, create_time, last_modified_time, 
+      remark)
+    values (#{id,jdbcType=INTEGER}, #{articleLikeCode,jdbcType=VARCHAR}, #{userCode,jdbcType=VARCHAR}, 
+      #{articleCode,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{lastModifiedTime,jdbcType=TIMESTAMP}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.wzl.sbc.prod.model.article.ArticleLike">
+    insert into sbc_article_like
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="articleLikeCode != null">
+        article_like_code,
+      </if>
+      <if test="userCode != null">
+        user_code,
+      </if>
+      <if test="articleCode != null">
+        article_code,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastModifiedTime != null">
+        last_modified_time,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="articleLikeCode != null">
+        #{articleLikeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="articleCode != null">
+        #{articleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifiedTime != null">
+        #{lastModifiedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.wzl.sbc.prod.model.article.ArticleLike">
+    update sbc_article_like
+    <set>
+      <if test="articleLikeCode != null">
+        article_like_code = #{articleLikeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        user_code = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="articleCode != null">
+        article_code = #{articleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifiedTime != null">
+        last_modified_time = #{lastModifiedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.wzl.sbc.prod.model.article.ArticleLike">
+    update sbc_article_like
+    set article_like_code = #{articleLikeCode,jdbcType=VARCHAR},
+      user_code = #{userCode,jdbcType=VARCHAR},
+      article_code = #{articleCode,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_modified_time = #{lastModifiedTime,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>-->
+</mapper>

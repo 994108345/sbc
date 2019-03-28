@@ -1,5 +1,6 @@
 package cn.wzl.sbc.prod.service.article.impl;
 
+import cn.wzl.sbc.common.constant.ArticleConstant;
 import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
@@ -7,15 +8,20 @@ import cn.wzl.sbc.common.util.ArrayUtil;
 import cn.wzl.sbc.common.util.CodeUtil;
 import cn.wzl.sbc.common.util.MessageUtil;
 import cn.wzl.sbc.common.util.OssUtil;
-import cn.wzl.sbc.prod.dao.bean.brand.ArticleDao;
-import cn.wzl.sbc.prod.dao.bean.brand.ArticlePersionClassificationDao;
-import cn.wzl.sbc.prod.model.Article;
-import cn.wzl.sbc.prod.model.ArticlePersionClassification;
+import cn.wzl.sbc.prod.dao.bean.article.ArticleDao;
+import cn.wzl.sbc.prod.dao.bean.article.ArticlePersionClassificationDao;
+import cn.wzl.sbc.prod.dao.mapper.ArticleInfoMapper;
+import cn.wzl.sbc.prod.model.article.Article;
+import cn.wzl.sbc.prod.model.article.ArticleInfo;
+import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
+import cn.wzl.sbc.prod.model.article.data.ArticleAllInfo;
 import cn.wzl.sbc.prod.model.page.ArticleBean;
 import cn.wzl.sbc.prod.service.article.ArticleService;
+import org.dozer.DozerBeanMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
 import java.io.ByteArrayInputStream;
@@ -38,6 +44,12 @@ public class ArticleServiceImpl implements ArticleService {
     private CodeUtil codeUtil;
     @Resource
     private ArticlePersionClassificationDao articlePersionClassificationDao;
+
+    @Resource
+    private ArticleInfoMapper articleInfoMapper;
+
+//    @Resource
+//    private DozerBeanMapper dozerBeanMapper;
 
     @Override
     public PageBeanResult queryArticleByPage(ArticleBean articleBean) {
@@ -154,6 +166,54 @@ public class ArticleServiceImpl implements ArticleService {
         return result;
     }
 
+    @Override
+    public PageBeanResult queryArticleInfo(ArticleBean articleBean) {
+        PageBeanResult result = new PageBeanResult();
+        /*只查看不私有的文章*/
+        articleBean.setIsPrivate(ArticleConstant.ArticlePrivate.NOT_PRIVATE);
+        try {
+            /*查询文章*/
+            result = articleDao.queryArticleByPage(articleBean);
+            if(result.isError()){
+                throw new Exception("查询文章出错:" + result.getMessage());
+            }
+            List<Article> articleList =  (List<Article>)result.getData();
+            if(!CollectionUtils.isEmpty(articleList)){
+                List<String> articleCodes = new ArrayList<>();
+                for (Article article : articleList) {
+                    articleCodes.add(article.getArticleCode());
+                }
+                ArticleInfo articleInfoRequest = new ArticleInfo();
+                articleInfoRequest.setArticleCodes(articleCodes);
+                /*查询文章其他信息*/
+                List<ArticleInfo> articleInfos = articleInfoMapper.queryArticleInfoByCodes(articleInfoRequest);
+                if(!CollectionUtils.isEmpty(articleInfos)){
+                    Map<String,ArticleInfo> articleInfoMap = new HashMap<>();
+                    /*拼成字典*/
+                    for (ArticleInfo info : articleInfos) {
+                        articleInfoMap.put(info.getArticleCode(),info);
+                    }
+                    /*结果数据*/
+                    List<ArticleAllInfo> dataList = new ArrayList<>();
+                    /*拼数据*/
+                    for (Article article : articleList) {
+                        ArticleAllInfo data =  null;//dozerBeanMapper.map(article,ArticleAllInfo.class);
+                        String articleCode = article.getArticleCode();
+                        /*从字典取出来*/
+                        ArticleInfo articleInfo = articleInfoMap.get(articleCode);
+                        data.setArticleInfo(articleInfo);
+                        dataList.add(data);
+                    }
+                    result.setData(dataList);
+                }
+            }
+        } catch (Exception e) {
+            log.error("ArticleServiceImpl queryArticleInfo has error...",e);
+            result.setErrorMessage(e.getMessage());
+        }
+        return result;
+    }
+
     /**
      * 个人分类对比
      * @param newPC
@@ -178,4 +238,6 @@ public class ArticleServiceImpl implements ArticleService {
         String result = ArrayUtil.arrToStr(oldNew,",");
         return result;
     }
+
+
 }

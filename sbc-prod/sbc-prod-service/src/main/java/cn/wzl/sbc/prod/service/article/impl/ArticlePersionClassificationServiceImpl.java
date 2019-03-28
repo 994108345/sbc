@@ -1,8 +1,8 @@
 package cn.wzl.sbc.prod.service.article.impl;
 
 import cn.wzl.sbc.common.result.MessageResult;
-import cn.wzl.sbc.prod.dao.bean.brand.ArticlePersionClassificationDao;
-import cn.wzl.sbc.prod.model.ArticlePersionClassification;
+import cn.wzl.sbc.prod.dao.bean.article.ArticlePersionClassificationDao;
+import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
 import cn.wzl.sbc.prod.service.article.ArticlePersionClassificationService;
 import org.springframework.stereotype.Service;
 

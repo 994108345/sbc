@@ -1,4 +1,4 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.article;
 
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.model.permission.UserMessage;
@@ -6,14 +6,12 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
 
-public class ArticleType extends UserMessage {
+public class ArticlePersionClassification extends UserMessage {
     private Integer id;
 
-    private String articleTypeCode;
+    private String userName;
 
-    private String articleName;
-
-    private String status;
+    private String persionClassification;
 
     @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date createTime;
@@ -35,28 +33,20 @@ public class ArticleType extends UserMessage {
         this.id = id;
     }
 
-    public String getArticleTypeCode() {
-        return articleTypeCode;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setArticleTypeCode(String articleTypeCode) {
-        this.articleTypeCode = articleTypeCode == null ? null : articleTypeCode.trim();
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 
-    public String getArticleName() {
-        return articleName;
+    public String getPersionClassification() {
+        return persionClassification;
     }
 
-    public void setArticleName(String articleName) {
-        this.articleName = articleName == null ? null : articleName.trim();
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void setPersionClassification(String persionClassification) {
+        this.persionClassification = persionClassification == null ? null : persionClassification.trim();
     }
 
     public Date getCreateTime() {

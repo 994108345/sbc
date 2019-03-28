@@ -1,10 +1,10 @@
-package cn.wzl.sbc.prod.dao.bean.brand.impl;
+package cn.wzl.sbc.prod.dao.bean.article.impl;
 
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
-import cn.wzl.sbc.prod.dao.bean.brand.ArticlePersionClassificationDao;
+import cn.wzl.sbc.prod.dao.bean.article.ArticlePersionClassificationDao;
 import cn.wzl.sbc.prod.dao.mapper.ArticlePersionClassificationMapper;
-import cn.wzl.sbc.prod.model.ArticlePersionClassification;
+import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

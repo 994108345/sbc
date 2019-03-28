@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wzl.sbc.prod.dao.mapper.ArticleInfoMapper">
+  <resultMap id="BaseResultMap" type="cn.wzl.sbc.prod.model.article.ArticleInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="article_info_code" jdbcType="VARCHAR" property="articleInfoCode" />
+    <result column="article_code" jdbcType="VARCHAR" property="articleCode" />
+    <result column="like_count" jdbcType="INTEGER" property="likeCount" />
+    <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
+    <result column="no_like_count" jdbcType="INTEGER" property="noLikeCount" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, article_info_code, article_code, like_count, comment_count, no_like_count, create_time, 
+    last_modified_time, remark
+  </sql>
+
+  <select id="queryTopArticleAllInfo" resultMap="BaseResultMap">
+    select * from sbc_article a left join sbc_article_info i on a.article_code = i.article_code
+    where
+  </select>
+
+  <!--根据条件查询文章详情-->
+  <select id="queryArticleInfoByRequest"  resultMap="BaseResultMap">
+    select * from sbc_article_info
+    <where>
+      <if test="articleInfoCode != null">
+       and article_info_code = #{articleInfoCode,jdbcType=VARCHAR}
+      </if>
+      <if test="articleCode != null">
+        and article_code = #{articleCode,jdbcType=VARCHAR}
+      </if>
+      <if test="likeCount != null">
+        and like_count = #{likeCount,jdbcType=INTEGER}
+      </if>
+      <if test="commentCount != null">
+        and comment_count = #{commentCount,jdbcType=INTEGER}
+      </if>
+      <if test="noLikeCount != null">
+        and no_like_count = #{noLikeCount,jdbcType=INTEGER}
+      </if>
+      <if test="clickCount != null">
+        and click_Count = #{clickCount,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+
+    <!--根据articleCode集合查询-->
+    <select id="queryArticleInfoByCodes"  resultMap="BaseResultMap">
+        select * from sbc_article_info
+        <where>
+            <if test="articleInfoCode != null">
+                and article_info_code = #{articleInfoCode,jdbcType=VARCHAR}
+            </if>
+            <if test="articleCodes != null">
+                and article_code in
+                <foreach collection="articleCodes" index="index" separator="," open="(" close=")" item="item">
+                    #{item,jdbcType=VARCHAR}
+                </foreach>
+            </if>
+            <if test="likeCount != null">
+                and like_count = #{likeCount,jdbcType=INTEGER}
+            </if>
+            <if test="commentCount != null">
+                and comment_count = #{commentCount,jdbcType=INTEGER}
+            </if>
+            <if test="noLikeCount != null">
+                and no_like_count = #{noLikeCount,jdbcType=INTEGER}
+            </if>
+            <if test="clickCount != null">
+                and click_Count = #{clickCount,jdbcType=INTEGER}
+            </if>
+        </where>
+    </select>
+
+  <!--插入一个文章明细信息-->
+  <insert id="insertArticleInfo">
+    insert into sbc_article_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="articleInfoCode != null">
+        article_info_code,
+      </if>
+      <if test="articleCode != null">
+        article_code,
+      </if>
+      <if test="likeCount != null">
+        like_count,
+      </if>
+      <if test="commentCount != null">
+        comment_count,
+      </if>
+      <if test="noLikeCount != null">
+        no_like_count,
+      </if>
+      <if test="clickCount != null">
+        click_Count,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="articleInfoCode != null">
+        #{articleInfoCode,jdbcType=VARCHAR},
+      </if>
+      <if test="articleCode != null">
+        #{articleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="likeCount != null">
+        #{likeCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentCount != null">
+        #{commentCount,jdbcType=INTEGER},
+      </if>
+      <if test="noLikeCount != null">
+        #{noLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="clickCount != null">
+        #{clickCount,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <!--更细一个文章信息-->
+  <update id="updateArticleInfo">
+    update sbc_article_info
+    <set>
+      <if test="likeCount != null">
+        like_count = #{likeCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentCount != null">
+        comment_count = #{commentCount,jdbcType=INTEGER},
+      </if>
+      <if test="noLikeCount != null">
+        no_like_count = #{noLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="clickCount != null">
+        click_Count = #{clickCount,jdbcType=INTEGER},
+      </if>
+    </set>
+    <where>
+      <if test="id != null">
+        and id = #{id,jdbcType=VARCHAR}
+      </if>
+      <if test="articleInfoCode != null">
+        and article_info_code = #{articleInfoCode,jdbcType=VARCHAR}
+      </if>
+      <if test="articleCode != null">
+        and article_code = #{articleCode,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </update>
+  <!--
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sbc_article_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sbc_article_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.wzl.sbc.prod.model.article.ArticleInfo">
+    insert into sbc_article_info (id, article_info_code, article_code, 
+      like_count, comment_count, no_like_count, 
+      create_time, last_modified_time, remark
+      )
+    values (#{id,jdbcType=INTEGER}, #{articleInfoCode,jdbcType=VARCHAR}, #{articleCode,jdbcType=VARCHAR}, 
+      #{likeCount,jdbcType=INTEGER}, #{commentCount,jdbcType=INTEGER}, #{noLikeCount,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{lastModifiedTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.wzl.sbc.prod.model.article.ArticleInfo">
+    insert into sbc_article_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="articleInfoCode != null">
+        article_info_code,
+      </if>
+      <if test="articleCode != null">
+        article_code,
+      </if>
+      <if test="likeCount != null">
+        like_count,
+      </if>
+      <if test="commentCount != null">
+        comment_count,
+      </if>
+      <if test="noLikeCount != null">
+        no_like_count,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastModifiedTime != null">
+        last_modified_time,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="articleInfoCode != null">
+        #{articleInfoCode,jdbcType=VARCHAR},
+      </if>
+      <if test="articleCode != null">
+        #{articleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="likeCount != null">
+        #{likeCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentCount != null">
+        #{commentCount,jdbcType=INTEGER},
+      </if>
+      <if test="noLikeCount != null">
+        #{noLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifiedTime != null">
+        #{lastModifiedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.wzl.sbc.prod.model.article.ArticleInfo">
+    update sbc_article_info
+    <set>
+      <if test="articleInfoCode != null">
+        article_info_code = #{articleInfoCode,jdbcType=VARCHAR},
+      </if>
+      <if test="articleCode != null">
+        article_code = #{articleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="likeCount != null">
+        like_count = #{likeCount,jdbcType=INTEGER},
+      </if>
+      <if test="commentCount != null">
+        comment_count = #{commentCount,jdbcType=INTEGER},
+      </if>
+      <if test="noLikeCount != null">
+        no_like_count = #{noLikeCount,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifiedTime != null">
+        last_modified_time = #{lastModifiedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.wzl.sbc.prod.model.article.ArticleInfo">
+    update sbc_article_info
+    set article_info_code = #{articleInfoCode,jdbcType=VARCHAR},
+      article_code = #{articleCode,jdbcType=VARCHAR},
+      like_count = #{likeCount,jdbcType=INTEGER},
+      comment_count = #{commentCount,jdbcType=INTEGER},
+      no_like_count = #{noLikeCount,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_modified_time = #{lastModifiedTime,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>-->
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <!-- result -->
+    <mapping>
+        <class-a>com.wagu.analysis.po.result.calculatedata.BusinessNodeSliderDataResult</class-a>
+        <class-b>com.wagu.analysis.bo.result.show.BusinessNodeBOResult</class-b>
+        <field>
+            <a>values</a>
+            <b>dataList</b>
+            <a-hint>com.wagu.analysis.po.data.calculatedata.BusinessNodeSliderData</a-hint>
+            <b-hint>com.wagu.analysis.bo.data.show.BusinessNodeBO</b-hint>
+        </field>
+    </mapping>
+
+</mappings>
