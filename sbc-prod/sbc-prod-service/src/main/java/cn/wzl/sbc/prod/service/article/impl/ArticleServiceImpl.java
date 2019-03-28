@@ -4,10 +4,7 @@ import cn.wzl.sbc.common.constant.ArticleConstant;
 import cn.wzl.sbc.common.constant.RedisConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
-import cn.wzl.sbc.common.util.ArrayUtil;
-import cn.wzl.sbc.common.util.CodeUtil;
-import cn.wzl.sbc.common.util.MessageUtil;
-import cn.wzl.sbc.common.util.OssUtil;
+import cn.wzl.sbc.common.util.*;
 import cn.wzl.sbc.prod.dao.bean.article.ArticleDao;
 import cn.wzl.sbc.prod.dao.bean.article.ArticlePersionClassificationDao;
 import cn.wzl.sbc.prod.dao.mapper.ArticleInfoMapper;
@@ -47,6 +44,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Resource
     private ArticleInfoMapper articleInfoMapper;
+
 
 //    @Resource
 //    private DozerBeanMapper dozerBeanMapper;
@@ -163,6 +161,23 @@ public class ArticleServiceImpl implements ArticleService {
         /*将对象名存入*/
         article.setContent(objectName);
         result = articleDao.insertOneArticle(article);
+        if(result.isError()){
+            return result;
+        }
+        /** 保存到文章具体信息*/
+        ArticleInfo request = new ArticleInfo();
+        String articleInfoCode = codeUtil.createCodeByRedis(RedisConstant.RedisCreateCode.CodeType.ARTICLE_INFO_CODE);
+        request.setArticleInfoCode(articleInfoCode);
+        request.setArticleCode(code);
+        try {
+            int count = articleInfoMapper.insertArticleInfo(request);
+            if(count < 1){
+                throw new Exception("插入内容记录数小于1");
+            }
+        } catch (Exception e) {
+            log.error("插入articleInfo出错",e);
+            result.setErrorMessage(e.getMessage());
+        }
         return result;
     }
 
