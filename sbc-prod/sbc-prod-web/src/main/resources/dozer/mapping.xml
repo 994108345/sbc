@@ -4,7 +4,7 @@
 http://dozer.sourceforge.net/schema/beanmapping.xsd">
 
     <!-- result -->
-    <mapping>
+    <!--<mapping>
         <class-a>com.wagu.analysis.po.result.calculatedata.BusinessNodeSliderDataResult</class-a>
         <class-b>com.wagu.analysis.bo.result.show.BusinessNodeBOResult</class-b>
         <field>
@@ -13,6 +13,6 @@ http://dozer.sourceforge.net/schema/beanmapping.xsd">
             <a-hint>com.wagu.analysis.po.data.calculatedata.BusinessNodeSliderData</a-hint>
             <b-hint>com.wagu.analysis.bo.data.show.BusinessNodeBO</b-hint>
         </field>
-    </mapping>
+    </mapping>-->
 
 </mappings>

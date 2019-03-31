@@ -20,10 +20,12 @@
     <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification" />
     <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus" />
     <result column="is_Original" jdbcType="VARCHAR" property="isOriginal" />
+    <result column="oss_url" jdbcType="VARCHAR" property="ossUrl" />
+    <result column="short_comment" jdbcType="VARCHAR" property="shortComment" />
   </resultMap>
   <sql id="Base_Column_List">
     id, article_code, user_id, article_type, author, title, content, tags, status, create_time,
-    create_user, last_modified_time, last_modified_user, remark,is_Private,
+    create_user, last_modified_time, last_modified_user, remark,is_Private,oss_url,short_comment
     article_Personal_Classification,audit_Status,is_Original
   </sql>
 
@@ -80,6 +82,12 @@
       </if>
       <if test="isOriginal != null">
         and is_Original = #{isOriginal,jdbcType=VARCHAR}
+      </if>
+      <if test="ossUrl != null">
+        and oss_Url = #{ossUrl,jdbcType=VARCHAR}
+      </if>
+      <if test="shortContent != null">
+        and short_Content = #{shortContent,jdbcType=VARCHAR}
       </if>
     </where>
     <if test="isPaging == true">
@@ -141,6 +149,12 @@
       <if test="isOriginal != null">
         and is_Original = #{isOriginal,jdbcType=VARCHAR}
       </if>
+      <if test="ossUrl != null">
+        and oss_Url = #{ossUrl,jdbcType=VARCHAR}
+      </if>
+      <if test="shortContent != null">
+        and short_Content = #{shortContent,jdbcType=VARCHAR}
+      </if>
     </where>
   </select>
 
@@ -182,6 +196,12 @@
       </if>
       <if test="isOriginal != null">
        is_Original = #{isOriginal,jdbcType=VARCHAR},
+      </if>
+      <if test="ossUrl != null">
+         oss_Url = #{ossUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="shortContent != null">
+        short_Content = #{shortContent,jdbcType=VARCHAR},
       </if>
     </set>
     <where>
@@ -242,6 +262,12 @@
       <if test="isOriginal != null">
         is_Original,
       </if>
+      <if test="ossUrl != null">
+        oss_Url,
+      </if>
+      <if test="shortContent != null">
+        short_Content,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="articleCode != null">
@@ -289,6 +315,12 @@
       <if test="isOriginal != null">
         #{isOriginal,jdbcType=VARCHAR},
       </if>
+      <if test="ossUrl != null">
+        #{ossUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="shortContent != null">
+        #{shortContent,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
 
@@ -312,23 +344,41 @@
     <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification" />
     <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus" />
     <result column="is_Original" jdbcType="VARCHAR" property="isOriginal" />
-
     <result column="article_info_code" jdbcType="VARCHAR" property="articleInfoCode" />
     <result column="like_count" jdbcType="INTEGER" property="likeCount" />
     <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
     <result column="no_like_count" jdbcType="INTEGER" property="noLikeCount" />
     <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+    <result column="oss_url" jdbcType="VARCHAR" property="ossUrl" />
+    <result column="short_content" jdbcType="VARCHAR" property="shortContent" />
   </resultMap>
-  <!--查询文章的详情信息-->
- <!-- <select id="queryArticleInfo" resultMap="BaseResultMap">
-    select * from sbc_article a join sbc_article_info i on a.article_code = i.article_code
+
+  <sql id="article_info_page">
     <where>
       <if test="articleCode != null">
-       and  article_code = #{articleCode,jdbcType=VARCHAR},
+        and  article_code = #{articleCode,jdbcType=VARCHAR}
+      </if>
+      <if test="isPrivate != null">
+        and is_private = #{isPrivate,jdbcType=VARCHAR}
       </if>
     </where>
-    group by
-  </select>-->
+  </sql>
+  <!--查询文章的详情信息-->
+  <select id="queryArticleInfo" resultMap="OtherResultMap">
+    select * from sbc_article a left join sbc_article_info i on a.article_code = i.article_code
+    <include refid="article_info_page"></include>
+    <if test="isPaging == true">
+      limit #{start},#{pageSize}
+    </if>
+    order by i.click_count,a.last_modified_time
+  </select>
+
+  <!--查询记录数-->
+  <select id="queryArticleInfoCount" resultMap="OtherResultMap">
+    select count(*) from sbc_article a
+    left join sbc_article_info i on a.article_code = i.article_code
+    <include refid="article_info_page"></include>
+  </select>
 
 
   <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">

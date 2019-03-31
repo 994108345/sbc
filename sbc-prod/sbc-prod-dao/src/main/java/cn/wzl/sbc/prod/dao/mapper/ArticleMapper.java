@@ -1,6 +1,7 @@
 package cn.wzl.sbc.prod.dao.mapper;
 
 import cn.wzl.sbc.prod.model.article.Article;
+import cn.wzl.sbc.prod.model.article.data.ArticleAllInfo;
 import cn.wzl.sbc.prod.model.page.ArticleBean;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -36,5 +37,17 @@ public interface ArticleMapper {
      * @return
      */
     int insertOneArticle(Article article);
+
+    /**
+     * 查询文章+文章其他信息
+     * @return
+     */
+    List<ArticleAllInfo> queryArticleInfo(ArticleAllInfo articleAllInfo);
+
+    /**
+     * 查询文章+文章其他信息记录数
+     * @return
+     */
+    int queryArticleInfoCount();
 
 }

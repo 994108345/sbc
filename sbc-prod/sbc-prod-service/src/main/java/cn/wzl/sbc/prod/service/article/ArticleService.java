@@ -3,6 +3,7 @@ package cn.wzl.sbc.prod.service.article;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.prod.model.article.Article;
+import cn.wzl.sbc.prod.model.article.data.ArticleAllInfo;
 import cn.wzl.sbc.prod.model.page.ArticleBean;
 
 /**
@@ -43,9 +44,9 @@ public interface ArticleService {
 
     /**
      * 查询文章信息（博客首页）
-     * @param articleBean
+     * @param articleAllInfo
      * @return
      */
-    PageBeanResult queryArticleInfo(ArticleBean articleBean);
+    PageBeanResult queryArticleInfo(ArticleAllInfo articleAllInfo);
 
 }

@@ -54,6 +54,32 @@ public class Article extends UserMessage {
      */
     private  String isOriginal;
 
+    /**
+     * 文章上传路由
+     */
+    private String ossUrl;
+
+    /**
+     * 缩略内容
+     */
+    private String shortComment;
+
+    public String getShortComment() {
+        return shortComment;
+    }
+
+    public void setShortComment(String shortComment) {
+        this.shortComment = shortComment;
+    }
+
+    public String getOssUrl() {
+        return ossUrl;
+    }
+
+    public void setOssUrl(String ossUrl) {
+        this.ossUrl = ossUrl;
+    }
+
     public String getIsOriginal() {
         return isOriginal;
     }

@@ -45,7 +45,7 @@ public class ProdWebConfig implements WebMvcConfigurer {
      * @return
      */
     public String[] excludePath(){
-        String[] path = {""};
+        String[] path = {"/sbc-prod/Article/webNo/articleServiceImpl/queryArticleInfo"};
         return path;
     }
 

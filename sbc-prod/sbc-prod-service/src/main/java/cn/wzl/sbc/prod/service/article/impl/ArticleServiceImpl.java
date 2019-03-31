@@ -8,6 +8,7 @@ import cn.wzl.sbc.common.util.*;
 import cn.wzl.sbc.prod.dao.bean.article.ArticleDao;
 import cn.wzl.sbc.prod.dao.bean.article.ArticlePersionClassificationDao;
 import cn.wzl.sbc.prod.dao.mapper.ArticleInfoMapper;
+import cn.wzl.sbc.prod.dao.mapper.ArticleMapper;
 import cn.wzl.sbc.prod.model.article.Article;
 import cn.wzl.sbc.prod.model.article.ArticleInfo;
 import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
@@ -46,8 +47,11 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleInfoMapper articleInfoMapper;
 
 
-//    @Resource
-//    private DozerBeanMapper dozerBeanMapper;
+    @Resource
+    private DozerBeanMapper dozerBeanMapper;
+
+    @Resource
+    private ArticleMapper articleMapper;
 
     @Override
     public PageBeanResult queryArticleByPage(ArticleBean articleBean) {
@@ -65,7 +69,7 @@ public class ArticleServiceImpl implements ArticleService {
                 return result;
             }
             for (Article article : list) {
-                MessageResult messageResult = OssUtil.downLoadFile(article.getContent());
+                MessageResult messageResult = OssUtil.downLoadFile(article.getOssUrl());
                 if(messageResult.isError()){
                     result = MessageUtil.messageToPage(messageResult);
                     return result;
@@ -100,7 +104,7 @@ public class ArticleServiceImpl implements ArticleService {
             return  result;
         }
         /*将对象名存入*/
-        article.setContent(objectName);
+        article.setOssUrl(objectName);
         result = articleDao.updateOneArticle(article);
         return result;
     }
@@ -159,7 +163,7 @@ public class ArticleServiceImpl implements ArticleService {
         }
         String[] classes = persionClass.split(",");
         /*将对象名存入*/
-        article.setContent(objectName);
+        article.setOssUrl(objectName);
         result = articleDao.insertOneArticle(article);
         if(result.isError()){
             return result;
@@ -182,46 +186,26 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public PageBeanResult queryArticleInfo(ArticleBean articleBean) {
+    public PageBeanResult queryArticleInfo(ArticleAllInfo articleAllInfo) {
         PageBeanResult result = new PageBeanResult();
         /*只查看不私有的文章*/
-        articleBean.setIsPrivate(ArticleConstant.ArticlePrivate.NOT_PRIVATE);
+        articleAllInfo.setIsPrivate(ArticleConstant.ArticlePrivate.NOT_PRIVATE);
         try {
             /*查询文章*/
-            result = articleDao.queryArticleByPage(articleBean);
-            if(result.isError()){
-                throw new Exception("查询文章出错:" + result.getMessage());
+            List<ArticleAllInfo> dataList = articleMapper.queryArticleInfo(articleAllInfo);
+            if(dataList == null){
+                throw new Exception("查询文章返回内容为null:");
             }
-            List<Article> articleList =  (List<Article>)result.getData();
-            if(!CollectionUtils.isEmpty(articleList)){
-                List<String> articleCodes = new ArrayList<>();
-                for (Article article : articleList) {
-                    articleCodes.add(article.getArticleCode());
-                }
-                ArticleInfo articleInfoRequest = new ArticleInfo();
-                articleInfoRequest.setArticleCodes(articleCodes);
-                /*查询文章其他信息*/
-                List<ArticleInfo> articleInfos = articleInfoMapper.queryArticleInfoByCodes(articleInfoRequest);
-                if(!CollectionUtils.isEmpty(articleInfos)){
-                    Map<String,ArticleInfo> articleInfoMap = new HashMap<>();
-                    /*拼成字典*/
-                    for (ArticleInfo info : articleInfos) {
-                        articleInfoMap.put(info.getArticleCode(),info);
-                    }
-                    /*结果数据*/
-                    List<ArticleAllInfo> dataList = new ArrayList<>();
-                    /*拼数据*/
-                    for (Article article : articleList) {
-                        ArticleAllInfo data =  null;//dozerBeanMapper.map(article,ArticleAllInfo.class);
-                        String articleCode = article.getArticleCode();
-                        /*从字典取出来*/
-                        ArticleInfo articleInfo = articleInfoMap.get(articleCode);
-                        data.setArticleInfo(articleInfo);
-                        dataList.add(data);
-                    }
-                    result.setData(dataList);
-                }
+            if(dataList.size() < 1){
+                result.setTotalRecords(0);
+                return result;
             }
+            for (ArticleAllInfo allInfo : dataList) {
+                MessageResult content = OssUtil.downLoadFile(allInfo.getContent());
+
+            }
+
+
         } catch (Exception e) {
             log.error("ArticleServiceImpl queryArticleInfo has error...",e);
             result.setErrorMessage(e.getMessage());
