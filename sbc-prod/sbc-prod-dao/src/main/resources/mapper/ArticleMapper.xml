@@ -1,560 +1,570 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.wzl.sbc.prod.dao.mapper.ArticleMapper">
-  <resultMap id="BaseResultMap" type="cn.wzl.sbc.prod.model.article.Article">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="article_code" jdbcType="VARCHAR" property="articleCode" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
-    <result column="article_type" jdbcType="VARCHAR" property="articleType" />
-    <result column="author" jdbcType="VARCHAR" property="author" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="tags" jdbcType="VARCHAR" property="tags" />
-    <result column="status" jdbcType="VARCHAR" property="status" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
-    <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime" />
-    <result column="last_modified_user" jdbcType="VARCHAR" property="lastModifiedUser" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-    <result column="is_private" jdbcType="VARCHAR" property="isPrivate" />
-    <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification" />
-    <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus" />
-    <result column="is_Original" jdbcType="VARCHAR" property="isOriginal" />
-    <result column="oss_url" jdbcType="VARCHAR" property="ossUrl" />
-    <result column="short_comment" jdbcType="VARCHAR" property="shortComment" />
-  </resultMap>
-  <sql id="Base_Column_List">
+    <resultMap id="BaseResultMap" type="cn.wzl.sbc.prod.model.article.Article">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="article_code" jdbcType="VARCHAR" property="articleCode"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="article_type" jdbcType="VARCHAR" property="articleType"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="tags" jdbcType="VARCHAR" property="tags"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+        <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime"/>
+        <result column="last_modified_user" jdbcType="VARCHAR" property="lastModifiedUser"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="is_private" jdbcType="VARCHAR" property="isPrivate"/>
+        <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification"/>
+        <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus"/>
+        <result column="is_Original" jdbcType="VARCHAR" property="isOriginal"/>
+        <result column="oss_url" jdbcType="VARCHAR" property="ossUrl"/>
+        <result column="short_comment" jdbcType="VARCHAR" property="shortComment"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, article_code, user_id, article_type, author, title, content, tags, status, create_time,
     create_user, last_modified_time, last_modified_user, remark,is_Private,oss_url,short_comment
     article_Personal_Classification,audit_Status,is_Original
   </sql>
 
-  <select id="queryArticleByPage" resultMap="BaseResultMap">
-    select * from sbc_article
-    <where>
-      <if test="id != null">
-        and  id = #{id,jdbcType=INTEGER}
-      </if>
-      <if test="articleCode != null">
-       and article_code = #{articleCode,jdbcType=VARCHAR}
-      </if>
-      <if test="userId != null">
-        and user_id = #{userId,jdbcType=VARCHAR}
-      </if>
-      <if test="articleType != null">
-        and article_type = #{articleType,jdbcType=VARCHAR}
-      </if>
-      <if test="author != null">
-        and author = #{author,jdbcType=VARCHAR}
-      </if>
-      <if test="title != null">
-        and  title = #{title,jdbcType=VARCHAR}
-      </if>
-      <if test="content != null">
-        and  content = #{content,jdbcType=VARCHAR}
-      </if>
-      <if test="tags != null">
-        and tags = #{tags,jdbcType=VARCHAR}
-      </if>
-      <if test="status != null">
-        and status = #{status,jdbcType=VARCHAR}
-      </if>
-      <if test="createUser != null">
-        and create_user = #{createUser,jdbcType=VARCHAR}
-      </if>
-      <if test="lastModifiedUser != null">
-        and last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR}
-      </if>
-      <if test="isPrivate != null">
-        and is_private = #{isPrivate,jdbcType=VARCHAR}
-      </if>
-      <if test="remark != null">
-        and remark = #{remark,jdbcType=VARCHAR}
-      </if>
-      <if test="articlePersonalClassificationList != null">
-        and
-        <foreach collection="articlePersonalClassificationList" separator="or" open="(" close=")" item="item" index="index">
-          article_Personal_Classification like "%"#{item}"%"
-        </foreach>
-      </if>
-      <if test="auditStatus != null">
-        and audit_Status = #{auditStatus,jdbcType=VARCHAR}
-      </if>
-      <if test="isOriginal != null">
-        and is_Original = #{isOriginal,jdbcType=VARCHAR}
-      </if>
-      <if test="ossUrl != null">
-        and oss_Url = #{ossUrl,jdbcType=VARCHAR}
-      </if>
-      <if test="shortComment != null">
-        and short_comment = #{shortComment,jdbcType=VARCHAR}
-      </if>
-    </where>
-    <if test="isPaging == true">
-      limit #{start},#{pageSize}
-    </if>
-  </select>
+    <select id="queryArticleByPage" resultMap="BaseResultMap">
+        select * from sbc_article
+        <where>
+            <if test="id != null">
+                and id = #{id,jdbcType=INTEGER}
+            </if>
+            <if test="articleCode != null">
+                and article_code = #{articleCode,jdbcType=VARCHAR}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId,jdbcType=VARCHAR}
+            </if>
+            <if test="articleType != null">
+                and article_type = #{articleType,jdbcType=VARCHAR}
+            </if>
+            <if test="author != null">
+                and author = #{author,jdbcType=VARCHAR}
+            </if>
+            <if test="title != null">
+                and title = #{title,jdbcType=VARCHAR}
+            </if>
+            <if test="content != null">
+                and content = #{content,jdbcType=VARCHAR}
+            </if>
+            <if test="tags != null">
+                and tags = #{tags,jdbcType=VARCHAR}
+            </if>
+            <if test="status != null">
+                and status = #{status,jdbcType=VARCHAR}
+            </if>
+            <if test="createUser != null">
+                and create_user = #{createUser,jdbcType=VARCHAR}
+            </if>
+            <if test="lastModifiedUser != null">
+                and last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR}
+            </if>
+            <if test="isPrivate != null">
+                and is_private = #{isPrivate,jdbcType=VARCHAR}
+            </if>
+            <if test="remark != null">
+                and remark = #{remark,jdbcType=VARCHAR}
+            </if>
+            <if test="articlePersonalClassificationList != null">
+                and
+                <foreach collection="articlePersonalClassificationList" separator="or" open="(" close=")" item="item"
+                         index="index">
+                    article_Personal_Classification like "%"#{item}"%"
+                </foreach>
+            </if>
+            <if test="auditStatus != null">
+                and audit_Status = #{auditStatus,jdbcType=VARCHAR}
+            </if>
+            <if test="isOriginal != null">
+                and is_Original = #{isOriginal,jdbcType=VARCHAR}
+            </if>
+            <if test="ossUrl != null">
+                and oss_Url = #{ossUrl,jdbcType=VARCHAR}
+            </if>
+            <if test="shortComment != null">
+                and short_comment = #{shortComment,jdbcType=VARCHAR}
+            </if>
+        </where>
+        <if test="isPaging == true">
+            limit #{start},#{pageSize}
+        </if>
+    </select>
 
-  <select id="queryArticleCount" resultType="java.lang.Integer">
-    select count(*) from sbc_article
-    <where>
-      <if test="id != null">
-        and  id = #{id,jdbcType=INTEGER}
-      </if>
-      <if test="articleCode != null">
-        and article_code = #{articleCode,jdbcType=VARCHAR}
-      </if>
-      <if test="userId != null">
-        and user_id = #{userId,jdbcType=VARCHAR}
-      </if>
-      <if test="articleType != null">
-        and article_type = #{articleType,jdbcType=VARCHAR}
-      </if>
-      <if test="author != null">
-        and author = #{author,jdbcType=VARCHAR}
-      </if>
-      <if test="title != null">
-        and  title = #{title,jdbcType=VARCHAR}
-      </if>
-      <if test="content != null">
-        and  content = #{content,jdbcType=VARCHAR}
-      </if>
-      <if test="tags != null">
-        and tags = #{tags,jdbcType=VARCHAR}
-      </if>
-      <if test="status != null">
-        and status = #{status,jdbcType=VARCHAR}
-      </if>
-      <if test="createUser != null">
-        and create_user = #{createUser,jdbcType=VARCHAR}
-      </if>
-      <if test="lastModifiedUser != null">
-        and last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR}
-      </if>
-      <if test="isPrivate != null">
-        and is_private = #{isPrivate,jdbcType=VARCHAR}
-      </if>
-      <if test="remark != null">
-        and remark = #{remark,jdbcType=VARCHAR}
-      </if>
-      <if test="articlePersonalClassificationList != null">
-        and
-        <foreach collection="articlePersonalClassificationList" separator="or" open="(" close=")" item="item" index="index">
-          article_Personal_Classification like "%"#{item}"%"
-        </foreach>
-      </if>
-      <if test="auditStatus != null">
-        and audit_Status = #{auditStatus,jdbcType=VARCHAR}
-      </if>
-      <if test="isOriginal != null">
-        and is_Original = #{isOriginal,jdbcType=VARCHAR}
-      </if>
-      <if test="ossUrl != null">
-        and oss_Url = #{ossUrl,jdbcType=VARCHAR}
-      </if>
-      <if test="shortComment != null">
-        and short_comment = #{shortComment,jdbcType=VARCHAR}
-      </if>
-    </where>
-  </select>
+    <select id="queryArticleCount" resultType="java.lang.Integer">
+        select count(*) from sbc_article
+        <where>
+            <if test="id != null">
+                and id = #{id,jdbcType=INTEGER}
+            </if>
+            <if test="articleCode != null">
+                and article_code = #{articleCode,jdbcType=VARCHAR}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId,jdbcType=VARCHAR}
+            </if>
+            <if test="articleType != null">
+                and article_type = #{articleType,jdbcType=VARCHAR}
+            </if>
+            <if test="author != null">
+                and author = #{author,jdbcType=VARCHAR}
+            </if>
+            <if test="title != null">
+                and title = #{title,jdbcType=VARCHAR}
+            </if>
+            <if test="content != null">
+                and content = #{content,jdbcType=VARCHAR}
+            </if>
+            <if test="tags != null">
+                and tags = #{tags,jdbcType=VARCHAR}
+            </if>
+            <if test="status != null">
+                and status = #{status,jdbcType=VARCHAR}
+            </if>
+            <if test="createUser != null">
+                and create_user = #{createUser,jdbcType=VARCHAR}
+            </if>
+            <if test="lastModifiedUser != null">
+                and last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR}
+            </if>
+            <if test="isPrivate != null">
+                and is_private = #{isPrivate,jdbcType=VARCHAR}
+            </if>
+            <if test="remark != null">
+                and remark = #{remark,jdbcType=VARCHAR}
+            </if>
+            <if test="articlePersonalClassificationList != null">
+                and
+                <foreach collection="articlePersonalClassificationList" separator="or" open="(" close=")" item="item"
+                         index="index">
+                    article_Personal_Classification like "%"#{item}"%"
+                </foreach>
+            </if>
+            <if test="auditStatus != null">
+                and audit_Status = #{auditStatus,jdbcType=VARCHAR}
+            </if>
+            <if test="isOriginal != null">
+                and is_Original = #{isOriginal,jdbcType=VARCHAR}
+            </if>
+            <if test="ossUrl != null">
+                and oss_Url = #{ossUrl,jdbcType=VARCHAR}
+            </if>
+            <if test="shortComment != null">
+                and short_comment = #{shortComment,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
 
-  <update id="updateOneArticle" >
-    update sbc_article
-    <set>
-      <if test="userId != null">
+    <update id="updateOneArticle">
+        update sbc_article
+        <set>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="articleType != null">
+                article_type = #{articleType,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                author = #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="tags != null">
+                tags = #{tags,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="isPrivate != null">
+                is_private = #{isPrivate,jdbcType=VARCHAR},
+            </if>
+            <if test="articlePersonalClassification != null">
+                article_Personal_Classification = #{articlePersonalClassification,jdbcType=VARCHAR},
+            </if>
+            <if test="auditStatus != null">
+                audit_Status = #{auditStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="isOriginal != null">
+                is_Original = #{isOriginal,jdbcType=VARCHAR},
+            </if>
+            <if test="ossUrl != null">
+                oss_Url = #{ossUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="shortComment != null">
+                short_comment = #{shortComment,jdbcType=VARCHAR},
+            </if>
+        </set>
+        <where>
+            <if test="id != null">
+                and id = #{id,jdbcType=INTEGER}
+            </if>
+            <if test="articleCode != null">
+                and article_code = #{articleCode,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </update>
+
+    <insert id="insertOneArticle">
+        insert into sbc_article
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="articleCode != null">
+                article_code,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="articleType != null">
+                article_type,
+            </if>
+            <if test="author != null">
+                author,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="tags != null">
+                tags,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="createUser != null">
+                create_user,
+            </if>
+            <if test="lastModifiedUser != null">
+                last_modified_user,
+            </if>
+            <if test="isPrivate != null">
+                is_private,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="articlePersonalClassification != null">
+                article_Personal_Classification,
+            </if>
+            <if test="auditStatus != null">
+                audit_Status,
+            </if>
+            <if test="isOriginal != null">
+                is_Original,
+            </if>
+            <if test="ossUrl != null">
+                oss_Url,
+            </if>
+            <if test="shortComment != null">
+                short_comment,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="articleCode != null">
+                #{articleCode,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="articleType != null">
+                #{articleType,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="tags != null">
+                #{tags,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="lastModifiedUser != null">
+                #{lastModifiedUser,jdbcType=VARCHAR},
+            </if>
+            <if test="isPrivate != null">
+                #{isPrivate,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="articlePersonalClassification != null">
+                #{articlePersonalClassification,jdbcType=VARCHAR},
+            </if>
+            <if test="auditStatus != null">
+                #{auditStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="isOriginal != null">
+                #{isOriginal,jdbcType=VARCHAR},
+            </if>
+            <if test="ossUrl != null">
+                #{ossUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="shortComment != null">
+                #{shortComment,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+
+    <resultMap id="OtherResultMap" type="cn.wzl.sbc.prod.model.article.data.ArticleAllInfo">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="article_code" jdbcType="VARCHAR" property="articleCode"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="article_type" jdbcType="VARCHAR" property="articleType"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="tags" jdbcType="VARCHAR" property="tags"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+        <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime"/>
+        <result column="last_modified_user" jdbcType="VARCHAR" property="lastModifiedUser"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="is_private" jdbcType="VARCHAR" property="isPrivate"/>
+        <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification"/>
+        <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus"/>
+        <result column="is_Original" jdbcType="VARCHAR" property="isOriginal"/>
+        <result column="article_info_code" jdbcType="VARCHAR" property="articleInfoCode"/>
+        <result column="like_count" jdbcType="INTEGER" property="likeCount"/>
+        <result column="comment_count" jdbcType="INTEGER" property="commentCount"/>
+        <result column="no_like_count" jdbcType="INTEGER" property="noLikeCount"/>
+        <result column="click_count" jdbcType="INTEGER" property="clickCount"/>
+        <result column="oss_url" jdbcType="VARCHAR" property="ossUrl"/>
+        <result column="short_comment" jdbcType="VARCHAR" property="shortComment"/>
+    </resultMap>
+
+    <sql id="article_info_page">
+        <where>
+            <if test="articleCode != null">
+                and article_code = #{articleCode,jdbcType=VARCHAR}
+            </if>
+            <if test="isPrivate != null">
+                and is_private = #{isPrivate,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </sql>
+    <!--查询文章的详情信息-->
+    <select id="queryArticleInfo" resultMap="OtherResultMap">
+        select * from sbc_article a
+        left join sbc_article_info i on a.article_code = i.article_code
+        <include refid="article_info_page"></include>
+        order by i.click_count,a.last_modified_time desc
+        <if test="isPaging == true">
+            limit #{start},#{pageSize}
+        </if>
+    </select>
+
+    <!--查询记录数-->
+    <select id="queryArticleInfoCount" resultType="java.lang.Integer">
+        select count(*) from sbc_article a
+        left join sbc_article_info i on a.article_code = i.article_code
+        <include refid="article_info_page"></include>
+    </select>
+
+    <!--删除指定文章-->
+    <delete id="deleteArticleByCode">
+        delete from sbc_article
+        <where>
+                and article_code = #{articleCode,jdbcType=VARCHAR}
+        </where>
+    </delete>
+
+
+    <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+      from sbc_article
+      where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+      delete from sbc_article
+      where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.yc.lottery.bean.Article">
+      insert into sbc_article (id, article_code, user_id,
+        article_type, author, title,
+        content, tags, status,
+        create_time, create_user, last_modified_time,
+        last_modified_user, remark)
+      values (#{id,jdbcType=INTEGER}, #{articleCode,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR},
+        #{articleType,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR},
+        #{content,jdbcType=VARCHAR}, #{tags,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=VARCHAR}, #{lastModifiedTime,jdbcType=TIMESTAMP},
+        #{lastModifiedUser,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="com.yc.lottery.bean.Article">
+      insert into sbc_article
+      <trim prefix="(" suffix=")" suffixOverrides=",">
+        <if test="id != null">
+          id,
+        </if>
+        <if test="articleCode != null">
+          article_code,
+        </if>
+        <if test="userId != null">
+          user_id,
+        </if>
+        <if test="articleType != null">
+          article_type,
+        </if>
+        <if test="author != null">
+          author,
+        </if>
+        <if test="title != null">
+          title,
+        </if>
+        <if test="content != null">
+          content,
+        </if>
+        <if test="tags != null">
+          tags,
+        </if>
+        <if test="status != null">
+          status,
+        </if>
+        <if test="createTime != null">
+          create_time,
+        </if>
+        <if test="createUser != null">
+          create_user,
+        </if>
+        <if test="lastModifiedTime != null">
+          last_modified_time,
+        </if>
+        <if test="lastModifiedUser != null">
+          last_modified_user,
+        </if>
+        <if test="remark != null">
+          remark,
+        </if>
+      </trim>
+      <trim prefix="values (" suffix=")" suffixOverrides=",">
+        <if test="id != null">
+          #{id,jdbcType=INTEGER},
+        </if>
+        <if test="articleCode != null">
+          #{articleCode,jdbcType=VARCHAR},
+        </if>
+        <if test="userId != null">
+          #{userId,jdbcType=VARCHAR},
+        </if>
+        <if test="articleType != null">
+          #{articleType,jdbcType=VARCHAR},
+        </if>
+        <if test="author != null">
+          #{author,jdbcType=VARCHAR},
+        </if>
+        <if test="title != null">
+          #{title,jdbcType=VARCHAR},
+        </if>
+        <if test="content != null">
+          #{content,jdbcType=VARCHAR},
+        </if>
+        <if test="tags != null">
+          #{tags,jdbcType=VARCHAR},
+        </if>
+        <if test="status != null">
+          #{status,jdbcType=VARCHAR},
+        </if>
+        <if test="createTime != null">
+          #{createTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="createUser != null">
+          #{createUser,jdbcType=VARCHAR},
+        </if>
+        <if test="lastModifiedTime != null">
+          #{lastModifiedTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="lastModifiedUser != null">
+          #{lastModifiedUser,jdbcType=VARCHAR},
+        </if>
+        <if test="remark != null">
+          #{remark,jdbcType=VARCHAR},
+        </if>
+      </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.yc.lottery.bean.Article">
+      update sbc_article
+      <set>
+        <if test="articleCode != null">
+          article_code = #{articleCode,jdbcType=VARCHAR},
+        </if>
+        <if test="userId != null">
+          user_id = #{userId,jdbcType=VARCHAR},
+        </if>
+        <if test="articleType != null">
+          article_type = #{articleType,jdbcType=VARCHAR},
+        </if>
+        <if test="author != null">
+          author = #{author,jdbcType=VARCHAR},
+        </if>
+        <if test="title != null">
+          title = #{title,jdbcType=VARCHAR},
+        </if>
+        <if test="content != null">
+          content = #{content,jdbcType=VARCHAR},
+        </if>
+        <if test="tags != null">
+          tags = #{tags,jdbcType=VARCHAR},
+        </if>
+        <if test="status != null">
+          status = #{status,jdbcType=VARCHAR},
+        </if>
+        <if test="createTime != null">
+          create_time = #{createTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="createUser != null">
+          create_user = #{createUser,jdbcType=VARCHAR},
+        </if>
+        <if test="lastModifiedTime != null">
+          last_modified_time = #{lastModifiedTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="lastModifiedUser != null">
+          last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR},
+        </if>
+        <if test="remark != null">
+          remark = #{remark,jdbcType=VARCHAR},
+        </if>
+      </set>
+      where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.yc.lottery.bean.Article">
+      update sbc_article
+      set article_code = #{articleCode,jdbcType=VARCHAR},
         user_id = #{userId,jdbcType=VARCHAR},
-      </if>
-      <if test="articleType != null">
         article_type = #{articleType,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null">
         author = #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="content != null">
         content = #{content,jdbcType=VARCHAR},
-      </if>
-      <if test="tags != null">
         tags = #{tags,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null">
         status = #{status,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null">
-        remark = #{remark,jdbcType=VARCHAR},
-      </if>
-      <if test="isPrivate != null">
-        is_private = #{isPrivate,jdbcType=VARCHAR},
-      </if>
-      <if test="articlePersonalClassification != null">
-      article_Personal_Classification = #{articlePersonalClassification,jdbcType=VARCHAR},
-      </if>
-      <if test="auditStatus != null">
-       audit_Status = #{auditStatus,jdbcType=VARCHAR},
-      </if>
-      <if test="isOriginal != null">
-       is_Original = #{isOriginal,jdbcType=VARCHAR},
-      </if>
-      <if test="ossUrl != null">
-         oss_Url = #{ossUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="shortComment != null">
-        short_comment = #{shortComment,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <where>
-      <if test="id != null">
-        and  id = #{id,jdbcType=INTEGER}
-      </if>
-      <if test="articleCode != null">
-        and article_code = #{articleCode,jdbcType=VARCHAR}
-      </if>
-    </where>
-  </update>
-
-  <insert id="insertOneArticle">
-    insert into sbc_article
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="articleCode != null">
-        article_code,
-      </if>
-      <if test="userId != null">
-        user_id,
-      </if>
-      <if test="articleType != null">
-        article_type,
-      </if>
-      <if test="author != null">
-        author,
-      </if>
-      <if test="title != null">
-        title,
-      </if>
-      <if test="content != null">
-        content,
-      </if>
-      <if test="tags != null">
-        tags,
-      </if>
-      <if test="status != null">
-        status,
-      </if>
-      <if test="createUser != null">
-        create_user,
-      </if>
-      <if test="lastModifiedUser != null">
-        last_modified_user,
-      </if>
-      <if test="isPrivate != null">
-        is_private,
-      </if>
-      <if test="remark != null">
-        remark,
-      </if>
-      <if test="articlePersonalClassification != null">
-       article_Personal_Classification,
-      </if>
-      <if test="auditStatus != null">
-       audit_Status,
-      </if>
-      <if test="isOriginal != null">
-        is_Original,
-      </if>
-      <if test="ossUrl != null">
-        oss_Url,
-      </if>
-      <if test="shortComment != null">
-        short_comment,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="articleCode != null">
-        #{articleCode,jdbcType=VARCHAR},
-      </if>
-      <if test="userId != null">
-        #{userId,jdbcType=VARCHAR},
-      </if>
-      <if test="articleType != null">
-        #{articleType,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null">
-        #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="title != null">
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="content != null">
-        #{content,jdbcType=VARCHAR},
-      </if>
-      <if test="tags != null">
-        #{tags,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null">
-        #{status,jdbcType=VARCHAR},
-      </if>
-      <if test="createUser != null">
-        #{createUser,jdbcType=VARCHAR},
-      </if>
-      <if test="lastModifiedUser != null">
-        #{lastModifiedUser,jdbcType=VARCHAR},
-      </if>
-      <if test="isPrivate != null">
-        #{isPrivate,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null">
-        #{remark,jdbcType=VARCHAR},
-      </if>
-      <if test="articlePersonalClassification != null">
-        #{articlePersonalClassification,jdbcType=VARCHAR},
-      </if>
-      <if test="auditStatus != null">
-        #{auditStatus,jdbcType=VARCHAR},
-      </if>
-      <if test="isOriginal != null">
-        #{isOriginal,jdbcType=VARCHAR},
-      </if>
-      <if test="ossUrl != null">
-        #{ossUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="shortComment != null">
-        #{shortComment,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-
-
-  <resultMap id="OtherResultMap" type="cn.wzl.sbc.prod.model.article.data.ArticleAllInfo">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="article_code" jdbcType="VARCHAR" property="articleCode" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
-    <result column="article_type" jdbcType="VARCHAR" property="articleType" />
-    <result column="author" jdbcType="VARCHAR" property="author" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="tags" jdbcType="VARCHAR" property="tags" />
-    <result column="status" jdbcType="VARCHAR" property="status" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
-    <result column="last_modified_time" jdbcType="TIMESTAMP" property="lastModifiedTime" />
-    <result column="last_modified_user" jdbcType="VARCHAR" property="lastModifiedUser" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-    <result column="is_private" jdbcType="VARCHAR" property="isPrivate" />
-    <result column="article_Personal_Classification" jdbcType="VARCHAR" property="articlePersonalClassification" />
-    <result column="audit_Status" jdbcType="VARCHAR" property="auditStatus" />
-    <result column="is_Original" jdbcType="VARCHAR" property="isOriginal" />
-    <result column="article_info_code" jdbcType="VARCHAR" property="articleInfoCode" />
-    <result column="like_count" jdbcType="INTEGER" property="likeCount" />
-    <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
-    <result column="no_like_count" jdbcType="INTEGER" property="noLikeCount" />
-    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
-    <result column="oss_url" jdbcType="VARCHAR" property="ossUrl" />
-    <result column="short_comment" jdbcType="VARCHAR" property="shortComment" />
-  </resultMap>
-
-  <sql id="article_info_page">
-    <where>
-      <if test="articleCode != null">
-        and  article_code = #{articleCode,jdbcType=VARCHAR}
-      </if>
-      <if test="isPrivate != null">
-        and is_private = #{isPrivate,jdbcType=VARCHAR}
-      </if>
-    </where>
-  </sql>
-  <!--查询文章的详情信息-->
-  <select id="queryArticleInfo" resultMap="OtherResultMap">
-    select * from sbc_article a
-    left join sbc_article_info i on a.article_code = i.article_code
-    <include refid="article_info_page"></include>
-    order by i.click_count,a.last_modified_time desc
-    <if test="isPaging == true">
-      limit #{start},#{pageSize}
-    </if>
-  </select>
-
-  <!--查询记录数-->
-  <select id="queryArticleInfoCount" resultType="java.lang.Integer">
-    select count(*) from sbc_article a
-    left join sbc_article_info i on a.article_code = i.article_code
-    <include refid="article_info_page"></include>
-  </select>
-
-
-  <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from sbc_article
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from sbc_article
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.yc.lottery.bean.Article">
-    insert into sbc_article (id, article_code, user_id,
-      article_type, author, title,
-      content, tags, status,
-      create_time, create_user, last_modified_time,
-      last_modified_user, remark)
-    values (#{id,jdbcType=INTEGER}, #{articleCode,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR},
-      #{articleType,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR},
-      #{content,jdbcType=VARCHAR}, #{tags,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR},
-      #{createTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=VARCHAR}, #{lastModifiedTime,jdbcType=TIMESTAMP},
-      #{lastModifiedUser,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.yc.lottery.bean.Article">
-    insert into sbc_article
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="articleCode != null">
-        article_code,
-      </if>
-      <if test="userId != null">
-        user_id,
-      </if>
-      <if test="articleType != null">
-        article_type,
-      </if>
-      <if test="author != null">
-        author,
-      </if>
-      <if test="title != null">
-        title,
-      </if>
-      <if test="content != null">
-        content,
-      </if>
-      <if test="tags != null">
-        tags,
-      </if>
-      <if test="status != null">
-        status,
-      </if>
-      <if test="createTime != null">
-        create_time,
-      </if>
-      <if test="createUser != null">
-        create_user,
-      </if>
-      <if test="lastModifiedTime != null">
-        last_modified_time,
-      </if>
-      <if test="lastModifiedUser != null">
-        last_modified_user,
-      </if>
-      <if test="remark != null">
-        remark,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="articleCode != null">
-        #{articleCode,jdbcType=VARCHAR},
-      </if>
-      <if test="userId != null">
-        #{userId,jdbcType=VARCHAR},
-      </if>
-      <if test="articleType != null">
-        #{articleType,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null">
-        #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="title != null">
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="content != null">
-        #{content,jdbcType=VARCHAR},
-      </if>
-      <if test="tags != null">
-        #{tags,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null">
-        #{status,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="createUser != null">
-        #{createUser,jdbcType=VARCHAR},
-      </if>
-      <if test="lastModifiedTime != null">
-        #{lastModifiedTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="lastModifiedUser != null">
-        #{lastModifiedUser,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null">
-        #{remark,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yc.lottery.bean.Article">
-    update sbc_article
-    <set>
-      <if test="articleCode != null">
-        article_code = #{articleCode,jdbcType=VARCHAR},
-      </if>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=VARCHAR},
-      </if>
-      <if test="articleType != null">
-        article_type = #{articleType,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null">
-        author = #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="title != null">
-        title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="content != null">
-        content = #{content,jdbcType=VARCHAR},
-      </if>
-      <if test="tags != null">
-        tags = #{tags,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null">
-        status = #{status,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="createUser != null">
         create_user = #{createUser,jdbcType=VARCHAR},
-      </if>
-      <if test="lastModifiedTime != null">
         last_modified_time = #{lastModifiedTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="lastModifiedUser != null">
         last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null">
-        remark = #{remark,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.yc.lottery.bean.Article">
-    update sbc_article
-    set article_code = #{articleCode,jdbcType=VARCHAR},
-      user_id = #{userId,jdbcType=VARCHAR},
-      article_type = #{articleType,jdbcType=VARCHAR},
-      author = #{author,jdbcType=VARCHAR},
-      title = #{title,jdbcType=VARCHAR},
-      content = #{content,jdbcType=VARCHAR},
-      tags = #{tags,jdbcType=VARCHAR},
-      status = #{status,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      create_user = #{createUser,jdbcType=VARCHAR},
-      last_modified_time = #{lastModifiedTime,jdbcType=TIMESTAMP},
-      last_modified_user = #{lastModifiedUser,jdbcType=VARCHAR},
-      remark = #{remark,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>-->
+        remark = #{remark,jdbcType=VARCHAR}
+      where id = #{id,jdbcType=INTEGER}
+    </update>-->
 </mapper>

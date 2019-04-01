@@ -50,4 +50,11 @@ public interface ArticleMapper {
      */
     int queryArticleInfoCount(ArticleAllInfo articleAllInfo);
 
+    /**
+     * 根据articleCode删除文章
+     * @param article
+     * @return
+     */
+    int deleteArticleByCode(Article article);
+
 }

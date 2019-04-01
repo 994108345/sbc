@@ -49,4 +49,11 @@ public interface ArticleService {
      */
     PageBeanResult queryArticleInfo(ArticleAllInfo articleAllInfo);
 
+    /**
+     * 删除文章
+     * @param article
+     * @return
+     */
+    MessageResult deleteArticleByCode(Article article);
+
 }

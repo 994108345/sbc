@@ -159,6 +159,14 @@
       </if>
     </where>
   </update>
+
+  <!--根据articleCode删除-->
+  <delete id="deleteArticleInfoByCode">
+    delete from sbc_article_info
+    <where>
+      article_code = #{articleCode,jdbcType=VARCHAR}
+    </where>
+  </delete>
   <!--
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 

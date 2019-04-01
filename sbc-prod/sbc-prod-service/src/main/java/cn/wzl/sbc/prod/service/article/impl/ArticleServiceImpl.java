@@ -238,5 +238,24 @@ public class ArticleServiceImpl implements ArticleService {
         return result;
     }
 
-
+    @Override
+    public MessageResult deleteArticleByCode(Article article) {
+        MessageResult result = new MessageResult();
+        try {
+            int articleCount = articleMapper.deleteArticleByCode(article);
+            if(articleCount < 1){
+                throw new Exception("删除文章记录数小于1");
+            }
+            ArticleInfo articleInfo = new ArticleInfo();
+            articleInfo.setArticleCode(article.getArticleCode());
+            int articleInfoCount = articleInfoMapper.deleteArticleInfoByCode(articleInfo);
+            if(articleInfoCount < 1){
+                throw new Exception("删除文章信息记录数小于1");
+            }
+        } catch (Exception e) {
+            log.error("ArticleServiceImpl deleteArticleByCode has error...",e);
+            result.setErrorMessage(e.getMessage());
+        }
+        return result;
+    }
 }
