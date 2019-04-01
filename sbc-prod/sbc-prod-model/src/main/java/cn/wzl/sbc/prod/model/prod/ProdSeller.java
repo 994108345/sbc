@@ -1,13 +1,15 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.prod;
 
 import java.util.Date;
 
-public class ProdSpecification {
+public class ProdSeller {
     private Integer id;
 
-    private String specificationCode;
+    private String sellerCode;
 
-    private String specificationName;
+    private String sellerName;
+
+    private String status;
 
     private Date createTime;
 
@@ -27,20 +29,28 @@ public class ProdSpecification {
         this.id = id;
     }
 
-    public String getSpecificationCode() {
-        return specificationCode;
+    public String getSellerCode() {
+        return sellerCode;
     }
 
-    public void setSpecificationCode(String specificationCode) {
-        this.specificationCode = specificationCode == null ? null : specificationCode.trim();
+    public void setSellerCode(String sellerCode) {
+        this.sellerCode = sellerCode == null ? null : sellerCode.trim();
     }
 
-    public String getSpecificationName() {
-        return specificationName;
+    public String getSellerName() {
+        return sellerName;
     }
 
-    public void setSpecificationName(String specificationName) {
-        this.specificationName = specificationName == null ? null : specificationName.trim();
+    public void setSellerName(String sellerName) {
+        this.sellerName = sellerName == null ? null : sellerName.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status == null ? null : status.trim();
     }
 
     public Date getCreateTime() {

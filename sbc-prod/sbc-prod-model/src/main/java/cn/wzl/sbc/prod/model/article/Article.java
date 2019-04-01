@@ -64,6 +64,7 @@ public class Article extends UserMessage {
      */
     private String shortComment;
 
+
     public String getShortComment() {
         return shortComment;
     }

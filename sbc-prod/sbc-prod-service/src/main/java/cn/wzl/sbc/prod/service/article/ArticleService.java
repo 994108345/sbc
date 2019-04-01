@@ -4,7 +4,7 @@ import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.prod.model.article.Article;
 import cn.wzl.sbc.prod.model.article.data.ArticleAllInfo;
-import cn.wzl.sbc.prod.model.page.ArticleBean;
+import cn.wzl.sbc.prod.model.article.page.ArticleBean;
 
 /**
  * @author ：wzl

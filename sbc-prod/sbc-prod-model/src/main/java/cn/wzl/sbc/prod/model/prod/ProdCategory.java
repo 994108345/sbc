@@ -1,15 +1,15 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.prod;
 
 import java.util.Date;
 
-public class ProdSpu {
+public class ProdCategory {
     private Integer id;
 
+    private String categoryCode;
+
+    private String categoryName;
+
     private String spuCode;
-
-    private String sellerCode;
-
-    private String spuName;
 
     private String status;
 
@@ -31,28 +31,28 @@ public class ProdSpu {
         this.id = id;
     }
 
+    public String getCategoryCode() {
+        return categoryCode;
+    }
+
+    public void setCategoryCode(String categoryCode) {
+        this.categoryCode = categoryCode == null ? null : categoryCode.trim();
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName == null ? null : categoryName.trim();
+    }
+
     public String getSpuCode() {
         return spuCode;
     }
 
     public void setSpuCode(String spuCode) {
         this.spuCode = spuCode == null ? null : spuCode.trim();
-    }
-
-    public String getSellerCode() {
-        return sellerCode;
-    }
-
-    public void setSellerCode(String sellerCode) {
-        this.sellerCode = sellerCode == null ? null : sellerCode.trim();
-    }
-
-    public String getSpuName() {
-        return spuName;
-    }
-
-    public void setSpuName(String spuName) {
-        this.spuName = spuName == null ? null : spuName.trim();
     }
 
     public String getStatus() {

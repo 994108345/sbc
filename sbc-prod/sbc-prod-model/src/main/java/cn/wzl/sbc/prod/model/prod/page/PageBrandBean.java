@@ -1,17 +1,36 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.prod.page;
+
+import cn.wzl.sbc.model.page.PageBean;
 
 import java.util.Date;
 
 /**
- * 品牌
+ * 品牌分页对象
  */
-public class ProdBrand {
+public class PageBrandBean extends PageBean {
+    /**
+     * 主键
+     */
     private Integer id;
 
+    /**
+     * 品牌编码
+     */
     private String brandCode;
 
+    /**
+     * 品牌名字
+     */
     private String brandName;
 
+    /**
+     * spu编码
+     */
+    private String spuCode;
+
+    /**
+     * 状态
+     */
     private String status;
 
     private Date createTime;
@@ -46,6 +65,14 @@ public class ProdBrand {
 
     public void setBrandName(String brandName) {
         this.brandName = brandName == null ? null : brandName.trim();
+    }
+
+    public String getSpuCode() {
+        return spuCode;
+    }
+
+    public void setSpuCode(String spuCode) {
+        this.spuCode = spuCode == null ? null : spuCode.trim();
     }
 
     public String getStatus() {

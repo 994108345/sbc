@@ -1,22 +1,28 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.article.page;
+
+import cn.wzl.sbc.model.page.PageBean;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
 
-public class ProdCategory {
+/**
+ * @author ：wzl
+ * @date ：Created in 2019/3/8 15:28
+ * @description：
+ */
+public class ArticlePersionClassificationBean extends PageBean {
     private Integer id;
 
-    private String categoryCode;
+    private String userName;
 
-    private String categoryName;
+    private String persionClassification;
 
-    private String spuCode;
-
-    private String status;
-
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date createTime;
 
     private String createUser;
 
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date lastModifiedTime;
 
     private String lastModifiedUser;
@@ -31,36 +37,20 @@ public class ProdCategory {
         this.id = id;
     }
 
-    public String getCategoryCode() {
-        return categoryCode;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setCategoryCode(String categoryCode) {
-        this.categoryCode = categoryCode == null ? null : categoryCode.trim();
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public String getPersionClassification() {
+        return persionClassification;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName == null ? null : categoryName.trim();
-    }
-
-    public String getSpuCode() {
-        return spuCode;
-    }
-
-    public void setSpuCode(String spuCode) {
-        this.spuCode = spuCode == null ? null : spuCode.trim();
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void setPersionClassification(String persionClassification) {
+        this.persionClassification = persionClassification == null ? null : persionClassification.trim();
     }
 
     public Date getCreateTime() {

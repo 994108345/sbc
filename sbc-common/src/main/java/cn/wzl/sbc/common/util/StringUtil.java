@@ -11,7 +11,7 @@ public class StringUtil {
      * @param endLength
      * @return
      */
-    public String getStrOfLength(int endLength,String str){
+    public static  String getStrOfLength(int endLength,String str){
         int length = str.length();
         return str.substring(0,length > endLength? endLength:length);
     }
@@ -22,7 +22,7 @@ public class StringUtil {
      * @param tag2
      * @return
      */
-    public String subString(String str,String tag1,String tag2){
+    public static String subString(String str,String tag1,String tag2){
         return null;
     }
 }

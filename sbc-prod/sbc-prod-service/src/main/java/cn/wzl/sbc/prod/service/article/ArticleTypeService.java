@@ -3,7 +3,7 @@ package cn.wzl.sbc.prod.service.article;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.prod.model.article.ArticleType;
-import cn.wzl.sbc.prod.model.page.ArticleTypeBean;
+import cn.wzl.sbc.prod.model.article.page.ArticleTypeBean;
 
 /**
  * @author ：wzl

@@ -1,13 +1,17 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.prod;
 
 import java.util.Date;
 
-public class ProdSpuSpecificationR {
+public class ProdSpu {
     private Integer id;
 
-    private String specificationCode;
-
     private String spuCode;
+
+    private String sellerCode;
+
+    private String spuName;
+
+    private String status;
 
     private Date createTime;
 
@@ -27,20 +31,36 @@ public class ProdSpuSpecificationR {
         this.id = id;
     }
 
-    public String getSpecificationCode() {
-        return specificationCode;
-    }
-
-    public void setSpecificationCode(String specificationCode) {
-        this.specificationCode = specificationCode == null ? null : specificationCode.trim();
-    }
-
     public String getSpuCode() {
         return spuCode;
     }
 
     public void setSpuCode(String spuCode) {
         this.spuCode = spuCode == null ? null : spuCode.trim();
+    }
+
+    public String getSellerCode() {
+        return sellerCode;
+    }
+
+    public void setSellerCode(String sellerCode) {
+        this.sellerCode = sellerCode == null ? null : sellerCode.trim();
+    }
+
+    public String getSpuName() {
+        return spuName;
+    }
+
+    public void setSpuName(String spuName) {
+        this.spuName = spuName == null ? null : spuName.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status == null ? null : status.trim();
     }
 
     public Date getCreateTime() {

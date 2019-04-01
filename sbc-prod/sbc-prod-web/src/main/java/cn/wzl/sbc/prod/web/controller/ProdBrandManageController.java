@@ -2,8 +2,8 @@ package cn.wzl.sbc.prod.web.controller;
 
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.PageBeanResult;
-import cn.wzl.sbc.prod.model.ProdBrand;
-import cn.wzl.sbc.prod.model.page.PageBrandBean;
+import cn.wzl.sbc.prod.model.prod.ProdBrand;
+import cn.wzl.sbc.prod.model.prod.page.PageBrandBean;
 import cn.wzl.sbc.prod.service.brand.ProdBrandService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.bind.annotation.*;

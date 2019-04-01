@@ -1,24 +1,13 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.prod;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
-public class ProdSku {
+public class ProdSpuSpecificationR {
     private Integer id;
 
-    private String skuCode;
-
-    private String sellerCode;
-
-    private String skuName;
+    private String specificationCode;
 
     private String spuCode;
-
-    private Integer repertory;
-
-    private BigDecimal price;
-
-    private String status;
 
     private Date createTime;
 
@@ -38,28 +27,12 @@ public class ProdSku {
         this.id = id;
     }
 
-    public String getSkuCode() {
-        return skuCode;
+    public String getSpecificationCode() {
+        return specificationCode;
     }
 
-    public void setSkuCode(String skuCode) {
-        this.skuCode = skuCode == null ? null : skuCode.trim();
-    }
-
-    public String getSellerCode() {
-        return sellerCode;
-    }
-
-    public void setSellerCode(String sellerCode) {
-        this.sellerCode = sellerCode == null ? null : sellerCode.trim();
-    }
-
-    public String getSkuName() {
-        return skuName;
-    }
-
-    public void setSkuName(String skuName) {
-        this.skuName = skuName == null ? null : skuName.trim();
+    public void setSpecificationCode(String specificationCode) {
+        this.specificationCode = specificationCode == null ? null : specificationCode.trim();
     }
 
     public String getSpuCode() {
@@ -68,30 +41,6 @@ public class ProdSku {
 
     public void setSpuCode(String spuCode) {
         this.spuCode = spuCode == null ? null : spuCode.trim();
-    }
-
-    public Integer getRepertory() {
-        return repertory;
-    }
-
-    public void setRepertory(Integer repertory) {
-        this.repertory = repertory;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
     }
 
     public Date getCreateTime() {

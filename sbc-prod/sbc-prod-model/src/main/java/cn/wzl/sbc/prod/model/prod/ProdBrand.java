@@ -1,15 +1,18 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.prod;
 
 import java.util.Date;
 
-public class ProdSpecificationValue {
+/**
+ * 品牌
+ */
+public class ProdBrand {
     private Integer id;
 
-    private String specificationCode;
+    private String brandCode;
 
-    private String valueCode;
+    private String brandName;
 
-    private String valueName;
+    private String status;
 
     private Date createTime;
 
@@ -29,28 +32,28 @@ public class ProdSpecificationValue {
         this.id = id;
     }
 
-    public String getSpecificationCode() {
-        return specificationCode;
+    public String getBrandCode() {
+        return brandCode;
     }
 
-    public void setSpecificationCode(String specificationCode) {
-        this.specificationCode = specificationCode == null ? null : specificationCode.trim();
+    public void setBrandCode(String brandCode) {
+        this.brandCode = brandCode == null ? null : brandCode.trim();
     }
 
-    public String getValueCode() {
-        return valueCode;
+    public String getBrandName() {
+        return brandName;
     }
 
-    public void setValueCode(String valueCode) {
-        this.valueCode = valueCode == null ? null : valueCode.trim();
+    public void setBrandName(String brandName) {
+        this.brandName = brandName == null ? null : brandName.trim();
     }
 
-    public String getValueName() {
-        return valueName;
+    public String getStatus() {
+        return status;
     }
 
-    public void setValueName(String valueName) {
-        this.valueName = valueName == null ? null : valueName.trim();
+    public void setStatus(String status) {
+        this.status = status == null ? null : status.trim();
     }
 
     public Date getCreateTime() {

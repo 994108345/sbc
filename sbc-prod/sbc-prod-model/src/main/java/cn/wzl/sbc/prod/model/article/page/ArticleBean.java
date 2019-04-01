@@ -1,7 +1,8 @@
-package cn.wzl.sbc.prod.model.page;
+package cn.wzl.sbc.prod.model.article.page;
 
 import cn.wzl.sbc.model.page.PageBean;
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * @date ：Created in 2019/3/6 9:52
  * @description：文章分页实体类
  */
+@Data
 public class ArticleBean  extends PageBean {
     private Integer id;
 
@@ -68,6 +70,32 @@ public class ArticleBean  extends PageBean {
      * 是否原创：0转载，1原创，2翻译
      */
     private  String isOriginal;
+
+    /**
+     * 文章上传路由
+     */
+    private String ossUrl;
+
+    /**
+     * 缩略内容
+     */
+    private String shortComment;
+
+    public String getOssUrl() {
+        return ossUrl;
+    }
+
+    public void setOssUrl(String ossUrl) {
+        this.ossUrl = ossUrl;
+    }
+
+    public String getShortComment() {
+        return shortComment;
+    }
+
+    public void setShortComment(String shortComment) {
+        this.shortComment = shortComment;
+    }
 
     public String[] getArticlePersonalClassficationArr() {
         return articlePersonalClassficationArr;

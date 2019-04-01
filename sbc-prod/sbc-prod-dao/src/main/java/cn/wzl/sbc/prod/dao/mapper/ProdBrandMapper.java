@@ -1,8 +1,8 @@
 package cn.wzl.sbc.prod.dao.mapper;
 
 
-import cn.wzl.sbc.prod.model.ProdBrand;
-import cn.wzl.sbc.prod.model.page.PageBrandBean;
+import cn.wzl.sbc.prod.model.prod.ProdBrand;
+import cn.wzl.sbc.prod.model.prod.page.PageBrandBean;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

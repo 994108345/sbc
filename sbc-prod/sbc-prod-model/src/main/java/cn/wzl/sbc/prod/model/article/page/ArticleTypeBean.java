@@ -1,20 +1,31 @@
-package cn.wzl.sbc.prod.model;
+package cn.wzl.sbc.prod.model.article.page;
+
+import cn.wzl.sbc.model.page.PageBean;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
 
-public class ProdSeller {
+/**
+ * @author ：wzl
+ * @date ：Created in 2019/3/6 9:52
+ * @description：文章类型分页实体类
+ */
+public class ArticleTypeBean extends PageBean {
+
     private Integer id;
 
-    private String sellerCode;
+    private String articleTypeCode;
 
-    private String sellerName;
+    private String articleName;
 
     private String status;
 
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date createTime;
 
     private String createUser;
 
+    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date lastModifiedTime;
 
     private String lastModifiedUser;
@@ -29,20 +40,20 @@ public class ProdSeller {
         this.id = id;
     }
 
-    public String getSellerCode() {
-        return sellerCode;
+    public String getArticleTypeCode() {
+        return articleTypeCode;
     }
 
-    public void setSellerCode(String sellerCode) {
-        this.sellerCode = sellerCode == null ? null : sellerCode.trim();
+    public void setArticleTypeCode(String articleTypeCode) {
+        this.articleTypeCode = articleTypeCode == null ? null : articleTypeCode.trim();
     }
 
-    public String getSellerName() {
-        return sellerName;
+    public String getArticleName() {
+        return articleName;
     }
 
-    public void setSellerName(String sellerName) {
-        this.sellerName = sellerName == null ? null : sellerName.trim();
+    public void setArticleName(String articleName) {
+        this.articleName = articleName == null ? null : articleName.trim();
     }
 
     public String getStatus() {

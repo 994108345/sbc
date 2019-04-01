@@ -6,7 +6,7 @@ import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.common.util.CodeUtil;
 import cn.wzl.sbc.prod.dao.bean.article.ArticleTypeDao;
 import cn.wzl.sbc.prod.model.article.ArticleType;
-import cn.wzl.sbc.prod.model.page.ArticleTypeBean;
+import cn.wzl.sbc.prod.model.article.page.ArticleTypeBean;
 import cn.wzl.sbc.prod.service.article.ArticleTypeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

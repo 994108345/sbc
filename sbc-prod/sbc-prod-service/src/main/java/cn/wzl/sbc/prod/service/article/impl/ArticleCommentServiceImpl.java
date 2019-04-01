@@ -7,7 +7,7 @@ import cn.wzl.sbc.common.result.PageBeanResult;
 import cn.wzl.sbc.common.util.RedisUtil;
 import cn.wzl.sbc.prod.dao.mapper.ArticleCommentMapper;
 import cn.wzl.sbc.prod.model.article.ArticleComment;
-import cn.wzl.sbc.prod.model.page.ArticleBean;
+import cn.wzl.sbc.prod.model.article.page.ArticleBean;
 import cn.wzl.sbc.prod.service.article.ArticleCommentService;
 import cn.wzl.sbc.prod.service.article.ArticleService;
 import org.slf4j.Logger;

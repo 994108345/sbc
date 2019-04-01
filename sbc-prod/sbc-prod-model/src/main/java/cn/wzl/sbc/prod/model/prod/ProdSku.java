@@ -1,36 +1,23 @@
-package cn.wzl.sbc.prod.model.page;
+package cn.wzl.sbc.prod.model.prod;
 
-import cn.wzl.sbc.model.page.PageBean;
-
+import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * 品牌分页对象
- */
-public class PageBrandBean extends PageBean {
-    /**
-     * 主键
-     */
+public class ProdSku {
     private Integer id;
 
-    /**
-     * 品牌编码
-     */
-    private String brandCode;
+    private String skuCode;
 
-    /**
-     * 品牌名字
-     */
-    private String brandName;
+    private String sellerCode;
 
-    /**
-     * spu编码
-     */
+    private String skuName;
+
     private String spuCode;
 
-    /**
-     * 状态
-     */
+    private Integer repertory;
+
+    private BigDecimal price;
+
     private String status;
 
     private Date createTime;
@@ -51,20 +38,28 @@ public class PageBrandBean extends PageBean {
         this.id = id;
     }
 
-    public String getBrandCode() {
-        return brandCode;
+    public String getSkuCode() {
+        return skuCode;
     }
 
-    public void setBrandCode(String brandCode) {
-        this.brandCode = brandCode == null ? null : brandCode.trim();
+    public void setSkuCode(String skuCode) {
+        this.skuCode = skuCode == null ? null : skuCode.trim();
     }
 
-    public String getBrandName() {
-        return brandName;
+    public String getSellerCode() {
+        return sellerCode;
     }
 
-    public void setBrandName(String brandName) {
-        this.brandName = brandName == null ? null : brandName.trim();
+    public void setSellerCode(String sellerCode) {
+        this.sellerCode = sellerCode == null ? null : sellerCode.trim();
+    }
+
+    public String getSkuName() {
+        return skuName;
+    }
+
+    public void setSkuName(String skuName) {
+        this.skuName = skuName == null ? null : skuName.trim();
     }
 
     public String getSpuCode() {
@@ -73,6 +68,22 @@ public class PageBrandBean extends PageBean {
 
     public void setSpuCode(String spuCode) {
         this.spuCode = spuCode == null ? null : spuCode.trim();
+    }
+
+    public Integer getRepertory() {
+        return repertory;
+    }
+
+    public void setRepertory(Integer repertory) {
+        this.repertory = repertory;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     public String getStatus() {

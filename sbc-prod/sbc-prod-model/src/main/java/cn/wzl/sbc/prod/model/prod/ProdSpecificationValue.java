@@ -1,31 +1,20 @@
-package cn.wzl.sbc.prod.model.page;
-
-import cn.wzl.sbc.model.page.PageBean;
-import com.alibaba.fastjson.annotation.JSONField;
+package cn.wzl.sbc.prod.model.prod;
 
 import java.util.Date;
 
-/**
- * @author ：wzl
- * @date ：Created in 2019/3/6 9:52
- * @description：文章类型分页实体类
- */
-public class ArticleTypeBean extends PageBean {
-
+public class ProdSpecificationValue {
     private Integer id;
 
-    private String articleTypeCode;
+    private String specificationCode;
 
-    private String articleName;
+    private String valueCode;
 
-    private String status;
+    private String valueName;
 
-    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date createTime;
 
     private String createUser;
 
-    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date lastModifiedTime;
 
     private String lastModifiedUser;
@@ -40,28 +29,28 @@ public class ArticleTypeBean extends PageBean {
         this.id = id;
     }
 
-    public String getArticleTypeCode() {
-        return articleTypeCode;
+    public String getSpecificationCode() {
+        return specificationCode;
     }
 
-    public void setArticleTypeCode(String articleTypeCode) {
-        this.articleTypeCode = articleTypeCode == null ? null : articleTypeCode.trim();
+    public void setSpecificationCode(String specificationCode) {
+        this.specificationCode = specificationCode == null ? null : specificationCode.trim();
     }
 
-    public String getArticleName() {
-        return articleName;
+    public String getValueCode() {
+        return valueCode;
     }
 
-    public void setArticleName(String articleName) {
-        this.articleName = articleName == null ? null : articleName.trim();
+    public void setValueCode(String valueCode) {
+        this.valueCode = valueCode == null ? null : valueCode.trim();
     }
 
-    public String getStatus() {
-        return status;
+    public String getValueName() {
+        return valueName;
     }
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void setValueName(String valueName) {
+        this.valueName = valueName == null ? null : valueName.trim();
     }
 
     public Date getCreateTime() {

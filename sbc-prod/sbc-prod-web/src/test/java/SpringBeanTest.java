@@ -1,8 +1,6 @@
 import cn.wzl.sbc.SbcProdApplication;
 import cn.wzl.sbc.common.util.SpringBeanUtil;
-import cn.wzl.sbc.prod.model.page.PageBrandBean;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.logging.log4j.core.util.JsonUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

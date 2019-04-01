@@ -6,7 +6,7 @@ import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.prod.dao.bean.article.ArticleDao;
 import cn.wzl.sbc.prod.dao.mapper.ArticleMapper;
 import cn.wzl.sbc.prod.model.article.Article;
-import cn.wzl.sbc.prod.model.page.ArticleBean;
+import cn.wzl.sbc.prod.model.article.page.ArticleBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

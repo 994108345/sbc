@@ -1,5 +1,6 @@
 package cn.wzl.sbc.prod.model.article.data;
 
+import cn.wzl.sbc.model.page.PageBean;
 import cn.wzl.sbc.prod.model.article.ArticleInfo;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
@@ -11,7 +12,7 @@ import java.util.Date;
  * @date Created in 2019/3/26 16:36
  */
 @Data
-public class ArticleAllInfo {
+public class ArticleAllInfo extends PageBean {
     private Integer id;
 
     private String articleCode;
@@ -63,6 +64,26 @@ public class ArticleAllInfo {
      * 文章其他信息
      */
     private ArticleInfo articleInfo;
+
+    /**
+     * 文章上传路由
+     */
+    private String ossUrl;
+
+    /**
+     * 缩略内容
+     */
+    private String shortComment;
+
+    private String articleInfoCode;
+
+    private Integer likeCount;
+
+    private Integer commentCount;
+
+    private Integer noLikeCount;
+
+    private Integer clickCount;
 
     public Integer getId() {
         return id;
@@ -214,5 +235,61 @@ public class ArticleAllInfo {
 
     public void setArticleInfo(ArticleInfo articleInfo) {
         this.articleInfo = articleInfo;
+    }
+
+    public String getOssUrl() {
+        return ossUrl;
+    }
+
+    public void setOssUrl(String ossUrl) {
+        this.ossUrl = ossUrl;
+    }
+
+    public String getShortComment() {
+        return shortComment;
+    }
+
+    public void setShortComment(String shortComment) {
+        this.shortComment = shortComment;
+    }
+
+    public String getArticleInfoCode() {
+        return articleInfoCode;
+    }
+
+    public void setArticleInfoCode(String articleInfoCode) {
+        this.articleInfoCode = articleInfoCode;
+    }
+
+    public Integer getLikeCount() {
+        return likeCount;
+    }
+
+    public void setLikeCount(Integer likeCount) {
+        this.likeCount = likeCount;
+    }
+
+    public Integer getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(Integer commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public Integer getNoLikeCount() {
+        return noLikeCount;
+    }
+
+    public void setNoLikeCount(Integer noLikeCount) {
+        this.noLikeCount = noLikeCount;
+    }
+
+    public Integer getClickCount() {
+        return clickCount;
+    }
+
+    public void setClickCount(Integer clickCount) {
+        this.clickCount = clickCount;
     }
 }

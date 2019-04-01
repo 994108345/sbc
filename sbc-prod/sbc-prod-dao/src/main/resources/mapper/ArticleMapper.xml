@@ -86,8 +86,8 @@
       <if test="ossUrl != null">
         and oss_Url = #{ossUrl,jdbcType=VARCHAR}
       </if>
-      <if test="shortContent != null">
-        and short_Content = #{shortContent,jdbcType=VARCHAR}
+      <if test="shortComment != null">
+        and short_comment = #{shortComment,jdbcType=VARCHAR}
       </if>
     </where>
     <if test="isPaging == true">
@@ -152,8 +152,8 @@
       <if test="ossUrl != null">
         and oss_Url = #{ossUrl,jdbcType=VARCHAR}
       </if>
-      <if test="shortContent != null">
-        and short_Content = #{shortContent,jdbcType=VARCHAR}
+      <if test="shortComment != null">
+        and short_comment = #{shortComment,jdbcType=VARCHAR}
       </if>
     </where>
   </select>
@@ -200,8 +200,8 @@
       <if test="ossUrl != null">
          oss_Url = #{ossUrl,jdbcType=VARCHAR},
       </if>
-      <if test="shortContent != null">
-        short_Content = #{shortContent,jdbcType=VARCHAR},
+      <if test="shortComment != null">
+        short_comment = #{shortComment,jdbcType=VARCHAR},
       </if>
     </set>
     <where>
@@ -265,8 +265,8 @@
       <if test="ossUrl != null">
         oss_Url,
       </if>
-      <if test="shortContent != null">
-        short_Content,
+      <if test="shortComment != null">
+        short_comment,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -318,14 +318,14 @@
       <if test="ossUrl != null">
         #{ossUrl,jdbcType=VARCHAR},
       </if>
-      <if test="shortContent != null">
-        #{shortContent,jdbcType=VARCHAR},
+      <if test="shortComment != null">
+        #{shortComment,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
 
 
-  <resultMap id="OtherResultMap" type="cn.wzl.sbc.prod.model.article.Article">
+  <resultMap id="OtherResultMap" type="cn.wzl.sbc.prod.model.article.data.ArticleAllInfo">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="article_code" jdbcType="VARCHAR" property="articleCode" />
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
@@ -350,7 +350,7 @@
     <result column="no_like_count" jdbcType="INTEGER" property="noLikeCount" />
     <result column="click_count" jdbcType="INTEGER" property="clickCount" />
     <result column="oss_url" jdbcType="VARCHAR" property="ossUrl" />
-    <result column="short_content" jdbcType="VARCHAR" property="shortContent" />
+    <result column="short_comment" jdbcType="VARCHAR" property="shortComment" />
   </resultMap>
 
   <sql id="article_info_page">
@@ -365,16 +365,17 @@
   </sql>
   <!--查询文章的详情信息-->
   <select id="queryArticleInfo" resultMap="OtherResultMap">
-    select * from sbc_article a left join sbc_article_info i on a.article_code = i.article_code
+    select * from sbc_article a
+    left join sbc_article_info i on a.article_code = i.article_code
     <include refid="article_info_page"></include>
+    order by i.click_count,a.last_modified_time desc
     <if test="isPaging == true">
       limit #{start},#{pageSize}
     </if>
-    order by i.click_count,a.last_modified_time
   </select>
 
   <!--查询记录数-->
-  <select id="queryArticleInfoCount" resultMap="OtherResultMap">
+  <select id="queryArticleInfoCount" resultType="java.lang.Integer">
     select count(*) from sbc_article a
     left join sbc_article_info i on a.article_code = i.article_code
     <include refid="article_info_page"></include>

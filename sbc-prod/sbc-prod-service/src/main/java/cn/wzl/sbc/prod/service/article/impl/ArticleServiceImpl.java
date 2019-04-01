@@ -13,13 +13,12 @@ import cn.wzl.sbc.prod.model.article.Article;
 import cn.wzl.sbc.prod.model.article.ArticleInfo;
 import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
 import cn.wzl.sbc.prod.model.article.data.ArticleAllInfo;
-import cn.wzl.sbc.prod.model.page.ArticleBean;
+import cn.wzl.sbc.prod.model.article.page.ArticleBean;
 import cn.wzl.sbc.prod.service.article.ArticleService;
 import org.dozer.DozerBeanMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
 import java.io.ByteArrayInputStream;
@@ -105,6 +104,8 @@ public class ArticleServiceImpl implements ArticleService {
         }
         /*将对象名存入*/
         article.setOssUrl(objectName);
+        /*缩略内容*/
+        article.setShortComment(StringUtil.getStrOfLength(400,content == null ?"":content));
         result = articleDao.updateOneArticle(article);
         return result;
     }
@@ -164,6 +165,7 @@ public class ArticleServiceImpl implements ArticleService {
         String[] classes = persionClass.split(",");
         /*将对象名存入*/
         article.setOssUrl(objectName);
+        article.setShortComment(StringUtil.getStrOfLength(400,content == null ?"":content));
         result = articleDao.insertOneArticle(article);
         if(result.isError()){
             return result;
@@ -199,13 +201,11 @@ public class ArticleServiceImpl implements ArticleService {
             if(dataList.size() < 1){
                 result.setTotalRecords(0);
                 return result;
+            }else{
+                int count = articleMapper.queryArticleInfoCount(articleAllInfo);
+                result.setTotalRecords(count);
             }
-            for (ArticleAllInfo allInfo : dataList) {
-                MessageResult content = OssUtil.downLoadFile(allInfo.getContent());
-
-            }
-
-
+            result.setData(dataList);
         } catch (Exception e) {
             log.error("ArticleServiceImpl queryArticleInfo has error...",e);
             result.setErrorMessage(e.getMessage());

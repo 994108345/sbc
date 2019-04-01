@@ -1,28 +1,18 @@
-package cn.wzl.sbc.prod.model.page;
-
-import cn.wzl.sbc.model.page.PageBean;
-import com.alibaba.fastjson.annotation.JSONField;
+package cn.wzl.sbc.prod.model.prod;
 
 import java.util.Date;
 
-/**
- * @author ：wzl
- * @date ：Created in 2019/3/8 15:28
- * @description：
- */
-public class ArticlePersionClassificationBean extends PageBean {
+public class ProdSpecification {
     private Integer id;
 
-    private String userName;
+    private String specificationCode;
 
-    private String persionClassification;
+    private String specificationName;
 
-    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date createTime;
 
     private String createUser;
 
-    @JSONField(format="yyyy-MM-dd hh:mm:ss")
     private Date lastModifiedTime;
 
     private String lastModifiedUser;
@@ -37,20 +27,20 @@ public class ArticlePersionClassificationBean extends PageBean {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getSpecificationCode() {
+        return specificationCode;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setSpecificationCode(String specificationCode) {
+        this.specificationCode = specificationCode == null ? null : specificationCode.trim();
     }
 
-    public String getPersionClassification() {
-        return persionClassification;
+    public String getSpecificationName() {
+        return specificationName;
     }
 
-    public void setPersionClassification(String persionClassification) {
-        this.persionClassification = persionClassification == null ? null : persionClassification.trim();
+    public void setSpecificationName(String specificationName) {
+        this.specificationName = specificationName == null ? null : specificationName.trim();
     }
 
     public Date getCreateTime() {
