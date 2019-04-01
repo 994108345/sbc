@@ -36,4 +36,11 @@ public interface ArticleTypeMapper {
      * @return
      */
     Integer queryArticleTypeCount(ArticleTypeBean articleBean);
+
+    /**
+     * 根据code删除我脑子类型
+     * @param articleType
+     * @return
+     */
+    int deleteArticleTypeByCode(ArticleType articleType);
 }

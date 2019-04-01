@@ -31,4 +31,11 @@ public interface ArticleTypeService {
      * @return
      */
     MessageResult insertOneArticleType(ArticleType article);
+
+    /**
+     * 删除文章类型
+     * @param articleType
+     * @return
+     */
+    MessageResult deleteArticleTypeByCode(ArticleType articleType);
 }
