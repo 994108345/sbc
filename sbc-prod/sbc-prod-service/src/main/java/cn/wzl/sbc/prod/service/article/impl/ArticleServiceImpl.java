@@ -105,7 +105,7 @@ public class ArticleServiceImpl implements ArticleService {
         /*将对象名存入*/
         article.setOssUrl(objectName);
         /*缩略内容*/
-        article.setShortComment(StringUtil.getStrOfLength(400,content == null ?"":content));
+        article.setShortComment(commentControl(content));
         result = articleDao.updateOneArticle(article);
         return result;
     }
@@ -165,7 +165,7 @@ public class ArticleServiceImpl implements ArticleService {
         String[] classes = persionClass.split(",");
         /*将对象名存入*/
         article.setOssUrl(objectName);
-        article.setShortComment(StringUtil.getStrOfLength(400,content == null ?"":content));
+        article.setShortComment(commentControl(content));
         result = articleDao.insertOneArticle(article);
         if(result.isError()){
             return result;
@@ -185,6 +185,19 @@ public class ArticleServiceImpl implements ArticleService {
             result.setErrorMessage(e.getMessage());
         }
         return result;
+    }
+
+    /**
+     * 处理短文本
+     * @param str
+     * @return
+     */
+    public String  commentControl(String str){
+        /*去除html标签*/
+        String st1 = StringUtil.wipeHtml(str == null?"":str);
+        /*截取100个字符串*/
+        String st2 = StringUtil.getStrOfLength(100,st1);
+        return st2;
     }
 
     @Override

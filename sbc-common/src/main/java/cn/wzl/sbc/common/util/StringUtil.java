@@ -17,6 +17,16 @@ public class StringUtil {
     }
 
     /**
+     * 去除html标签内的内容
+     * @param str
+     * @return
+     */
+    public static String wipeHtml(String str){
+        String s=str.replaceAll("<[^>]*>","");
+        return s;
+    }
+
+    /**
      * 删除指定两个标签内之间的内容
      * @param str
      * @param tag2
