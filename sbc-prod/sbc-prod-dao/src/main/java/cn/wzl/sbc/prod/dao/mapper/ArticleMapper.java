@@ -57,4 +57,11 @@ public interface ArticleMapper {
      */
     int deleteArticleByCode(Article article);
 
+    /**
+     * 查询文章的具体内容
+     * @param articleAllInfo
+     * @return
+     */
+    List<ArticleAllInfo> queryArticleAllInfoByCode(ArticleAllInfo articleAllInfo);
+
 }

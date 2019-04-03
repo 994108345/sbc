@@ -28,7 +28,12 @@ public  final class CommonConstant {
         /**
          * 用户名
          */
-        public static final String userName = "userName";
+        public static final String USERNAME = "userName";
+
+        /**
+         * 用户名的json字符串
+         */
+        public static final String USERINFO_STR = "userInfoStr";
     }
 
     /**

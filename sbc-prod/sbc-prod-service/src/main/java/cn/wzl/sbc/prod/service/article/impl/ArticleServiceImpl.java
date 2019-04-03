@@ -15,10 +15,12 @@ import cn.wzl.sbc.prod.model.article.ArticlePersionClassification;
 import cn.wzl.sbc.prod.model.article.data.ArticleAllInfo;
 import cn.wzl.sbc.prod.model.article.page.ArticleBean;
 import cn.wzl.sbc.prod.service.article.ArticleService;
+import org.apache.commons.lang.StringUtils;
 import org.dozer.DozerBeanMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
 import java.io.ByteArrayInputStream;
@@ -114,6 +116,8 @@ public class ArticleServiceImpl implements ArticleService {
     public MessageResult insertOneArticle(Article article) {
         MessageResult result = new MessageResult();
         String userName = article.getUsrInfoUserName();
+        /*设置id*/
+        article.setUserId(String.valueOf(article.getUsrInfoId()));
         /*设置code*/
         String code = codeUtil.createCodeByRedis(RedisConstant.RedisCreateCode.CodeType.ARTICLE_CODE);
         article.setArticleCode(code);
@@ -267,6 +271,36 @@ public class ArticleServiceImpl implements ArticleService {
             }
         } catch (Exception e) {
             log.error("ArticleServiceImpl deleteArticleByCode has error...",e);
+            result.setErrorMessage(e.getMessage());
+        }
+        return result;
+    }
+
+    @Override
+    public MessageResult queryArticleAllInfo(ArticleAllInfo articleAllInfo) {
+        MessageResult result = new MessageResult();
+
+        if(StringUtils.isBlank(articleAllInfo.getArticleCode())){
+            result.setErrorMessage("文章编码不能为空");
+            return result;
+        }
+        /*设置查看私有*/
+        articleAllInfo.setIsPrivate(ArticleConstant.ArticlePrivate.NOT_PRIVATE);
+        try {
+            List<ArticleAllInfo> list = articleMapper.queryArticleAllInfoByCode(articleAllInfo);
+            if(!CollectionUtils.isEmpty(list)){
+                ArticleAllInfo articleInfo = list.get(0);
+                MessageResult ossResult = OssUtil.downLoadFile(articleInfo.getOssUrl());
+                if(ossResult.isError()){
+                    log.error("查询oss出错");
+                    throw new Exception(ossResult.getMessage());
+                }
+                StringBuilder content = (StringBuilder)ossResult.getData();
+                articleInfo.setContent(content.toString());
+                result.setData(articleInfo);
+            }
+        } catch (Exception e) {
+            log.error("ArticleServiceImpl queryArticleAllInfo has error...",e);
             result.setErrorMessage(e.getMessage());
         }
         return result;

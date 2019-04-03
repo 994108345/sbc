@@ -56,4 +56,11 @@ public interface ArticleService {
      */
     MessageResult deleteArticleByCode(Article article);
 
+    /**
+     * 查询文章的所有信息
+     * @param articleAllInfo
+     * @return
+     */
+    MessageResult queryArticleAllInfo(ArticleAllInfo articleAllInfo);
+
 }

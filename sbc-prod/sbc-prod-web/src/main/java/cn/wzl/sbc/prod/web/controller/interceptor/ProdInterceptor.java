@@ -57,7 +57,7 @@ public class ProdInterceptor implements HandlerInterceptor {
                 throw new Exception("缺少登陆信息，请先登陆");
             }
             String userName = userInfo.getUserName();
-            request.setAttribute(CommonConstant.RequestConstant.userName,userName);
+            request.setAttribute(CommonConstant.RequestConstant.USERNAME,userName);
             /*token存在，即重置cookie的token，redis的token和username的存活时间*/
             cookie.setMaxAge(CommonConstant.CookieConstant.LOGIN_OUT_TIME);
             redisUtil.addOutTime(token, RedisConstant.RedisOutTimes.TOKEN_OUT_TIME, TimeUnit.HOURS);

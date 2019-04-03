@@ -7,6 +7,7 @@ import cn.wzl.sbc.common.result.ReturnResultEnum;
 import cn.wzl.sbc.common.util.ClassUtil;
 import cn.wzl.sbc.common.util.ObjectTranUtil;
 import cn.wzl.sbc.common.util.SpringBeanUtil;
+import cn.wzl.sbc.model.permission.UserInfo;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -29,7 +30,7 @@ public class ProdWeb {
     /**
      * 走权限
      * @param obj
-     * @param userName
+     * @param userNameStr
      * @param serviceName
      * @param method
      * @return
@@ -37,7 +38,7 @@ public class ProdWeb {
     @PostMapping("web/{serviceName}/{method}")
     @ResponseBody
     public Object webPost(@RequestBody Object obj ,
-                                   @RequestAttribute(value = CommonConstant.RequestConstant.userName) String userName,
+                                   @RequestAttribute(value = CommonConstant.RequestConstant.USERINFO_STR) String userNameStr,
                                    @PathVariable("serviceName")String serviceName,
                                    @PathVariable("method")String method){
         MessageResult result = new MessageResult();
@@ -53,10 +54,12 @@ public class ProdWeb {
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"method不能为空");
             return result;
         }
-        if(StringUtils.isBlank(userName)){
-            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"用户名不能为空");
+        if(StringUtils.isBlank(userNameStr)){
+            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"用户信息不能为空");
             return result;
         }
+        /*转换对象*/
+        UserInfo userInfo = JSONObject.parseObject(userNameStr,UserInfo.class);
         /*去空字符串*/
         obj = ObjectTranUtil.emptyToNullOfObj(obj);
         Object bean = SpringBeanUtil.getBean(serviceName);
@@ -73,15 +76,18 @@ public class ProdWeb {
                 throw new Exception("该方法没有入参");
             }
             String jsonStr = JSONObject.toJSONString(obj);
-            /*给请求参数加人用户名*/
+            /*给请求参数加人用户信息*/
             JSONObject jsonObj = JSONObject.parseObject(jsonStr);
-            jsonObj.put(JsonConstant.UserInfo.USRINFO_USERNAME,userName);
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_USERNAME,userInfo.getUserName());
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_ID,userInfo.getId());
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_USERCODE,userInfo.getUserCode());
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_PASSWORD,userInfo.getPassWord());
+
             String param = JSONObject.toJSONString(jsonObj);
             Object paramObj =JSONObject.parseObject(param ,parmeterClass);
             /*调用目标方法*/
             Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),paramObj);
             return returnParam;
-//            result = JSONObject.parseObject(JSONObject.toJSONString(returnParam), PageBeanResult.class);
         } catch (Exception e) {
             log.error("ProdWeb webConfig has error ......",e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),e.getMessage());
@@ -91,9 +97,10 @@ public class ProdWeb {
 
     @GetMapping("web/{serviceName}/{method}")
     @ResponseBody
-    public Object webGet(@RequestBody Object obj ,
-                            @PathVariable("serviceName")String serviceName,
-                            @PathVariable("method")String method){
+    public Object webGetPost(@RequestBody Object obj ,
+                          @RequestAttribute(value = CommonConstant.RequestConstant.USERINFO_STR) String userNameStr,
+                          @PathVariable("serviceName")String serviceName,
+                          @PathVariable("method")String method){
         MessageResult result = new MessageResult();
         if(obj == null){
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"参数不能为空");
@@ -107,6 +114,14 @@ public class ProdWeb {
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"method不能为空");
             return result;
         }
+        if(StringUtils.isBlank(userNameStr)){
+            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"用户信息不能为空");
+            return result;
+        }
+        /*转换对象*/
+        UserInfo userInfo = JSONObject.parseObject(userNameStr,UserInfo.class);
+        /*去空字符串*/
+        obj = ObjectTranUtil.emptyToNullOfObj(obj);
         Object bean = SpringBeanUtil.getBean(serviceName);
         Class serviceClass = bean.getClass();
         try {
@@ -121,11 +136,18 @@ public class ProdWeb {
                 throw new Exception("该方法没有入参");
             }
             String jsonStr = JSONObject.toJSONString(obj);
-            Object paramObj =JSONObject.parseObject(jsonStr ,parmeterClass);
+            /*给请求参数加人用户信息*/
+            JSONObject jsonObj = JSONObject.parseObject(jsonStr);
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_USERNAME,userInfo.getUserName());
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_ID,userInfo.getId());
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_USERCODE,userInfo.getUserCode());
+            jsonObj.put(JsonConstant.UserInfo.USRINFO_PASSWORD,userInfo.getPassWord());
+
+            String param = JSONObject.toJSONString(jsonObj);
+            Object paramObj =JSONObject.parseObject(param ,parmeterClass);
             /*调用目标方法*/
             Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),paramObj);
             return returnParam;
-//            result = JSONObject.parseObject(JSONObject.toJSONString(returnParam), PageBeanResult.class);
         } catch (Exception e) {
             log.error("ProdWeb webConfig has error ......",e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),e.getMessage());
@@ -181,7 +203,6 @@ public class ProdWeb {
             /*调用目标方法*/
             Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),paramObj);
             return returnParam;
-//            result = JSONObject.parseObject(JSONObject.toJSONString(returnParam), PageBeanResult.class);
         } catch (Exception e) {
             log.error("ProdWeb webConfig has error ......",e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),e.getMessage());

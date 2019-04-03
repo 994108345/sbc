@@ -391,6 +391,23 @@
         </where>
     </delete>
 
+    <!--查询文章的所有信息-->
+    <select id="queryArticleAllInfoByCode" resultMap="OtherResultMap">
+        select * from sbc_article a
+        left join sbc_article_info i on a.article_code = i.article_code
+        <where>
+            <if test="articleCode != null">
+                and a.article_code = #{articleCode,jdbcType=VARCHAR}
+            </if>
+            <if test="isPrivate != null">
+                and a.is_private = #{isPrivate,jdbcType=VARCHAR}
+            </if>
+            <if test="userId != null">
+                and a.user_id = #{userId,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+
 
     <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
       select
