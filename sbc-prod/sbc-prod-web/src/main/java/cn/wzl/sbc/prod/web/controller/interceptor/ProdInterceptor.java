@@ -58,6 +58,7 @@ public class ProdInterceptor implements HandlerInterceptor {
             }
             String userName = userInfo.getUserName();
             request.setAttribute(CommonConstant.RequestConstant.USERNAME,userName);
+            request.setAttribute(CommonConstant.RequestConstant.USERINFO_STR,userInfoStr);
             /*token存在，即重置cookie的token，redis的token和username的存活时间*/
             cookie.setMaxAge(CommonConstant.CookieConstant.LOGIN_OUT_TIME);
             redisUtil.addOutTime(token, RedisConstant.RedisOutTimes.TOKEN_OUT_TIME, TimeUnit.HOURS);

@@ -5,6 +5,7 @@ import java.math.RoundingMode;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author ：wzl
@@ -108,5 +109,22 @@ public class StrTest {
         BigDecimal d = (a.divide(b,2,RoundingMode.FLOOR).multiply(new BigDecimal("100")));
         BigDecimal e = a.divide(b,3,RoundingMode.FLOOR);
         System.out.println();
+    }
+
+    @Test
+    public void DemoTest1(){
+        int a= 1;
+        int b = 18;
+        if(b >= 1){
+            System.out.println("1");
+        }else{
+            System.out.println("2");
+        }
+    }
+
+    @Test
+    public void DemoTest(){
+        String uuId = UUID.randomUUID().toString();
+        System.out.println(uuId);
     }
 }

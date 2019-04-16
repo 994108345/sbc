@@ -363,6 +363,12 @@
             <if test="isPrivate != null">
                 and is_private = #{isPrivate,jdbcType=VARCHAR}
             </if>
+            <if test="title != null">
+                and a.title like "%"#{title}"%"
+            </if>
+            <if test="author != null">
+                and a.author like "%"#{author}"%"
+            </if>
         </where>
     </sql>
     <!--查询文章的详情信息-->
