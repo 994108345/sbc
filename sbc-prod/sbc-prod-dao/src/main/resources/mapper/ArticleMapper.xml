@@ -367,7 +367,7 @@
                 and a.title like "%"#{title}"%"
             </if>
             <if test="author != null">
-                and a.author like "%"#{author}"%"
+                or a.author like "%"#{author}"%"
             </if>
         </where>
     </sql>
