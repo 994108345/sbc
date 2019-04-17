@@ -127,4 +127,10 @@ public class StrTest {
         String uuId = UUID.randomUUID().toString();
         System.out.println(uuId);
     }
+
+    @Test
+    public void containTest(){
+        String str = "132654\"\"987";
+        System.out.println(str);
+    }
 }

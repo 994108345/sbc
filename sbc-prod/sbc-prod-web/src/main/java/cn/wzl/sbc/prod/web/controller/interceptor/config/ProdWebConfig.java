@@ -46,7 +46,8 @@ public class ProdWebConfig implements WebMvcConfigurer {
      */
     public String[] excludePath(){
         String[] path = {"/sbc-prod/Article/webNo/articleServiceImpl/queryArticleInfo"
-                ,"/sbc-prod/Article/webNo/articleServiceImpl/queryArticleAllInfo"
+                ,"/sbc-prod/Article/webNo/articleServiceImpl/queryArticleAllInfo",
+                "/sbc-prod/Article/webNo/articleTypeServiceImpl/queryArticleTypeByPage"
         };
         return path;
     }

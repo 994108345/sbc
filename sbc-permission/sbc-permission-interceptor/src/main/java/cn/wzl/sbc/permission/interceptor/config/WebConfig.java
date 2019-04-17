@@ -28,11 +28,11 @@ public class WebConfig implements WebMvcConfigurer {
         /**
          * 日志拦截
          */
-        registry.addInterceptor(logInterceptor).addPathPatterns("/**")
-                .excludePathPatterns("/sbc-prod/**","/sbc-permission/Login/login","/sbc-permission/Register/register","/sbc-permission/Login/loginOut");
+//        registry.addInterceptor(logInterceptor).addPathPatterns("/**")
+//                .excludePathPatterns("/sbc-prod/**","/sbc-permission/Login/login","/sbc-permission/Register/register","/sbc-permission/Login/loginOut");
 
         /**
-         * addPathPatterns：拦截哪些路径("/**":代表拦截所有路径);
+         * addPathPatterns：拦截哪些路径("/**":代表拦截所有路径)
          * excludePathPatterns：不拦截哪些路径;
          *  登陆拦截
          */

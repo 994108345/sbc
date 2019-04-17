@@ -360,6 +360,9 @@
             <if test="articleCode != null">
                 and article_code = #{articleCode,jdbcType=VARCHAR}
             </if>
+            <if test="articleType != null">
+                and article_Type = #{articleType,jdbcType=VARCHAR}
+            </if>
             <if test="isPrivate != null">
                 and is_private = #{isPrivate,jdbcType=VARCHAR}
             </if>
