@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wzl.sbc.permission.dao.mapper.UserInfoDtlMapper">
+  <resultMap id="BaseResultMap" type="cn.wzl.sbc.model.permission.UserInfoDtl">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_info_dtl_code" jdbcType="VARCHAR" property="userInfoDtlCode" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="e-mail" jdbcType="VARCHAR" property="eMail" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="avatar_url" jdbcType="VARCHAR" property="avatarUrl" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="we_chat" jdbcType="VARCHAR" property="weChat" />
+    <result column="face_book" jdbcType="VARCHAR" property="faceBook" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="last_modified_date" jdbcType="TIMESTAMP" property="lastModifiedDate" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="user_code" jdbcType="VARCHAR" property="userCode" />
+    <result column="pass_word" jdbcType="VARCHAR" property="passWord" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_info_dtl_code, user_name, name, real_name, phone, e-mail, address, avatar_url, 
+    qq, we_chat, face_book, create_date, last_modified_date, remark, status
+  </sql>
+
+  <!--查询用户信息-->
+  <select id="queryUserInfos" resultMap="BaseResultMap">
+    select * from sbc_user_info u left join sbc_user_info_dtl d  on u.user_name = d.user_name
+    <where>
+      <if test="userInfoDtlCode != null">
+       and user_info_dtl_code = #{userInfoDtlCode,jdbcType=VARCHAR}
+      </if>
+      <if test="userName != null">
+        and user_name = #{userName,jdbcType=VARCHAR}
+      </if>
+      <if test="name != null">
+        and name = #{name,jdbcType=VARCHAR}
+      </if>
+      <if test="realName != null">
+        and real_name = #{realName,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null">
+        and phone = #{phone,jdbcType=VARCHAR}
+      </if>
+      <if test="eMail != null">
+        and e-mail = #{eMail,jdbcType=VARCHAR}
+      </if>
+      <if test="address != null">
+        and address = #{address,jdbcType=VARCHAR}
+      </if>
+      <if test="avatarUrl != null">
+        and avatar_url = #{avatarUrl,jdbcType=VARCHAR}
+      </if>
+      <if test="qq != null">
+        and qq = #{qq,jdbcType=VARCHAR}
+      </if>
+      <if test="weChat != null">
+        and we_chat = #{weChat,jdbcType=VARCHAR}
+      </if>
+      <if test="faceBook != null">
+        and face_book = #{faceBook,jdbcType=VARCHAR}
+      </if>
+      <if test="remark != null">
+        and remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="status != null">
+        and status = #{status,jdbcType=VARCHAR}
+      </if>
+    </where>
+    <if test="isPaging == true">
+      limit #{start},#{pageSize}
+    </if>
+  </select>
+
+  <!--更新用户账号信息-->
+  <update id="updateByCode">
+    update sbc_user_info_dtl
+    <set>
+
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        real_name = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="eMail != null">
+        e-mail = #{eMail,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="avatarUrl != null">
+        avatar_url = #{avatarUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="weChat != null">
+        we_chat = #{weChat,jdbcType=VARCHAR},
+      </if>
+      <if test="faceBook != null">
+        face_book = #{faceBook,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <where>
+      and user_info_dtl_code = #{userInfoDtlCode,jdbcType=VARCHAR}
+    </where>
+  </update>
+
+  <!--插入一个用户信息-->
+  <insert id="insertByData">
+    insert into sbc_user_info_dtl
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userInfoDtlCode != null">
+        user_info_dtl_code,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="realName != null">
+        real_name,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="eMail != null">
+        e-mail,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="avatarUrl != null">
+        avatar_url,
+      </if>
+      <if test="qq != null">
+        qq,
+      </if>
+      <if test="weChat != null">
+        we_chat,
+      </if>
+      <if test="faceBook != null">
+        face_book,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userInfoDtlCode != null">
+        #{userInfoDtlCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="eMail != null">
+        #{eMail,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="avatarUrl != null">
+        #{avatarUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="weChat != null">
+        #{weChat,jdbcType=VARCHAR},
+      </if>
+      <if test="faceBook != null">
+        #{faceBook,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <!--删除账号信息-->
+  <delete id="deleteByRequest" >
+    delete from sbc_user_info_dtl
+    <where>
+      <if test="id != null">
+       and id =  #{id,jdbcType=INTEGER}
+      </if>
+      <if test="userInfoDtlCode != null">
+        and userInfoDtlCode = #{userInfoDtlCode,jdbcType=VARCHAR}
+      </if>
+    </where>
+
+  </delete>
+
+  <!--
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sbc_user_info_dtl
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sbc_user_info_dtl
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.wzl.sbc.prod.model.UserInfoDtl">
+    insert into sbc_user_info_dtl (id, user_info_dtl_code, user_name,
+      name, real_name, phone,
+      e-mail, address, avatar_url,
+      qq, we_chat, face_book,
+      create_date, last_modified_date, remark,
+      status)
+    values (#{id,jdbcType=INTEGER}, #{userInfoDtlCode,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR},
+      #{name,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},
+      #{eMail,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{avatarUrl,jdbcType=VARCHAR},
+      #{qq,jdbcType=VARCHAR}, #{weChat,jdbcType=VARCHAR}, #{faceBook,jdbcType=VARCHAR},
+      #{createDate,jdbcType=TIMESTAMP}, #{lastModifiedDate,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR},
+      #{status,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.wzl.sbc.prod.model.UserInfoDtl">
+    insert into sbc_user_info_dtl
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userInfoDtlCode != null">
+        user_info_dtl_code,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="realName != null">
+        real_name,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="eMail != null">
+        e-mail,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="avatarUrl != null">
+        avatar_url,
+      </if>
+      <if test="qq != null">
+        qq,
+      </if>
+      <if test="weChat != null">
+        we_chat,
+      </if>
+      <if test="faceBook != null">
+        face_book,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="lastModifiedDate != null">
+        last_modified_date,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userInfoDtlCode != null">
+        #{userInfoDtlCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="eMail != null">
+        #{eMail,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="avatarUrl != null">
+        #{avatarUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="weChat != null">
+        #{weChat,jdbcType=VARCHAR},
+      </if>
+      <if test="faceBook != null">
+        #{faceBook,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifiedDate != null">
+        #{lastModifiedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.wzl.sbc.prod.model.UserInfoDtl">
+    update sbc_user_info_dtl
+    <set>
+      <if test="userInfoDtlCode != null">
+        user_info_dtl_code = #{userInfoDtlCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        real_name = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="eMail != null">
+        e-mail = #{eMail,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="avatarUrl != null">
+        avatar_url = #{avatarUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="weChat != null">
+        we_chat = #{weChat,jdbcType=VARCHAR},
+      </if>
+      <if test="faceBook != null">
+        face_book = #{faceBook,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastModifiedDate != null">
+        last_modified_date = #{lastModifiedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.wzl.sbc.prod.model.UserInfoDtl">
+    update sbc_user_info_dtl
+    set user_info_dtl_code = #{userInfoDtlCode,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      real_name = #{realName,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      e-mail = #{eMail,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      avatar_url = #{avatarUrl,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      we_chat = #{weChat,jdbcType=VARCHAR},
+      face_book = #{faceBook,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      last_modified_date = #{lastModifiedDate,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>-->
+</mapper>

@@ -52,9 +52,14 @@ public class RedisConstant {
             public static final String BRAND_CODE = "brand";
             public static final String ARTICLETYPE_CODE = "articletype";
             public static final String ARTICLE_CODE = "article";
+            //oss上传文件标识
             public static final String OSS_FILE_CODE = "ossFile";
             public static final String ARTICLE_COMMENT_CODE = "articleComment";
             public static final String ARTICLE_INFO_CODE = "articleInfo";
+            //用户明细
+            public static final String USER_INFO_DTL_CODE = "userInfoDtlCode";
+            //文件管理
+            public static final String FILE_CODE = "fileCode";
         }
     }
 }

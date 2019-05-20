@@ -1,16 +1,20 @@
-package cn.wzl.sbc.prod.web.controller;
+package cn.wzl.sbc.permission.web.controller.web;
 
 import cn.wzl.sbc.common.constant.CommonConstant;
 import cn.wzl.sbc.common.constant.JsonConstant;
 import cn.wzl.sbc.common.result.MessageResult;
 import cn.wzl.sbc.common.result.ReturnResultEnum;
-import cn.wzl.sbc.common.util.*;
+import cn.wzl.sbc.common.util.ClassUtil;
+import cn.wzl.sbc.common.util.ObjectTranUtil;
+import cn.wzl.sbc.common.util.SpringBeanUtil;
 import cn.wzl.sbc.model.permission.UserInfo;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 
 /**
@@ -18,11 +22,11 @@ import java.lang.reflect.Method;
  * @date ：Created in 2019/3/6 10:47
  * @description：代理controller层，调用service层
  */
-@RequestMapping(value = "/sbc-prod/Article")
+@RequestMapping(value = "/sbc-permission/New")
 @RestController
-public class ProdWeb {
+public class PermissionWeb {
 
-    private Logger log = LoggerFactory.getLogger(ProdWeb.class);
+    private Logger log = LoggerFactory.getLogger(PermissionWeb.class);
 
     /**
      * 走权限
@@ -81,7 +85,7 @@ public class ProdWeb {
             jsonObj.put(JsonConstant.UserInfo.USRINFO_PASSWORD,userInfo.getPassWord());
 
             String param = JSONObject.toJSONString(jsonObj);
-            Object paramObj =JSONObject.parseObject (param ,parmeterClass);
+            Object paramObj =JSONObject.parseObject(param ,parmeterClass);
             /*调用目标方法*/
             Object returnParam = serviceMethod.invoke(SpringBeanUtil.getBean(serviceName),paramObj);
             return returnParam;
@@ -206,4 +210,13 @@ public class ProdWeb {
         }
         return result;
     }
+
+    @PostMapping("webNo/pictureUpload")
+    public MessageResult pictureUpload(HttpServletRequest request){
+        MessageResult result = new MessageResult();
+
+
+        return result;
+    }
+
 }

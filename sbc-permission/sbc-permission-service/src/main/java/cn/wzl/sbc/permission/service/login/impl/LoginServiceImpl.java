@@ -1,7 +1,13 @@
 package cn.wzl.sbc.permission.service.login.impl;
 
+import cn.wzl.sbc.common.constant.CommonConstant;
+import cn.wzl.sbc.common.constant.RedisConstant;
+import cn.wzl.sbc.common.result.PageBeanResult;
+import cn.wzl.sbc.common.util.CodeUtil;
 import cn.wzl.sbc.common.util.Md5Util;
 import cn.wzl.sbc.common.util.RedisUtil;
+import cn.wzl.sbc.model.permission.UserInfoDtl;
+import cn.wzl.sbc.permission.dao.mapper.UserInfoDtlMapper;
 import cn.wzl.sbc.permission.service.login.LoginService;
 import cn.wzl.sbc.model.permission.UserInfo;
 import cn.wzl.sbc.common.result.MessageResult;
@@ -25,7 +31,14 @@ public class LoginServiceImpl implements LoginService {
     private final static Logger log = LoggerFactory.getLogger(LoginServiceImpl.class);
 
     @Resource
+    private CodeUtil codeUtil;
+
+    @Resource
     private UserDao userDao;
+
+    @Resource
+    private UserInfoDtlMapper userInfoDtlMapper;
+
     @Override
     public MessageResult login(UserInfo userInfo) {
         MessageResult result = new MessageResult();
@@ -58,9 +71,52 @@ public class LoginServiceImpl implements LoginService {
             String password = Md5Util.EncoderByMd5(userInfo.getPassWord());
             userInfo.setPassWord(password);
             int count = userDao.insertOneUserInfo(userInfo);
+            String code = codeUtil.createCodeByRedis(RedisConstant.RedisCreateCode.CodeType.USER_INFO_DTL_CODE);
+            //插入用户明细信息
+            UserInfoDtl userInfoDtl = new UserInfoDtl();
+            userInfoDtl.setUserInfoDtlCode(code);
+            userInfoDtl.setStatus(CommonConstant.UserStatus.USEFUL);
+            userInfoDtlMapper.insertByData(userInfoDtl);
         } catch (Exception e) {
             log.error("添加用户出错：" + e.getMessage(),e);
             result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"添加用户出错：" + e.getMessage());
+        }
+        return result;
+    }
+
+    @Override
+    public PageBeanResult queryByRequest(UserInfoDtl userInfoDtl) {
+        PageBeanResult result = new PageBeanResult();
+        try {
+            List<UserInfoDtl> list = userInfoDtlMapper.queryUserInfos(userInfoDtl);
+            result.setData(list);
+        } catch (Exception e) {
+            result.setErrorMessage("查询用户明细信息列表出现异常");
+            log.error("LoginServiceImpl queryByRequest has error",e);
+        }
+        return result;
+    }
+
+    @Override
+    public MessageResult updateUserInfo(UserInfoDtl userInfoDtl) {
+        MessageResult result = new MessageResult();
+        try {
+            int count = userInfoDtlMapper.updateByCode(userInfoDtl);
+        } catch (Exception e) {
+            result.setErrorMessage("更新用户明细信息出现异常");
+            log.error("LoginServiceImpl updateUserInfo has error",e);
+        }
+        return result;
+    }
+
+    @Override
+    public MessageResult deleteByRequest(UserInfoDtl userInfoDtl) {
+        MessageResult result = new MessageResult();
+        try {
+            int count = userInfoDtlMapper.deleteByRequest(userInfoDtl);
+        } catch (Exception e) {
+            result.setErrorMessage("删除用户明细信息出现异常");
+            log.error("LoginServiceImpl deleteByRequest has error",e);
         }
         return result;
     }

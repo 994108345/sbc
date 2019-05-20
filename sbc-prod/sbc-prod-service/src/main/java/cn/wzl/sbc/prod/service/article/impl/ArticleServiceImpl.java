@@ -108,6 +108,8 @@ public class ArticleServiceImpl implements ArticleService {
         article.setOssUrl(objectName);
         /*缩略内容*/
         article.setShortComment(commentControl(content));
+        //设置为空，防止存库
+        article.setContent("");
         result = articleDao.updateOneArticle(article);
         return result;
     }
@@ -170,6 +172,8 @@ public class ArticleServiceImpl implements ArticleService {
         /*将对象名存入*/
         article.setOssUrl(objectName);
         article.setShortComment(commentControl(content));
+        //设置为空，防止存库
+        article.setContent("");
         result = articleDao.insertOneArticle(article);
         if(result.isError()){
             return result;

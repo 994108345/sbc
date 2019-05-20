@@ -1,11 +1,10 @@
+import org.apache.commons.lang.StringEscapeUtils;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * @author ：wzl
@@ -132,5 +131,66 @@ public class StrTest {
     public void containTest(){
         String str = "132654\"\"987";
         System.out.println(str);
+    }
+
+    @Test
+    public void test(){
+        String a = null + "";
+        System.out.println(a);
+    }
+
+    @Test
+    public void str4Test(){
+        String str = "\\n123\\tdfdf\\rgdgasdf\\ndfgfg";
+        System.out.println("转义前："+ StringEscapeUtils.unescapeJava(str));
+        String str1 =str.replaceAll("\\\\", "/");
+        System.out.println(str1);
+        String str2= StringEscapeUtils.unescapeJava(str1);
+        System.out.println("转义后："+ str2);
+    }
+
+    @Test
+    public void str5Test(){
+        BigDecimal big = new BigDecimal("0.1").multiply(new BigDecimal("1"));
+        System.out.println(big);
+    }
+
+    @Test
+    public void millionTest(){
+        System.out.println(Calendar.getInstance().getTimeInMillis() / 1000);
+    }
+
+    @Test
+    public void uuidTest(){
+        String str = UUID.randomUUID().toString();
+        System.out.println(str);
+
+    }
+
+    @Test
+    public void listTest(){
+        ListA listA = new ListA();
+        List<String> strList = null;
+        try {
+            strList = listA.getStrList();
+            for (String s : strList) {
+                System.out.println(1);
+            }
+            System.out.println(2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    class ListA{
+        List<String> strList;
+
+        public List<String> getStrList() {
+            return strList;
+        }
+
+        public void setStrList(List<String> strList) {
+            this.strList = strList;
+        }
     }
 }

@@ -1,11 +1,8 @@
 package cn.wzl.sbc.common.util;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * @author ：wzl

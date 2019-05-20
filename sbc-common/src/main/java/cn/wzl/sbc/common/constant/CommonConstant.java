@@ -68,4 +68,14 @@ public  final class CommonConstant {
          */
         public static final int SECKILL_COUNT = 10;
     }
+
+    /**
+     * 用户账户状态
+     */
+    public static final class UserStatus{
+        //有用
+        public static final String USEFUL = "1";
+        //无用
+        public static final String USELESS = "0";
+    }
 }
