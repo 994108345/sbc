@@ -66,7 +66,7 @@ public class ProdInterceptor implements HandlerInterceptor {
         } catch (Exception e) {
             isToken = false;
             log.error("preHandle preHandle has error ...",e);
-            result.setMessageAndStatus(ReturnResultEnum.ERROR.getStatus(),"缺少登陆信息，请先登陆");
+            result.setNologinMessage();
         }
         if(!isToken){
             /*token不存在，设置返回值*/

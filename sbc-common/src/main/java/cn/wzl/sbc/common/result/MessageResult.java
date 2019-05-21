@@ -55,6 +55,14 @@ public class MessageResult {
         this.message = resultEnum.getMessage();
     }
 
+    /**
+     * 返回没有登录状态的返回信息
+     */
+    public void setNologinMessage(){
+        this.status = ReturnResultEnum.NO_LOGIN.getStatus();
+        this.message = ReturnResultEnum.NO_LOGIN.getMessage();
+    }
+
 
     public String getMessage() {
         return message;

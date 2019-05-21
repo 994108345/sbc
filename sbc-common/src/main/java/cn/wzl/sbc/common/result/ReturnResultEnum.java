@@ -17,6 +17,11 @@ public enum ReturnResultEnum {
     SUCCESS(10000,"执行成功"),
 
     /**
+     * 没有登录
+     */
+    NO_LOGIN(20000,"缺少登陆信息，请重新登录"),
+
+    /**
      * 用户错误
      */
     LOGIN_ERROR(10001,"账号或密码错误");
